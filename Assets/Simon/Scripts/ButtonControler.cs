@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class ButtonControler : MonoBehaviour
 {
+    [SerializeField]
+    int OptionsManuScene;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +20,8 @@ public class ButtonControler : MonoBehaviour
     }
 
     public void OptionsOpen() 
-    { 
-    
+    {
+        SceneManager.LoadScene(OptionsManuScene);
     }
 
     public void QuitGame() 

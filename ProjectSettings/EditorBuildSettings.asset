@@ -6,13 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Simon/OnOpenBlackScreen(Simon).unity
+    path: Assets/Scenes/OnOpenBlackScreen(Simon).unity
     guid: 855d41d9b4319954daafdacf7869e1c0
   - enabled: 1
-    path: Assets/Simon/Main Menu(Simon).unity
+    path: Assets/Scenes/Main Menu(Simon).unity
     guid: 9cacf740af227c54391c5c82a882eafc
   - enabled: 1
-    path: Assets/Simon/OptionsMenu.unity
+    path: Assets/Scenes/OptionsMenu.unity
     guid: f33e7ebec03601d4784a63d8bce93899
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity

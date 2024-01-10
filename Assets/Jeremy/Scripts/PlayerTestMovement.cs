@@ -1,7 +1,7 @@
 using Photon.Pun;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerTestMovement : MonoBehaviour
 {
     [SerializeField]
     float speed = 3;
@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.W))
             {
-                rb.AddForce(new Vector3(0, speed));  
+                rb.AddForce(new Vector3(0, speed));
             }
             if (Input.GetKey(KeyCode.S))
             {
@@ -38,6 +38,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 rb.AddForce(new Vector3(speed, 0));
             }
-        }   
+        }
     }
 }

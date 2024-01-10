@@ -2,17 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class SBCool : MonoBehaviour
 {
+    [SerializeField]
+    GameObject Manager;
 
-    public float moveSpeed;
-
-    public Rigidbody2D rb;
-
+    ReadySystem RS;
     // Start is called before the first frame update
     void Start()
     {
-        
+        RS = Manager.GetComponent<ReadySystem>();
     }
 
     // Update is called once per frame
@@ -20,4 +19,5 @@ public class PlayerMovement : MonoBehaviour
     {
         
     }
+   
 }

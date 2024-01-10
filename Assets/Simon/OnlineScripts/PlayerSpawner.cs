@@ -15,17 +15,7 @@ public class PlayerSpawner : MonoBehaviour
     // Update is called once per frame
     void CreatePlayer()
     {
-        if (PhotonNetwork.PlayerList.Length == 1)
-        {
-            PhotonNetwork.Instantiate("PlayerCar", new Vector3(0, -3.5f, -1), Quaternion.identity);
-        }
-        else if (PhotonNetwork.PlayerList.Length == 2)
-        {
-            PhotonNetwork.Instantiate("PlayerCar", new Vector3(3, -3.5f, -1), Quaternion.identity);
-        }
-        else
-        {
-            PhotonNetwork.Instantiate("PlayerCar", new Vector3(-3, -3.5f, -1), Quaternion.identity);
-        }
+       
+            PhotonNetwork.Instantiate("Player", new Vector3(0, 0, 0), Quaternion.identity);
     }
 }

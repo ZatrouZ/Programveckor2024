@@ -14,6 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/OptionsMenu.unity
     guid: f33e7ebec03601d4784a63d8bce93899
+  - enabled: 1
+    path: Assets/Scenes/PreGameLobby.unity
+    guid: d6ac996db34892643bd0beddcf59e46a
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729

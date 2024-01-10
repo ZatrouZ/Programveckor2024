@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class interact : noisemanager
 {
-    public float noise;
     public bool interacted;
-    public float totalNoise;
     
     public void OnInterct()
     {

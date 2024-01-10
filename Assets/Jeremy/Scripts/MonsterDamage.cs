@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class MonsterDamage : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int damage;
+    public PlayerHealth playerHealth;
+    public PlayerTestMovement playerMovement;
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        if(collision.gameObject.tag == "Player")
+        {
+
+         
+
+            playerHealth.TakeDamage(damage);
+        }
+
     }
 }

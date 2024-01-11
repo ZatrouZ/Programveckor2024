@@ -33,14 +33,14 @@ public class AIChase : MonoBehaviour
         if (distance < 4)
         {
             GetComponent<EnemyPatrol>().enabled = false;
-            //GetComponent<AIChase>().enabled = true;
+            GetComponent<AIChase>().enabled = true;
             transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
     
         }
         else if(distance >5)
         {
-            //GetComponent<EnemyPatrol>().enabled = true;
-            //GetComponent<AIChase>().enabled = false;
+            GetComponent<EnemyPatrol>().enabled = true;
+            GetComponent<AIChase>().enabled = false;
         }
         
 

@@ -8,6 +8,8 @@ public class door : MonoBehaviour
 
     [SerializeField]
     GameObject doorText;
+    [SerializeField]
+    GameObject doorClueText;
 
     bool open;
     // Start is called before the first frame update
@@ -15,6 +17,7 @@ public class door : MonoBehaviour
     {
         key = FindObjectOfType<key>();
         doorText.SetActive(false);
+        doorClueText.SetActive(false);
     }
 
     // Update is called once per frame
@@ -36,12 +39,17 @@ public class door : MonoBehaviour
             doorText.SetActive(true);
             open = true;
         }
+        else if (collision.gameObject.tag == "Player" && key.hasKey == false)
+        {
+            doorClueText.SetActive(true);
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
             doorText.SetActive(false);
+            doorClueText.SetActive(false);
             open = false;
         }
     }

@@ -9,6 +9,8 @@ public class key : MonoBehaviour
     [SerializeField]
     GameObject keyText;
     [SerializeField]
+    GameObject keyClueText;
+    [SerializeField]
     public GameObject keyInHand;
     [SerializeField]
     GameObject pipeOnGround;
@@ -18,6 +20,7 @@ public class key : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        keyClueText.SetActive(false);
         pipe = FindObjectOfType<pipe>();
         keyText.SetActive(false);
         keyInHand.SetActive(false);
@@ -47,12 +50,17 @@ public class key : MonoBehaviour
             keyText.SetActive(true);
             reach = true;
         }
+        else if (collision.gameObject.tag=="Player" && pipe.hasPipe==false)
+        {
+            keyClueText.SetActive(true);
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
             keyText.SetActive(false);
+            keyClueText.SetActive(false);
             reach = false;
         }
     }

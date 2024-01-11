@@ -5,7 +5,7 @@ using UnityEngine;
 public class pipe : MonoBehaviour
 {
     [SerializeField]
-    GameObject pipeText;
+    GameObject pipePickupText;
     [SerializeField]
     public GameObject pipeInHand;
 
@@ -14,7 +14,7 @@ public class pipe : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pipeText.SetActive(false);
+        pipePickupText.SetActive(false);
         pipeInHand.SetActive(false);
         pickup = false;
         hasPipe = false;
@@ -28,7 +28,7 @@ public class pipe : MonoBehaviour
             if (Input.GetKey(KeyCode.E))
             {
                 hasPipe = true;
-                pipeText.SetActive(false);
+                pipePickupText.SetActive(false);
                 gameObject.SetActive(false);
                 pipeInHand.SetActive(true);
             }
@@ -39,7 +39,7 @@ public class pipe : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            pipeText.SetActive(true);
+            pipePickupText.SetActive(true);
             pickup = true;
         }
     }
@@ -47,7 +47,7 @@ public class pipe : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            pipeText.SetActive(false);
+            pipePickupText.SetActive(false);
             pickup = false;
         }
     }

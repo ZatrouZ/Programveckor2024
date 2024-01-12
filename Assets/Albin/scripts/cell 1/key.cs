@@ -7,8 +7,6 @@ public class key : MonoBehaviour
     pipe pipe;
 
     [SerializeField]
-    GameObject keyText;
-    [SerializeField]
     public GameObject keyInHand;
     [SerializeField]
     GameObject pipeOnGround;
@@ -19,7 +17,6 @@ public class key : MonoBehaviour
     void Start()
     {
         pipe = FindObjectOfType<pipe>();
-        keyText.SetActive(false);
         keyInHand.SetActive(false);
         pipeOnGround.SetActive(false);
         hasKey = false;
@@ -44,7 +41,6 @@ public class key : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player" && pipe.hasPipe==true)
         {
-            keyText.SetActive(true);
             reach = true;
         }
     }
@@ -52,7 +48,6 @@ public class key : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            keyText.SetActive(false);
             reach = false;
         }
     }

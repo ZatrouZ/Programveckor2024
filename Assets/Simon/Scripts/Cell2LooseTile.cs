@@ -2,43 +2,47 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class door : MonoBehaviour
+public class Cell2LooseTile : MonoBehaviour
 {
-    key key;
+    [SerializeField]
+    public GameObject TileMoved;
 
-
-    bool open;
+    bool pickup;
+    public bool hasMovedTile;
     // Start is called before the first frame update
     void Start()
     {
-        key = FindObjectOfType<key>();
+        TileMoved.SetActive(false);
+        pickup = false;
+        hasMovedTile = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (open == true)
+        if (pickup == true)
         {
             if (Input.GetKey(KeyCode.E))
             {
+                hasMovedTile = true;
                 gameObject.SetActive(false);
-                key.keyInHand.SetActive(false);
+                TileMoved.SetActive(true);
             }
         }
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player" && key.hasKey == true)
+        if (collision.gameObject.tag == "Player")
         {
-            open = true;
+            pickup = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            open = false;
+            pickup = false;
         }
     }
 }
-

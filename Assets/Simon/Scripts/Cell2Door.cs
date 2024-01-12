@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class door : MonoBehaviour
+public class Cell2Door : MonoBehaviour
 {
-    key key;
+    Cell2Key Cell2Key;
 
 
     bool open;
     // Start is called before the first frame update
     void Start()
     {
-        key = FindObjectOfType<key>();
+       Cell2Key = FindObjectOfType<Cell2Key>();
     }
 
     // Update is called once per frame
@@ -22,13 +22,13 @@ public class door : MonoBehaviour
             if (Input.GetKey(KeyCode.E))
             {
                 gameObject.SetActive(false);
-                key.keyInHand.SetActive(false);
+                Cell2Key.keyInHand.SetActive(false);
             }
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player" && key.hasKey == true)
+        if (collision.gameObject.tag == "Player" && Cell2Key.hasKey == true)
         {
             open = true;
         }
@@ -41,4 +41,3 @@ public class door : MonoBehaviour
         }
     }
 }
-

@@ -30,17 +30,18 @@ public class AIChase : MonoBehaviour
         direction.Normalize();
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        if (distance < 4)
+        if (distance < 8)
         {
             GetComponent<EnemyPatrol>().enabled = false;
             GetComponent<AIChase>().enabled = true;
             transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
     
         }
-        else if(distance >5)
+        else if(distance >= 9)
         {
             GetComponent<EnemyPatrol>().enabled = true;
-            GetComponent<AIChase>().enabled = false;
+            
+            
         }
         
 

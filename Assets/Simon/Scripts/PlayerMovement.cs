@@ -48,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
         {
             print("Entering Main Menu");
             PauseMenuObject.SetActive(true);
+            
 
         }
     }

@@ -8,13 +8,17 @@ public class PlayerMovement : MonoBehaviour
     PhotonView view;
     Rigidbody2D rb;
 
-
+    [SerializeField]
+    GameObject PauseMenuObject;
 
     // Start is called before the first frame update
     void Start()
     {
         view = GetComponent<PhotonView>();
         rb = GetComponent<Rigidbody2D>();
+
+        
+
     }
 
     // Update is called once per frame
@@ -38,6 +42,13 @@ public class PlayerMovement : MonoBehaviour
             {
                 rb.AddForce(new Vector3(speed, 0));
             }
-        }   
+            
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            print("Entering Main Menu");
+            PauseMenuObject.SetActive(true);
+
+        }
     }
 }

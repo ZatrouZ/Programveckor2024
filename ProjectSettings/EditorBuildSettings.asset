@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/OfficialGameScenes/Main Menu(Simon).unity
     guid: 9cacf740af227c54391c5c82a882eafc
   - enabled: 1
-    path: Assets/Scenes/OfficialGameScenes/OptionsMenu.unity
+    path: Assets/Scenes/OfficialGameScenes/NOT USED/NOTUSEDOptionsMenu.unity
     guid: f33e7ebec03601d4784a63d8bce93899
   - enabled: 1
     path: Assets/Scenes/OfficialGameScenes/PreGameLobby.unity

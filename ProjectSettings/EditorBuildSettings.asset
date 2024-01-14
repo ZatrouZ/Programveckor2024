@@ -17,6 +17,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/OfficialGameScenes/PreGameLobby.unity
     guid: d6ac996db34892643bd0beddcf59e46a
+  - enabled: 1
+    path: Assets/Scenes/cell 1(albin).unity
+    guid: d01999d4720302642898bb9a05b0f58c
+  - enabled: 1
+    path: Assets/Scenes/cell 2(Simon).unity
+    guid: fa1a0caf51d46d6429547b89522cda2b
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729

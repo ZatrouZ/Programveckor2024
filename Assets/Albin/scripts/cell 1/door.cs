@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class door : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class door : MonoBehaviour
             {
                 gameObject.SetActive(false);
                 key.keyInHand.SetActive(false);
+                SceneManager.LoadScene("Corridor 1(albin)", LoadSceneMode.Additive);
             }
         }
     }

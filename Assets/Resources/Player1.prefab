@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
+  PauseMenuObject: {fileID: 0}
 --- !u!114 &7859656606115595891
 MonoBehaviour:
   m_ObjectHideFlags: 0

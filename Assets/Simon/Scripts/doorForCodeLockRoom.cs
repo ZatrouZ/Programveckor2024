@@ -1,18 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class door : MonoBehaviour
+public class doorForCodeLockRoom : MonoBehaviour
 {
-    key key;
-
-
     bool open;
+
+    GameObject KeyInHand;
     // Start is called before the first frame update
     void Start()
     {
-        key = FindObjectOfType<key>();
+        KeyInHand = GameObject.FindWithTag("Key");
     }
 
     // Update is called once per frame
@@ -20,19 +18,20 @@ public class door : MonoBehaviour
     {
         if (open == true)
         {
-            if (Input.GetKey(KeyCode.E))
-            {
+            if (Input.GetKeyDown(KeyCode.E))
+            { 
                 gameObject.SetActive(false);
-                key.keyInHand.SetActive(false);
-                SceneManager.LoadScene("Corridor 1(albin)", LoadSceneMode.Additive);
+                KeyInHand.SetActive(false);
             }
         }
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player" && key.hasKey == true)
+        if (collision.gameObject.tag == "Player") //&& CL.hasKey == true)
         {
             open = true;
+            print("open");
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -43,4 +42,3 @@ public class door : MonoBehaviour
         }
     }
 }
-

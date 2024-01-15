@@ -3,44 +3,39 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class door : MonoBehaviour
+public class doortodocuments : MonoBehaviour
 {
-    key key;
-
-
-    bool open;
+    bool reach = false;
     // Start is called before the first frame update
     void Start()
     {
-        key = FindObjectOfType<key>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (open == true)
+        if (reach == true)
         {
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                gameObject.SetActive(false);
-                key.keyInHand.SetActive(false);
-                SceneManager.LoadScene("Corridor 1(albin)", LoadSceneMode.Additive);
+                SceneManager.LoadScene("Dokument rum", LoadSceneMode.Additive);
             }
         }
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player" && key.hasKey == true)
+        if (collision.gameObject.tag == "Player")
         {
-            open = true;
+            reach = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            open = false;
+            reach = false;
         }
     }
 }
-

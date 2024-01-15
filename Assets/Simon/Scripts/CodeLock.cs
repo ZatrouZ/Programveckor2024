@@ -13,21 +13,26 @@ public class CodeLock : MonoBehaviour
     GameObject WhenLockerOpen;
     [SerializeField]
     GameObject LockerDoor;
+    [SerializeField]
+    GameObject KeyInLocker;
+    [SerializeField]
+    GameObject KeyInHand;
 
     bool InReach;
+    bool hasOpendLocker;
+   public bool hasKey = false;
 
     string EnterdCode;
-    string rightCode;
+    public string rightCode = "110901";
 
     SpriteRenderer SR;
     // Start is called before the first frame update
     void Start()
     {
         LockUI.SetActive(false);
-        rightCode = "110901";
         WhenLockerOpen.SetActive(false);
         SR = GetComponent<SpriteRenderer>();
-
+        KeyInHand.SetActive(false);
     }
 
     // Update is called once per frame
@@ -46,13 +51,22 @@ public class CodeLock : MonoBehaviour
             print("Unlock");
             EnterdRightCode();
         }
+
+        if (hasOpendLocker == true && InReach == true)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                KeyInLocker.SetActive(false);
+                KeyInHand.SetActive(true);
+                hasKey = true;
+            }
+        }
     }
 
     public void OnDigitChnage(string s) 
     {
         print("CodeEnterd");
         EnterdCode = s;
-        print(EnterdCode);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -76,5 +90,6 @@ public class CodeLock : MonoBehaviour
         WhenLockerOpen.SetActive(true);
         LockerDoor.SetActive(false);
         SR.enabled = false;
+        hasOpendLocker = true;
     }
 }

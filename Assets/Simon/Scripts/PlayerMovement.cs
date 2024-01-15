@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField]
-    float speed = 3;
+    public float speed = 3;
     PhotonView view;
     Rigidbody2D rb;
 

@@ -8,6 +8,7 @@ TagManager:
   - pipe
   - PauseMenu
   - Key
+  - File
   layers:
   - Default
   - TransparentFX

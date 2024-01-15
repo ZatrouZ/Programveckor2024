@@ -7,8 +7,7 @@ public class Cell2Key : MonoBehaviour
     //detta script är en kopia av albins key scripts med några endringar
     Cell2LooseTile LT;
 
-    [SerializeField]
-    public GameObject keyInHand;
+    GameObject File;
 
     bool reach;
     public bool hasKey;
@@ -16,8 +15,9 @@ public class Cell2Key : MonoBehaviour
     void Start()
     {
         LT = FindObjectOfType<Cell2LooseTile>();
-        keyInHand.SetActive(false);
         hasKey = false;
+        File = GameObject.FindWithTag("File");
+        File.SetActive(false);
     }
 
     // Update is called once per frame
@@ -28,7 +28,7 @@ public class Cell2Key : MonoBehaviour
             if (Input.GetKey(KeyCode.E))
             {
                 gameObject.SetActive(false);
-                keyInHand.SetActive(true);
+                File.SetActive(true);
                 hasKey = true;
             }
         }

@@ -7,13 +7,18 @@ public class Cell2Door : MonoBehaviour
     Cell2Key Cell2Key;
 
     [SerializeField]
-    GameObject doorOpen;
+    GameObject BackroundWithHole;
+    [SerializeField]
+    GameObject BackroundWithoutHole;
     bool open;
+
+    GameObject File;
     // Start is called before the first frame update
     void Start()
     {
        Cell2Key = FindObjectOfType<Cell2Key>();
-        doorOpen.SetActive(false);
+        BackroundWithHole.SetActive(false);
+        File = GameObject.FindWithTag("File");
     }
 
     // Update is called once per frame
@@ -23,8 +28,9 @@ public class Cell2Door : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.E))
             {
-                doorOpen.SetActive(true);
-                Cell2Key.keyInHand.SetActive(false);
+                BackroundWithHole.SetActive(true);
+                File.SetActive(false);
+                BackroundWithoutHole.SetActive(false);
             }
         }
     }

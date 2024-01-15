@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bullet
   - pipe
+  - PauseMenu
   layers:
   - Default
   - TransparentFX

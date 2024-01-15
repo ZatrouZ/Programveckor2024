@@ -1372,7 +1372,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bdefd0541c299442b6611ffdd1f85a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pipePickupText: {fileID: 0}
   pipeInHand: {fileID: 504785908}
   hasPipe: 0
 --- !u!1 &722700915
@@ -1472,7 +1471,6 @@ GameObject:
   - component: {fileID: 788048556}
   - component: {fileID: 788048554}
   - component: {fileID: 788048559}
-  - component: {fileID: 788048560}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -1634,18 +1632,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
---- !u!114 &788048560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 788048553}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2841bd7384afdf545b35e135a0c59b81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &837755042
 GameObject:
   m_ObjectHideFlags: 0
@@ -3042,8 +3028,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 005c6b965a8801a4ba30f68c56381ded, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorText: {fileID: 0}
-  doorClueText: {fileID: 0}
 --- !u!1 &1872922593
 GameObject:
   m_ObjectHideFlags: 0
@@ -3216,8 +3200,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27e5d1554c23dfd449a1ef5406d5109e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyText: {fileID: 0}
-  keyClueText: {fileID: 0}
   keyInHand: {fileID: 554289467}
   pipeOnGround: {fileID: 1713786202}
   hasKey: 0

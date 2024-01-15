@@ -1175,7 +1175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db519938da283d14f841d8fd1cf759fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 2081360519}
   speed: 4
 --- !u!50 &301175900
 Rigidbody2D:
@@ -5495,6 +5495,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2025805607}
   m_CullTransparentMesh: 1
+--- !u!1 &2081360519 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5338883887794953714, guid: 8e00688f4ccd1ee469fabd5cb73a3888, type: 3}
+  m_PrefabInstance: {fileID: 1057232886}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2089948398
 GameObject:
   m_ObjectHideFlags: 0

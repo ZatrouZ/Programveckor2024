@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/OfficialGameScenes/OnOpenBlackScreen(Simon).unity
     guid: 855d41d9b4319954daafdacf7869e1c0
   - enabled: 1

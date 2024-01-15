@@ -15,7 +15,14 @@ public class PlayerSpawner : MonoBehaviour
     // Update is called once per frame
     void CreatePlayer()
     {
-       
-            PhotonNetwork.Instantiate("Player", new Vector3(0, 0, 0), Quaternion.identity);
+        if (PhotonNetwork.IsMasterClient)
+        {
+            PhotonNetwork.Instantiate("Player1", new Vector3(-4, -1.15f, 0), Quaternion.identity);
+        }
+        else
+        {
+            PhotonNetwork.Instantiate("Player2", new Vector3(5.5f, -1.15f, 0), Quaternion.identity);
+        }
+            
     }
 }

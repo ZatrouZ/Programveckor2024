@@ -36,13 +36,14 @@ public class ReadySystem : MonoBehaviourPunCallbacks
         view = GetComponent<PhotonView>();
         _BCC = button.GetComponent<ButtonChangeColor>();
         timerObj.SetActive(false);
+        playersInLobby.text = "2";
     }
 
     // Update is called once per frame
     void Update()
     {
         timerText.text = timer.ToString("0");
-        playersInLobby.text = PhotonNetwork.PlayerList.Length.ToString();
+        //playersInLobby.text = PhotonNetwork.PlayerList.Length.ToString();
         playersReady.text = readyPlayers.ToString();
         if (readyPlayers == PhotonNetwork.PlayerList.Length && stopTimer == false)
         {

@@ -6,12 +6,14 @@ public class Cell2Door : MonoBehaviour
 {
     Cell2Key Cell2Key;
 
-
+    [SerializeField]
+    GameObject doorOpen;
     bool open;
     // Start is called before the first frame update
     void Start()
     {
        Cell2Key = FindObjectOfType<Cell2Key>();
+        doorOpen.SetActive(false);
     }
 
     // Update is called once per frame
@@ -21,7 +23,7 @@ public class Cell2Door : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.E))
             {
-                gameObject.SetActive(false);
+                doorOpen.SetActive(true);
                 Cell2Key.keyInHand.SetActive(false);
             }
         }

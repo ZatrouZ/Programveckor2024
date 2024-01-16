@@ -9,6 +9,8 @@ TagManager:
   - PauseMenu
   - Key
   - File
+  - KeyInHand
+  - PipeInHand
   layers:
   - Default
   - TransparentFX

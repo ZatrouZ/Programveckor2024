@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+
     [SerializeField]
     public float speed = 3;
     PhotonView view;
@@ -30,19 +31,23 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.W))
             {
-                rb.AddForce(new Vector3(0, speed));  
+                rb.AddForce(new Vector3(0, speed));
+                animator.Play("RosaWalkUp");
             }
             if (Input.GetKey(KeyCode.S))
             {
                 rb.AddForce(new Vector3(0, -speed));
+                animator.Play("RosaWalkDown");
             }
             if (Input.GetKey(KeyCode.A))
             {
                 rb.AddForce(new Vector3(-speed, 0));
+                animator.Play("RosaWalkLeft");
             }
             if (Input.GetKey(KeyCode.D))
             {
                 rb.AddForce(new Vector3(speed, 0));
+                animator.Play("RosaWalkRight");
             }
             
         }

@@ -5,11 +5,11 @@ using UnityEngine;
 public class Cum : MonoBehaviour
 {
     float timer;
-    PlayerMovement playermovement;
+    PlayerMovement playermovement_;
     bool active = true;
     private void Start()
     {
-        playermovement = GetComponent<PlayerMovement>();
+        playermovement_ = GetComponent<PlayerMovement>();
     }
     // Update is called once per frame
     void Update()
@@ -20,14 +20,14 @@ public class Cum : MonoBehaviour
     {
         timer = 0;
         active = false;
-        PlayerMovement.speed = 0;
+        playermovement_.speed = 0;
         while (timer < 5)
         {
             timer += 1 * Time.deltaTime;
         }
         if (timer >= 5)
         {
-            PlayerMovement.speed == 3;
+            playermovement_.speed = 3;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

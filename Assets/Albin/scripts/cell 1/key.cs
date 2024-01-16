@@ -7,9 +7,11 @@ public class key : MonoBehaviour
     pipe pipe;
 
     [SerializeField]
-    public GameObject keyInHand;
-    [SerializeField]
     GameObject pipeOnGround;
+
+    GameObject KeyInHand;
+
+    GameObject PipeInHand;
 
     bool reach;
     public bool hasKey;
@@ -17,7 +19,9 @@ public class key : MonoBehaviour
     void Start()
     {
         pipe = FindObjectOfType<pipe>();
-        keyInHand.SetActive(false);
+        KeyInHand = GameObject.FindWithTag("KeyInHand");
+        
+        KeyInHand.SetActive(false);
         pipeOnGround.SetActive(false);
         hasKey = false;
     }
@@ -27,13 +31,14 @@ public class key : MonoBehaviour
     {
         if (reach==true)
         {
+            PipeInHand = GameObject.FindWithTag("PipeInHand");
             if (Input.GetKey(KeyCode.E))
             {
-                gameObject.SetActive(false);
-                pipe.pipeInHand.SetActive(false);
-                keyInHand.SetActive(true);
+                PipeInHand.SetActive(false);
+                KeyInHand.SetActive(true);
                 pipeOnGround.SetActive(true);
                 hasKey = true;
+                gameObject.SetActive(false);
             }
         }
     }

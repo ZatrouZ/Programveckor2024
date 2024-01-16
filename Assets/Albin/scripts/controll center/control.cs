@@ -25,7 +25,7 @@ public class control : MonoBehaviour
 
     bool reach;
     public bool managing;
-    bool open;
+    public bool open;
     // Start is called before the first frame update
     void Start()
     {

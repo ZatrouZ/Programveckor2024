@@ -7,6 +7,8 @@ public class door : MonoBehaviour
 {
     key key;
 
+    GameObject KeyInHand;
+
 
     bool open;
     // Start is called before the first frame update
@@ -20,10 +22,10 @@ public class door : MonoBehaviour
     {
         if (open == true)
         {
+            KeyInHand = GameObject.FindWithTag("KeyInHand");
             if (Input.GetKey(KeyCode.E))
             {
-                gameObject.SetActive(false);
-                key.keyInHand.SetActive(false);
+                KeyInHand.SetActive(false);
                 SceneManager.LoadScene("Corridor 1(albin)", LoadSceneMode.Additive);
             }
         }
@@ -33,6 +35,7 @@ public class door : MonoBehaviour
         if (collision.gameObject.tag == "Player" && key.hasKey == true)
         {
             open = true;
+            print("canOpen");
         }
     }
     private void OnTriggerExit2D(Collider2D collision)

@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class pipe : MonoBehaviour
 {
-    [SerializeField]
-    public GameObject pipeInHand;
 
+    GameObject PipeInHand;
     bool pickup;
     public bool hasPipe;
     // Start is called before the first frame update
     void Start()
     {
-        pipeInHand.SetActive(false);
+        PipeInHand = GameObject.FindWithTag("PipeInHand");
+        PipeInHand.SetActive(false);
         pickup = false;
         hasPipe = false;
     }
@@ -25,8 +25,8 @@ public class pipe : MonoBehaviour
             if (Input.GetKey(KeyCode.E))
             {
                 hasPipe = true;
+                PipeInHand.SetActive(true);
                 gameObject.SetActive(false);
-                pipeInHand.SetActive(true);
             }
         }
     }

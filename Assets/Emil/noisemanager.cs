@@ -6,4 +6,8 @@ public class noisemanager : MonoBehaviour
 {
     public float noise;
     public float totalNoise;
+    
+    private void Update()
+    { 
+    }
 }

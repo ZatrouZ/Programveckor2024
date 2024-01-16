@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     PhotonView view;
     Rigidbody2D rb;
 
+    public Animator animator;
+
     [SerializeField]
     GameObject PauseMenuObject;
 

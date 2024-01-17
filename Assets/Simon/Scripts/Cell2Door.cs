@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class Cell2Door : MonoBehaviour
 {
@@ -11,14 +12,14 @@ public class Cell2Door : MonoBehaviour
     [SerializeField]
     GameObject BackroundWithoutHole;
     bool open;
+    PhotonView View;
 
     GameObject File;
     // Start is called before the first frame update
     void Start()
     {
-       Cell2Key = FindObjectOfType<Cell2Key>();
-        BackroundWithHole.SetActive(false);
-        File = GameObject.FindWithTag("File");
+        StartCoroutine(Starting());
+        View = GetComponent<PhotonView>();
     }
 
     // Update is called once per frame
@@ -28,9 +29,7 @@ public class Cell2Door : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.E))
             {
-                BackroundWithHole.SetActive(true);
-                File.SetActive(false);
-                BackroundWithoutHole.SetActive(false);
+                View.RPC("RPC2", RpcTarget.All);
             }
         }
     }
@@ -47,5 +46,26 @@ public class Cell2Door : MonoBehaviour
         {
             open = false;
         }
+    }
+
+    IEnumerator Starting() 
+    {
+        yield return new WaitForSeconds(1.5f);
+        Cell2Key = FindObjectOfType<Cell2Key>();
+        View.RPC("RPC1", RpcTarget.All);
+        File = GameObject.FindWithTag("File");
+    }
+
+    [PunRPC]
+    void RPC1() 
+    {
+        BackroundWithHole.SetActive(false);
+    }
+    [PunRPC]
+    void RPC2()
+    {
+        BackroundWithHole.SetActive(true);
+        File.SetActive(false);
+        BackroundWithoutHole.SetActive(false);
     }
 }

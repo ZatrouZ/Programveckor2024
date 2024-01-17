@@ -2,19 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Photon.Pun;
 
 public class door : MonoBehaviour
 {
     key key;
 
     GameObject KeyInHand;
-
+    PhotonView View;
 
     bool open;
     // Start is called before the first frame update
     void Start()
     {
         key = FindObjectOfType<key>();
+        View = GetComponent<PhotonView>();
     }
 
     // Update is called once per frame
@@ -25,7 +27,7 @@ public class door : MonoBehaviour
             KeyInHand = GameObject.FindWithTag("KeyInHand");
             if (Input.GetKey(KeyCode.E))
             {
-                KeyInHand.SetActive(false);
+                View.RPC("RPC1", RpcTarget.All);
                 SceneManager.LoadScene("Corridor 1(albin)", LoadSceneMode.Additive);
             }
         }
@@ -44,6 +46,12 @@ public class door : MonoBehaviour
         {
             open = false;
         }
+    }
+
+    [PunRPC]
+    void RPC1() 
+    {
+        KeyInHand.SetActive(false);
     }
 }
 

@@ -1,20 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class Cell2LooseTile : MonoBehaviour
 {
     [SerializeField]
     public GameObject TileMoved;
-
+    PhotonView View;
     bool pickup;
     public bool hasMovedTile;
     // Start is called before the first frame update
     void Start()
     {
-        TileMoved.SetActive(false);
-        pickup = false;
-        hasMovedTile = false;
+        StartCoroutine(Starting());
+        View = GetComponent<PhotonView>();
     }
 
     // Update is called once per frame
@@ -25,8 +25,7 @@ public class Cell2LooseTile : MonoBehaviour
             if (Input.GetKey(KeyCode.E))
             {
                 hasMovedTile = true;
-                gameObject.SetActive(false);
-                TileMoved.SetActive(true);
+                View.RPC("RPC1", RpcTarget.All);
             }
         }
     }
@@ -44,5 +43,25 @@ public class Cell2LooseTile : MonoBehaviour
         {
             pickup = false;
         }
+    }
+
+    IEnumerator Starting() 
+    {
+        yield return new WaitForSeconds(1.5f);
+        View.RPC("RPC2", RpcTarget.All);
+        pickup = false;
+        hasMovedTile = false;
+    }
+
+    [PunRPC]
+    void RPC1() 
+    {
+        gameObject.SetActive(false);
+        TileMoved.SetActive(true);
+    }
+    [PunRPC]
+    void RPC2()
+    {
+        TileMoved.SetActive(false);
     }
 }

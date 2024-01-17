@@ -1,13 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class key : MonoBehaviour
 {
     pipe pipe;
+    PhotonView View;
 
     [SerializeField]
     GameObject pipeOnGround;
+    [SerializeField]
+    GameObject EmptyKeyHook;
 
     GameObject KeyInHand;
 
@@ -18,12 +22,8 @@ public class key : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pipe = FindObjectOfType<pipe>();
-        KeyInHand = GameObject.FindWithTag("KeyInHand");
-        
-        KeyInHand.SetActive(false);
-        pipeOnGround.SetActive(false);
-        hasKey = false;
+        StartCoroutine(Starting());
+        View = GetComponent<PhotonView>();
     }
 
     // Update is called once per frame
@@ -31,14 +31,10 @@ public class key : MonoBehaviour
     {
         if (reach==true)
         {
-            PipeInHand = GameObject.FindWithTag("PipeInHand");
             if (Input.GetKey(KeyCode.E))
             {
-                PipeInHand.SetActive(false);
-                KeyInHand.SetActive(true);
-                pipeOnGround.SetActive(true);
+                View.RPC("RPC1", RpcTarget.All);
                 hasKey = true;
-                gameObject.SetActive(false);
             }
         }
     }
@@ -55,5 +51,38 @@ public class key : MonoBehaviour
         {
             reach = false;
         }
+    }
+
+    IEnumerator Starting() 
+    {
+        yield return new WaitForSeconds(1.5f);
+        pipe = FindObjectOfType<pipe>();
+        KeyInHand = GameObject.FindWithTag("KeyInHand");
+        View.RPC("RPC2", RpcTarget.All);
+        hasKey = false;
+    }
+
+    [PunRPC]
+    void RPC1() 
+    {
+        if (PipeInHand == null)
+        {
+            PipeInHand = GameObject.FindWithTag("PipeInHand");
+        }
+        PipeInHand.SetActive(false);
+        KeyInHand.SetActive(true);
+        pipeOnGround.SetActive(true);
+        gameObject.SetActive(false);
+        EmptyKeyHook.SetActive(true);
+    }
+    [PunRPC]
+    void RPC2()
+    {
+        if (KeyInHand == null)
+        {
+            KeyInHand = GameObject.FindWithTag("KeyInHand");
+        }
+        KeyInHand.SetActive(false);
+        pipeOnGround.SetActive(false);
     }
 }

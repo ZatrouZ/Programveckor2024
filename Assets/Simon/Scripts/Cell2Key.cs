@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class Cell2Key : MonoBehaviour
 {
     //detta script är en kopia av albins key scripts med några endringar
     Cell2LooseTile LT;
-
+    PhotonView View;
     GameObject File;
 
     bool reach;
@@ -14,10 +15,9 @@ public class Cell2Key : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        StartCoroutine(Starting());
         LT = FindObjectOfType<Cell2LooseTile>();
-        hasKey = false;
-        File = GameObject.FindWithTag("File");
-        File.SetActive(false);
+        View = GetComponent<PhotonView>();
     }
 
     // Update is called once per frame
@@ -27,11 +27,33 @@ public class Cell2Key : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.E))
             {
-                gameObject.SetActive(false);
-                File.SetActive(true);
+                View.RPC("RPC1", RpcTarget.All);
                 hasKey = true;
             }
         }
     }
    
+    IEnumerator Starting() 
+    {
+        yield return new WaitForSeconds(1.5f);
+        hasKey = false;
+        File = GameObject.FindWithTag("File");
+        View.RPC("RPC2", RpcTarget.All);
+    }
+
+    [PunRPC]
+    void RPC1() 
+    {
+        gameObject.SetActive(false);
+        File.SetActive(true);
+    }
+    [PunRPC]
+    void RPC2()
+    {
+        if (File == null)
+        {
+            File = GameObject.FindWithTag("File");
+        }
+        File.SetActive(false);
+    }
 }

@@ -1,20 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class pipe : MonoBehaviour
 {
-
+    PhotonView View;
     GameObject PipeInHand;
     bool pickup;
     public bool hasPipe;
     // Start is called before the first frame update
     void Start()
     {
-        PipeInHand = GameObject.FindWithTag("PipeInHand");
-        PipeInHand.SetActive(false);
-        pickup = false;
-        hasPipe = false;
+        StartCoroutine(StartIng());
+        View = GetComponent<PhotonView>();
     }
 
     // Update is called once per frame
@@ -24,9 +23,12 @@ public class pipe : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.E))
             {
+                if (PipeInHand == null)
+                {
+                    PipeInHand = GameObject.FindWithTag("PipeInHand");
+                }
                 hasPipe = true;
-                PipeInHand.SetActive(true);
-                gameObject.SetActive(false);
+                View.RPC("RPC1", RpcTarget.All);
             }
         }
     }
@@ -44,5 +46,29 @@ public class pipe : MonoBehaviour
         {
             pickup = false;
         }
+    }
+
+    IEnumerator StartIng()
+    {
+        yield return new WaitForSeconds(1.5f);
+        View.RPC("RPC2", RpcTarget.All);
+        pickup = false;
+        hasPipe = false;
+    }
+
+    [PunRPC]
+    void RPC1() 
+    {
+        PipeInHand.SetActive(true);
+        gameObject.SetActive(false);
+    }
+    [PunRPC]
+    void RPC2()
+    {
+        if (PipeInHand == null)
+        {
+            PipeInHand = GameObject.FindWithTag("PipeInHand");
+        }
+        PipeInHand.SetActive(false);
     }
 }

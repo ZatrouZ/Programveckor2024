@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class green_light : MonoBehaviour
 {
     control control;
     [SerializeField]
     GameObject green;
+
+    bool reach = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +23,27 @@ public class green_light : MonoBehaviour
         if (control.open==true)
         {
             green.SetActive(true);
+            if (reach == true)
+            {
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    SceneManager.LoadScene("-------", LoadSceneMode.Additive);
+                }
+            }
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            reach = true;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            reach = false;
         }
     }
 }

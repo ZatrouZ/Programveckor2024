@@ -52,6 +52,7 @@ public class CodeLock : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 LockUI.SetActive(true);
+                hasUIUP = true;
             }
         }
 

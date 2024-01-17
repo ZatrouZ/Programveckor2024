@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class hidingplace : MonoBehaviour
 {
-    [SerializeField]
     GameObject player;
     bool reach = false;
     public bool hiding = false;
@@ -17,7 +16,11 @@ public class hidingplace : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (hiding == true && Input.GetKeyDown(KeyCode.E))
+        if (player==null)
+        {
+            player = GameObject.FindWithTag("Player");
+        }
+        if (hiding == true && Input.GetKeyDown(KeyCode.Q))
         {
             print("stop hiding");
             hiding = false;
@@ -26,7 +29,7 @@ public class hidingplace : MonoBehaviour
         else if (reach == true)
         {
             print("reach");
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.Q))
             {
                 print("hinding");
                 hiding = true;

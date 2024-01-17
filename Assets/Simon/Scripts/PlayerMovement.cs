@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rb;
 
     public Animator animator;
+    float L1R2U3D4;
 
     [SerializeField]
     GameObject PauseMenuObject;
@@ -32,26 +33,26 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKey(KeyCode.W))
             {
                 rb.AddForce(new Vector3(0, speed));
-                animator.Play("RosaWalkUp");
-                //animator.SetBool("movingUp", Input.GetKey(KeyCode.W));
+              //  animator.Play("RosaWalkUp");
+                animator.SetBool("movingUp", Input.GetKey(KeyCode.W));
             }
             if (Input.GetKey(KeyCode.S))
             {
                 rb.AddForce(new Vector3(0, -speed));
-                 animator.Play("RosaWalkDown");
-               // animator.SetBool("movingDown", Input.GetKey(KeyCode.S));
+                 //animator.Play("RosaWalkDown");
+               animator.SetBool("movingDown", Input.GetKey(KeyCode.S));
             }
             if (Input.GetKey(KeyCode.A))
             {
                 rb.AddForce(new Vector3(-speed, 0));
-                animator.Play("RosaWalkLeft");
-               // animator.SetBool("movingLeft", Input.GetKey(KeyCode.A));
+               // animator.Play("RosaWalkLeft");
+                animator.SetBool("movingLeft", Input.GetKey(KeyCode.A));
             }
             if (Input.GetKey(KeyCode.D))
             {
                 rb.AddForce(new Vector3(speed, 0));
                 animator.Play("RosaWalkRight");
-               // animator.SetBool("movingRight", Input.GetKey(KeyCode.D));
+                animator.SetBool("movingRight", Input.GetKey(KeyCode.D));
             }
             
         }

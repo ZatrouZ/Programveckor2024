@@ -10,7 +10,6 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rb;
 
     public Animator animator;
-    float L1R2U3D4 = 1;
 
     [SerializeField]
     GameObject PauseMenuObject;

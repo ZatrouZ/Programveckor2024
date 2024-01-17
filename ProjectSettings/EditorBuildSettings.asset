@@ -18,15 +18,15 @@ EditorBuildSettings:
     path: Assets/Scenes/OfficialGameScenes/LockerRoom.unity
     guid: 7a4f79cd8d409254b99db359eaf1d93d
   - enabled: 1
-    path: Assets/Scenes/Corridor 2(albin).unity
+    path: Assets/Scenes/OfficialGameScenes/Corridor 2(albin).unity
     guid: b6f853dd42c30354c8bf076100043680
   - enabled: 1
-    path: Assets/Scenes/corridor 1(albin).unity
+    path: Assets/Scenes/OfficialGameScenes/corridor 1(albin).unity
     guid: 3cdea44deb4ba1146a986a4483db8a82
   - enabled: 1
-    path: Assets/Scenes/dokument rum.unity
+    path: Assets/Scenes/OfficialGameScenes/dokument rum.unity
     guid: 0a506ecd618b2024ba8c91b10306c5fd
   - enabled: 1
-    path: Assets/Scenes/knapp_pussel(albin).unity
+    path: Assets/Scenes/OfficialGameScenes/knapp_pussel(albin).unity
     guid: d2d59026c61d47d4b8a6c95eda272f2e
   m_configObjects: {}

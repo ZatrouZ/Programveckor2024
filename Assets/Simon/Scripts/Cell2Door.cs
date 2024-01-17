@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using UnityEngine.SceneManagement;
 
 public class Cell2Door : MonoBehaviour
 {
@@ -30,6 +31,7 @@ public class Cell2Door : MonoBehaviour
             if (Input.GetKey(KeyCode.E))
             {
                 View.RPC("RPC2", RpcTarget.All);
+                SceneManager.LoadScene("Corridor 2(albin)");
             }
         }
     }

@@ -28,7 +28,7 @@ public class door : MonoBehaviour
             if (Input.GetKey(KeyCode.E))
             {
                 View.RPC("RPC1", RpcTarget.All);
-                SceneManager.LoadScene("Corridor 1(albin)", LoadSceneMode.Additive);
+                SceneManager.LoadScene("corridor 1(albin)", LoadSceneMode.Additive);
             }
         }
     }

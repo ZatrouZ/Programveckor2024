@@ -44,8 +44,8 @@ public class Cell2Key : MonoBehaviour
     [PunRPC]
     void RPC1() 
     {
-        gameObject.SetActive(false);
         File.SetActive(true);
+        gameObject.SetActive(false);
     }
     [PunRPC]
     void RPC2()

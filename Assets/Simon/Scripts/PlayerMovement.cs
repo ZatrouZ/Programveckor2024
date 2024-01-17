@@ -75,12 +75,6 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetBool("movingRight", false);
             }
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            print("Entering Main Menu");
-            PauseMenuObject.SetActive(true);
-            
 
-        }
     }
 }

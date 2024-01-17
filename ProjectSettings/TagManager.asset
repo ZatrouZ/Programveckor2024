@@ -11,6 +11,7 @@ TagManager:
   - File
   - KeyInHand
   - PipeInHand
+  - LRK
   layers:
   - Default
   - TransparentFX

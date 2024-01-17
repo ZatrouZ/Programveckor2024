@@ -5,13 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/OfficialGameScenes/OnOpenBlackScreen(Simon).unity
-    guid: 855d41d9b4319954daafdacf7869e1c0
   - enabled: 1
     path: Assets/Scenes/OfficialGameScenes/Main Menu(Simon).unity
     guid: 9cacf740af227c54391c5c82a882eafc
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/OfficialGameScenes/NOT USED/NOTUSEDOptionsMenu.unity
     guid: f33e7ebec03601d4784a63d8bce93899
   - enabled: 1
@@ -20,13 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/OfficialGameScenes/StartingCells.unity
     guid: 63643bb6f2ae86f40a4fdf82f443e001
-  - enabled: 0
-    path: Assets/Scenes/cell 1(albin).unity
-    guid: d01999d4720302642898bb9a05b0f58c
-  - enabled: 0
-    path: Assets/Scenes/cell 2(Simon).unity
-    guid: fa1a0caf51d46d6429547b89522cda2b
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/OfficialGameScenes/LockerRoom.unity
+    guid: 7a4f79cd8d409254b99db359eaf1d93d
   m_configObjects: {}

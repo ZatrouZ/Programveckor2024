@@ -7,6 +7,7 @@ public class StartCellBlackScreen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameObject.SetActive(true);
         StartCoroutine(BlackScreen());
     }
 

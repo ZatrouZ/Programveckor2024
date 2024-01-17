@@ -8,36 +8,45 @@ public class CodeLock : MonoBehaviour
     [SerializeField]
     GameObject LockUI;
     [SerializeField]
-    GameObject Door;
-    [SerializeField]
-    GameObject WhenLockerOpen;
-    [SerializeField]
-    GameObject LockerDoor;
-    [SerializeField]
-    GameObject KeyInLocker;
-    [SerializeField]
+    GameObject StartBlackScreen;
     GameObject KeyInHand;
 
     bool InReach;
-    bool hasOpendLocker;
    public bool hasKey = false;
 
     string EnterdCode;
     public string rightCode = "110901";
 
-    SpriteRenderer SR;
+    GameObject pipe;
+    GameObject otherkey;
+    bool hasUIUP;
+
     // Start is called before the first frame update
     void Start()
     {
+        StartBlackScreen.SetActive(true);
         LockUI.SetActive(false);
-        WhenLockerOpen.SetActive(false);
-        SR = GetComponent<SpriteRenderer>();
-        KeyInHand.SetActive(false);
+        StartCoroutine(Starting());
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (KeyInHand == null)
+        {
+            KeyInHand = GameObject.FindWithTag("LRK");
+        }
+        
+        if (pipe == null)
+        {
+            pipe = GameObject.FindWithTag("PipeInHand");
+        }
+        
+        if (otherkey == null)
+        {
+            otherkey = GameObject.FindWithTag("KeyInHand");
+        }
+       
         if (InReach == true)
         {
             if (Input.GetKeyDown(KeyCode.E))
@@ -52,13 +61,12 @@ public class CodeLock : MonoBehaviour
             EnterdRightCode();
         }
 
-        if (hasOpendLocker == true && InReach == true)
+        if (hasUIUP == true)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
-                KeyInLocker.SetActive(false);
-                KeyInHand.SetActive(true);
-                hasKey = true;
+                LockUI.SetActive(false);
+                hasUIUP = false;
             }
         }
     }
@@ -87,9 +95,16 @@ public class CodeLock : MonoBehaviour
     void EnterdRightCode() 
     {
         LockUI.SetActive(false);
-        WhenLockerOpen.SetActive(true);
-        LockerDoor.SetActive(false);
-        SR.enabled = false;
-        hasOpendLocker = true;
+        hasKey = true;
+        KeyInHand.SetActive(true);
+    }
+
+    IEnumerator Starting() 
+    {
+        yield return new WaitForSeconds(1);
+        KeyInHand.SetActive(false);
+        pipe.SetActive(false);
+        otherkey.SetActive(false);
+        StartBlackScreen.SetActive(false);
     }
 }

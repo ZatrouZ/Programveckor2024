@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKey(KeyCode.D))
             {
                 rb.AddForce(new Vector3(speed, 0));
-                animator.Play("RosaWalkRight");
+               // animator.Play("RosaWalkRight");
                 animator.SetBool("movingRight", Input.GetKey(KeyCode.D));
             }
             

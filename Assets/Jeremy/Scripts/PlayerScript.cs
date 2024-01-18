@@ -7,20 +7,20 @@ using System;
 
 public class PlayerScript : MonoBehaviour
 {
-    public PhotonView photonView;
+    public PhotonView pv;
     public Text nameText;
 
         
 
     void Start()
     {
-        if (photonView.IsMine)
+        if (pv.IsMine)
         {
             nameText.text = PhotonNetwork.NickName;
         }
         else
         {
-            nameText.text = photonView.Owner.NickName;
+            nameText.text = pv.Owner.NickName;
         }
 
 

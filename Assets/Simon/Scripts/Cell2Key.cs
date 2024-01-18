@@ -9,6 +9,7 @@ public class Cell2Key : MonoBehaviour
     Cell2LooseTile LT;
     PhotonView View;
     GameObject File;
+    GameObject CodeLockKey;
 
     bool reach;
     public bool hasKey;
@@ -55,5 +56,11 @@ public class Cell2Key : MonoBehaviour
             File = GameObject.FindWithTag("File");
         }
         File.SetActive(false);
+        
+        if (CodeLockKey == null)
+        {
+            CodeLockKey = GameObject.FindWithTag("LRK");
+        }
+        CodeLockKey.SetActive(false);
     }
 }

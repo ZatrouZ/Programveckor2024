@@ -821,7 +821,7 @@ MonoBehaviour:
   timerText: {fileID: 1573240304}
   timerObj: {fileID: 1573240302}
   button: {fileID: 1964771567}
-  GameScene: 3
+  GameScene: 2
 --- !u!4 &1179687452
 Transform:
   m_ObjectHideFlags: 0

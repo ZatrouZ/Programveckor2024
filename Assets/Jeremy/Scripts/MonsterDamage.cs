@@ -15,7 +15,7 @@ public class MonsterDamage : MonoBehaviour
 
          
 
-            playerHealth.TakeDamage(damage);
+            playerHealth.TakeDamage(damage); //If this object collides with tag "player" the tag "player" will take damage.
         }
 
     }

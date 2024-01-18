@@ -10,14 +10,11 @@ public class Instantiate : MonoBehaviour
     public float yP1;
     public float yP2;
 
-    [SerializeField]
-    GameObject BlackScreen;
 
     // Start is called before the first frame update
     void Start()
     {
         Invoke("CreatePlayer", 0.5f);
-        BlackScreen.SetActive(true);
     }
 
     // Update is called once per frame

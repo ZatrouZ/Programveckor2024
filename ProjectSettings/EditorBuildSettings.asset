@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/OfficialGameScenes/Cutscene.unity
     guid: 5b8f45984eaa6c941a7ff1441a592f43
+  - enabled: 1
+    path: Assets/Scenes/OfficialGameScenes/sista rum(albin).unity
+    guid: 63d173e4b87a9074dbfc48725fc79be9
   m_configObjects: {}

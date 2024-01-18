@@ -10,7 +10,7 @@ public class CodeLock : MonoBehaviour
     GameObject KeyInHand;
 
     bool InReach;
-   public bool hasKey = false;
+   public bool hasCKey = false;
 
     string EnterdCode;
     public string rightCode = "110901";
@@ -55,7 +55,6 @@ public class CodeLock : MonoBehaviour
 
         if (EnterdCode == rightCode)
         {
-            print("Unlock");
             EnterdRightCode();
         }
 
@@ -93,7 +92,7 @@ public class CodeLock : MonoBehaviour
     void EnterdRightCode() 
     {
         LockUI.SetActive(false);
-        hasKey = true;
+        hasCKey = true;
         KeyInHand.SetActive(true);
     }
 

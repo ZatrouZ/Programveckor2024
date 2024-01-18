@@ -32,6 +32,16 @@ public class Cell2Key : MonoBehaviour
                 hasKey = true;
             }
         }
+
+        if (CodeLockKey == null)
+        {
+            CodeLockKey = GameObject.FindWithTag("LRK");
+        }
+        else
+        {
+            CodeLockKey.SetActive(false);
+        }
+        
     }
    
     IEnumerator Starting() 
@@ -56,11 +66,5 @@ public class Cell2Key : MonoBehaviour
             File = GameObject.FindWithTag("File");
         }
         File.SetActive(false);
-        
-        if (CodeLockKey == null)
-        {
-            CodeLockKey = GameObject.FindWithTag("LRK");
-        }
-        CodeLockKey.SetActive(false);
     }
 }

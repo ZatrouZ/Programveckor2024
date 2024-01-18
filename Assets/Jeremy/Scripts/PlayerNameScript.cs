@@ -9,13 +9,17 @@ public class PlayerNameScript : MonoBehaviour
     public InputField nameInput;
     public Button setNameButton;
 
-    public void OnNameChange(string value)
+    public void OnNameChange()
     {
-        if(value.Length > 3)
+        if(nameInput.text.Length > 2)
         {
             print("Can now type in Nickname");
             setNameButton.interactable = true;
 
+        }
+        else
+        {
+            setNameButton.interactable = false;
         }
     }
 

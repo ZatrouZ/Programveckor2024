@@ -257,8 +257,11 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 927993545405100568, guid: 29cb488227c49834aa6143b99c7eeb47, type: 2}
     value: {fileID: 381646168}
+  - key: {fileID: 636704088295679526, guid: 29cb488227c49834aa6143b99c7eeb47, type: 2}
+    value: {fileID: 381646172}
   m_ExposedReferences:
-    m_References: []
+    m_References:
+    - 6625605caa66b3241bde585f1469789b: {fileID: 951508057}
 --- !u!4 &279367614
 Transform:
   m_ObjectHideFlags: 0
@@ -354,8 +357,8 @@ Transform:
   m_GameObject: {fileID: 381646168}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalPosition: {x: 0, y: 2.76, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -385,7 +388,7 @@ Animator:
   m_GameObject: {fileID: 381646168}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 493f1dcb25c4526489691d963e0644b3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

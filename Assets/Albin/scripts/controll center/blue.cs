@@ -14,8 +14,8 @@ public class blue : MonoBehaviour
     {
         control = FindObjectOfType<control>();
         rend = GetComponent<Renderer>();
-        rend.material.color = Color.blue;
-        right = false;
+        rend.material.color = Color.blue;//gör knappen blå
+        right = false;//bool för när knappen är rätt färg
     }
 
     // Update is called once per frame

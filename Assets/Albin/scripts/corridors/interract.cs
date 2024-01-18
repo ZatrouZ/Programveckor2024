@@ -4,15 +4,30 @@ using UnityEngine;
 
 public class interract : MonoBehaviour
 {
-    // Start is called before the first frame update
+    bool reach = false;//bool för om du är inom räckholl för att öppna dörren
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")//om dörrens hitbox rör spelarens hitbox
+        {
+            reach = true;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")//om spelaren lämnar dörrens hitbox
+        {
+            reach = false;
+        }
     }
 }

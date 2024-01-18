@@ -1,19 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class vägg : MonoBehaviour
 {
-    [SerializeField]
-    GameObject wall;
-    [SerializeField]
-    GameObject brokenwall;
+    bomb bomb;
 
     bool reach = false;
     // Start is called before the first frame update
     void Start()
     {
-        brokenwall.SetActive(false);
+        bomb = FindObjectOfType<bomb>();
     }
 
     // Update is called once per frame
@@ -21,10 +19,14 @@ public class vägg : MonoBehaviour
     {
         if (reach == true)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (bomb.hasBomb==true)
             {
-                
-            }
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    print("wohoo");
+                    SceneManager.LoadScene("--------");
+                }
+            }  
         }
     }
 
@@ -41,10 +43,5 @@ public class vägg : MonoBehaviour
         {
             reach = false;
         }
-    }
-    void explosion()
-    {
-        wall.SetActive(false);
-        brokenwall.SetActive(true);
     }
 }

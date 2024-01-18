@@ -27,7 +27,7 @@ public class green_light : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    SceneManager.LoadScene("sista rum(albin)", LoadSceneMode.Additive);
+                    SceneManager.LoadScene("sista rum(albin)");
                 }
             }
         }

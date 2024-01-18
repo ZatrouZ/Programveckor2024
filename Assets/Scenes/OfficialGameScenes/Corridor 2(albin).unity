@@ -454,6 +454,7 @@ GameObject:
   m_Component:
   - component: {fileID: 318170130}
   - component: {fileID: 318170129}
+  - component: {fileID: 318170131}
   m_Layer: 0
   m_Name: PlayerSpawner
   m_TagString: Untagged
@@ -477,7 +478,6 @@ MonoBehaviour:
   xP2: -4.53
   yP1: 0
   yP2: -1.95
-  BlackScreen: {fileID: 2115985847}
 --- !u!4 &318170130
 Transform:
   m_ObjectHideFlags: 0
@@ -493,6 +493,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &318170131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318170128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 2
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &325123146
 GameObject:
   m_ObjectHideFlags: 0

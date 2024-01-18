@@ -2195,7 +2195,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 96cfa31922fd25c41b0dceb3cf45be7c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2232,6 +2232,7 @@ GameObject:
   m_Component:
   - component: {fileID: 722181249}
   - component: {fileID: 722181248}
+  - component: {fileID: 722181250}
   m_Layer: 0
   m_Name: PlayerSpawner
   m_TagString: Untagged
@@ -2255,7 +2256,6 @@ MonoBehaviour:
   xP2: 0
   yP1: -1.88
   yP2: 0
-  BlackScreen: {fileID: 1144761653}
 --- !u!4 &722181249
 Transform:
   m_ObjectHideFlags: 0
@@ -2271,6 +2271,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &722181250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722181247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 2
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &772344524
 GameObject:
   m_ObjectHideFlags: 0
@@ -3554,6 +3576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acc4ccfc123ae68438caa08c331ccc90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CodeLockX: {fileID: 2099522458}
 --- !u!61 &1323876195
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3888,7 +3911,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: dd330d7370e857946aff9fd77cc87d60, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5071,7 +5094,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LockUI: {fileID: 795330918}
-  hasKey: 0
+  hasCKey: 0
   rightCode: 110901
 --- !u!4 &2099522461
 Transform:

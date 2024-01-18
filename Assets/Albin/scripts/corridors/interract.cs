@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class interract : MonoBehaviour
 {
-    bool reach = false;//bool för om du är inom räckholl för att öppna dörren
+    protected bool reach = false;//bool för om du är inom räckholl för att öppna dörren
     void Start()
     {
 

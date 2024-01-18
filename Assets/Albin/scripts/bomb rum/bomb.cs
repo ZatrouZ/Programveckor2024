@@ -8,13 +8,12 @@ public class bomb : MonoBehaviour
     GameObject Bomb;
     bool reach = false;
     public bool hasBomb = false;
-    // Start is called before the first frame update
+
     void Start()
     {
         Bomb.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (reach == true)

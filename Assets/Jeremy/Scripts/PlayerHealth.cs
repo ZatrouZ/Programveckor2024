@@ -19,7 +19,7 @@ public class PlayerHealth : MonoBehaviour
         health -= damage;
         if (health < 0)
         {
-            Destroy(gameObject);
+            Destroy(gameObject); //if player health reaches 0, you are dead and this script will destroy the game object player.
         }
     }
 }

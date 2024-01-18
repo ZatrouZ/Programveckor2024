@@ -7,8 +7,6 @@ public class CodeLock : MonoBehaviour
 {
     [SerializeField]
     GameObject LockUI;
-    [SerializeField]
-    GameObject StartBlackScreen;
     GameObject KeyInHand;
 
     bool InReach;
@@ -24,7 +22,6 @@ public class CodeLock : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartBlackScreen.SetActive(true);
         LockUI.SetActive(false);
         StartCoroutine(Starting());
     }
@@ -106,6 +103,5 @@ public class CodeLock : MonoBehaviour
         KeyInHand.SetActive(false);
         pipe.SetActive(false);
         otherkey.SetActive(false);
-        StartBlackScreen.SetActive(false);
     }
 }

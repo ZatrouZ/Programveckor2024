@@ -19,7 +19,7 @@ public class doortodocuments : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                SceneManager.LoadScene("Dokument rum", LoadSceneMode.Additive);
+                SceneManager.LoadScene("Dokument rum");
             }
         }
     }

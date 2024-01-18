@@ -19,7 +19,7 @@ public class unlockeddoor : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                SceneManager.LoadScene("Code Lock Room(Simon)", LoadSceneMode.Additive);
+                SceneManager.LoadScene("LockerRoom");
             }
         }
     }

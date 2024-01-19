@@ -7,6 +7,8 @@ public class Instan3 : MonoBehaviour
 {
     public float xSpawnCo;
     public float ySpawnCo;
+
+    public GameObject Player1Singel2;
     // Start is called before the first frame update
     void Start()
     {

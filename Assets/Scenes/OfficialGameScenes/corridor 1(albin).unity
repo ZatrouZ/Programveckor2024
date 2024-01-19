@@ -169,6 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xSpawnCo: 4.818457
   ySpawnCo: -1.210869
+  Player1Singel2: {fileID: 7185139411781758864, guid: f9725c740563e784d83a60c356eb92a2, type: 3}
 --- !u!1001 &65102186
 PrefabInstance:
   m_ObjectHideFlags: 0

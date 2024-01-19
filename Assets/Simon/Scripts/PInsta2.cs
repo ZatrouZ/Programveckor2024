@@ -7,6 +7,8 @@ public class PInsta2 : MonoBehaviour
 {
    public float xSpawnCo;
     public float ySpawnCo;
+
+    public GameObject Player2Singel;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +24,7 @@ public class PInsta2 : MonoBehaviour
     void CreatePlayer()
     {
      
-            PhotonNetwork.Instantiate("Player2Singel", new Vector3(xSpawnCo, ySpawnCo, 0), Quaternion.identity);
+            Instantiate(Player2Singel, new Vector3(xSpawnCo, ySpawnCo, 0), Quaternion.identity);
     
 
     }

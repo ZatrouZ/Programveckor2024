@@ -1750,6 +1750,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xSpawnCo: -7.89222
   ySpawnCo: -1.764406
+  Player1Singel: {fileID: 7185139411781758864, guid: c6401ea0fdbd4d24fa85b342b2a7965e, type: 3}
 --- !u!4 &489134638
 Transform:
   m_ObjectHideFlags: 0

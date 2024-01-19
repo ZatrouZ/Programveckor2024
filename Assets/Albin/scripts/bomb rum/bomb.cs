@@ -8,6 +8,7 @@ public class bomb : MonoBehaviour
     GameObject Bomb;
     bool reach = false;
     public bool hasBomb = false;
+    public bool boom = false;
 
     void Start()
     {
@@ -16,6 +17,10 @@ public class bomb : MonoBehaviour
 
     void Update()
     {
+        if (boom == true)
+        {
+            Bomb.SetActive(false);
+        }
         if (reach == true)
         {
             if (Input.GetKeyDown(KeyCode.E))

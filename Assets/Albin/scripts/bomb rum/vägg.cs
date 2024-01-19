@@ -31,6 +31,7 @@ public class vägg : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     blackscreen.SetActive(true);
+                    bomb.boom = true;
                     timerstart = true;
                 }
             }  

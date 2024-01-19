@@ -60,6 +60,7 @@ public class control : MonoBehaviour
 
         if (red.right==true && green.right==true && yellow.right==true && blue.right==true && magenta.right==true)
         {
+            panel.SetActive(false);
             open = true;
             DTLR.DoorOpen = true;
             //svar: grön magenta gul grön röd

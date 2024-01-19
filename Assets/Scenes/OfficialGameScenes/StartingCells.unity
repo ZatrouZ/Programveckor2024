@@ -2965,6 +2965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 704e8d47573c3bf449267c479cf2ff91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KEYWITHSCRIPT: {fileID: 1796176193}
   hasKey: 0
 --- !u!114 &1488915932
 MonoBehaviour:

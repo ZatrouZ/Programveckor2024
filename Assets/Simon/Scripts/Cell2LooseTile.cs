@@ -22,14 +22,13 @@ public class Cell2LooseTile : MonoBehaviour
     {
         if (pickup == true)
         {
-            if (View.IsMine)
-            {
+          
                 if (Input.GetKey(KeyCode.E))
                 {
                     hasMovedTile = true;
                     View.RPC("RPC1", RpcTarget.All);
                 }
-            }
+            
             
         }
     }

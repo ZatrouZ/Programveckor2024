@@ -2042,7 +2042,7 @@ Transform:
   m_GameObject: {fileID: 1165983460}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.3415, y: -0.6769, z: 0.097176105}
+  m_LocalPosition: {x: -0.38, y: -0.6769, z: 0.097176105}
   m_LocalScale: {x: 3.37811, y: 3.474676, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3349,6 +3349,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2120205567}
   - component: {fileID: 2120205566}
+  - component: {fileID: 2120205568}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -3386,6 +3387,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2120205568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120205565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bc48509dc5df0c4f8067fe7483d204f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

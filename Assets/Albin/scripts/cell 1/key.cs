@@ -29,6 +29,11 @@ public class key : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (KeyInHand == null)
+        {
+            KeyInHand = GameObject.FindWithTag("KeyInHand");
+        }
+
         if (reach==true)
         {
             if (Input.GetKey(KeyCode.E))
@@ -78,10 +83,6 @@ public class key : MonoBehaviour
     [PunRPC]
     void RPC2()
     {
-        if (KeyInHand == null)
-        {
-            KeyInHand = GameObject.FindWithTag("KeyInHand");
-        }
         KeyInHand.SetActive(false);
         pipeOnGround.SetActive(false);
     }

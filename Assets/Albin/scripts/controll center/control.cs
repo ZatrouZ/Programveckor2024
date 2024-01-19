@@ -10,6 +10,8 @@ public class control : MonoBehaviour
     blue blue;
     magenta magenta;
 
+    DoorToLastRoom DTLR;
+
     [SerializeField]
     GameObject panel;
     [SerializeField]
@@ -22,6 +24,9 @@ public class control : MonoBehaviour
     GameObject Blue;
     [SerializeField]
     GameObject Magenta;
+
+    [SerializeField]
+    GameObject DTLROBJ;
 
     bool reach;
     public bool managing;
@@ -38,6 +43,7 @@ public class control : MonoBehaviour
         managing = false;
         open = false;
         panel.SetActive(false);
+        DTLR = DTLROBJ.GetComponent<DoorToLastRoom>();
     }
 
     // Update is called once per frame
@@ -55,6 +61,7 @@ public class control : MonoBehaviour
         if (red.right==true && green.right==true && yellow.right==true && blue.right==true && magenta.right==true)
         {
             open = true;
+            DTLR.DoorOpen = true;
             //svar: grön magenta gul grön röd
         }
     }

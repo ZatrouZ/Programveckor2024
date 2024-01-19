@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class DoorToLastRoom : MonoBehaviour
 {
-    bool DoorOpen;
+   public bool DoorOpen;
     bool open;
     public bool ConnectedOpen;
 
@@ -31,6 +31,7 @@ public class DoorToLastRoom : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 SceneManager.LoadScene("sista rum(albin)");
+                ConnectedOpen = true;
             }
         }
     }

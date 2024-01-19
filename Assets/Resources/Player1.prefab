@@ -540,7 +540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77b17f02e5f60b4499dcdefed6587fe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 5
   animator: {fileID: 7933557935782461483}
   PauseMenuObject: {fileID: 0}
 --- !u!114 &7859656606115595891

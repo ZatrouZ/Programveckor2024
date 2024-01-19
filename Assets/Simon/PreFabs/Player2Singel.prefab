@@ -275,14 +275,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1966715703846489425}
   - component: {fileID: 1945473042145878712}
-  - component: {fileID: 6868310113130898518}
+  - component: {fileID: -8107752060962013907}
   - component: {fileID: 1391730358597036627}
   - component: {fileID: 8743598424692988505}
   - component: {fileID: 209100752327269691}
   - component: {fileID: 372278513781925115}
   - component: {fileID: 5631836281238721465}
   - component: {fileID: 132232564615751852}
-  - component: {fileID: 3646938455539380968}
   m_Layer: 0
   m_Name: Player2Singel
   m_TagString: Player
@@ -359,16 +358,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6868310113130898518
+--- !u!114 &-8107752060962013907
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7406500945368600771}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77b17f02e5f60b4499dcdefed6587fe1, type: 3}
+  m_Script: {fileID: 11500000, guid: 495fdad0d5f22dd4ab7a3ee4a0e205c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
@@ -537,18 +536,3 @@ MonoBehaviour:
     InterpolateOption: 0
     InterpolateMoveTowardsSpeed: 1
     InterpolateLerpSpeed: 0
---- !u!114 &3646938455539380968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7406500945368600771}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b564693ab1efb6146b1cb3bc77e1f251, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
-  animator: {fileID: 0}
-  PauseMenuObject: {fileID: 0}

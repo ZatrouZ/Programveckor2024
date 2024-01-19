@@ -26,8 +26,7 @@ public class sINGELmOVMENT : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (View.IsMine)
-        {
+       
             if (Input.GetKey(KeyCode.W))
             {
                 rb.AddForce(new Vector3(0, speed));
@@ -72,7 +71,7 @@ public class sINGELmOVMENT : MonoBehaviour
             {
                 animator.SetBool("movingRight", false);
             }
-        }
+        
         
             
         

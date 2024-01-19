@@ -24,7 +24,7 @@ public class Instan3 : MonoBehaviour
     void CreatePlayer()
     {
 
-        PhotonNetwork.Instantiate("Player1Singel2", new Vector3(xSpawnCo, ySpawnCo, 0), Quaternion.identity);
+        Instantiate(Player1Singel2, new Vector3(xSpawnCo, ySpawnCo, 0), Quaternion.identity);
 
     }
 }

@@ -26,8 +26,8 @@ public class Movment2 : MonoBehaviour
     {
 
 
-        if (View.IsMine)
-        {
+        
+        
             if (Input.GetKey(KeyCode.W))
             {
                 rb.AddForce(new Vector3(0, speed));
@@ -72,7 +72,7 @@ public class Movment2 : MonoBehaviour
             {
                 animator.SetBool("movingRight", false);
             }
-        }
+        
 
 
     }

@@ -462,7 +462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77b17f02e5f60b4499dcdefed6587fe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 4
   animator: {fileID: 3661547449320450729}
   PauseMenuObject: {fileID: 0}
 --- !u!114 &2609966572994661026
@@ -640,7 +640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b564693ab1efb6146b1cb3bc77e1f251, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 4
   animator: {fileID: 0}
   PauseMenuObject: {fileID: 0}
 --- !u!1 &7488954503642072634

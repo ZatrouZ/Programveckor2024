@@ -12,6 +12,7 @@ TagManager:
   - KeyInHand
   - PipeInHand
   - LRK
+  - Bomb
   layers:
   - Default
   - TransparentFX

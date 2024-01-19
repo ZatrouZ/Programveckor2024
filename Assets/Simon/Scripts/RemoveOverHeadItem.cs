@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RemoveOverHeadItem : MonoBehaviour
 {
+    GameObject Bomb;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +15,13 @@ public class RemoveOverHeadItem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Bomb == null)
+        {
+            Bomb = GameObject.FindWithTag("Bomb");
+        }
+        else
+        {
+            Bomb.SetActive(false);
+        }
     }
 }

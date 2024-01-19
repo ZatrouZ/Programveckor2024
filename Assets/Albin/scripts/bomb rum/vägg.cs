@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class vägg : MonoBehaviour
 {
+
     bomb bomb;
 
     [SerializeField]
@@ -12,6 +13,7 @@ public class vägg : MonoBehaviour
 
     bool reach = false;
     float timer = 2;
+    bool timerstart = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,10 +30,14 @@ public class vägg : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    blackscreen.SetActive(true);//göra bool för att triga scene
-                    timer -= Time.deltaTime;
+                    blackscreen.SetActive(true);
+                    timerstart = true;
                 }
             }  
+        }
+        if (timerstart==true)
+        {
+            timer -= Time.deltaTime;
         }
         if (timer<0)
         {

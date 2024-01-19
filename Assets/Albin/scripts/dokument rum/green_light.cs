@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class green_light : MonoBehaviour
-{
-    control control;
+{ 
     [SerializeField]
     GameObject green;
 
@@ -13,16 +12,15 @@ public class green_light : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        green.SetActive(false);
-        control = FindObjectOfType<control>();
+        green.SetActive(true);
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (control.open==true)
-        {
-            green.SetActive(true);
+       
+            
             if (reach == true)
             {
                 if (Input.GetKeyDown(KeyCode.E))
@@ -30,7 +28,7 @@ public class green_light : MonoBehaviour
                     SceneManager.LoadScene("sista rum(albin)");
                 }
             }
-        }
+       
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

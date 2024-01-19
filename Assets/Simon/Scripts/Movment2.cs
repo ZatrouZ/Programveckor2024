@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
-public class sINGELmOVMENT : MonoBehaviour
+public class Movment2 : MonoBehaviour
 {
-[SerializeField]
+    [SerializeField]
     public float speed = 3;
     Rigidbody2D rb;
     PhotonView View;
-
     public Animator animator;
 
     [SerializeField]
@@ -25,6 +24,8 @@ public class sINGELmOVMENT : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
         if (View.IsMine)
         {
             if (Input.GetKey(KeyCode.W))
@@ -72,9 +73,7 @@ public class sINGELmOVMENT : MonoBehaviour
                 animator.SetBool("movingRight", false);
             }
         }
-        
-            
-        
+
 
     }
 }

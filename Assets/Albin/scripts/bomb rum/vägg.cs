@@ -28,7 +28,7 @@ public class vägg : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    blackscreen.SetActive(true);
+                    blackscreen.SetActive(true);//göra bool för att triga scene
                     timer -= Time.deltaTime;
                 }
             }  

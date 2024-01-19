@@ -59,7 +59,6 @@ public class Cell2Key : MonoBehaviour
     {
         yield return new WaitForSeconds(1.5f);
         hasKey = false;
-        File = GameObject.FindWithTag("File");
         View.RPC("RPC2", RpcTarget.All);
     }
 
@@ -72,7 +71,6 @@ public class Cell2Key : MonoBehaviour
     [PunRPC]
     void RPC2()
     {
-      
         File.SetActive(false);
     }
 }

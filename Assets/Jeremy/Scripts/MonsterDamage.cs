@@ -6,7 +6,7 @@ public class MonsterDamage : MonoBehaviour
 {
     public int damage;
     public PlayerHealth playerHealth;
-    public PlayerTestMovement playerMovement;
+    
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

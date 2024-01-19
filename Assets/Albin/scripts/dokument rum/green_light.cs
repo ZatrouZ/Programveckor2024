@@ -14,7 +14,7 @@ public class green_light : MonoBehaviour
     void Start()
     {
         green.SetActive(false);
-        control = GetComponent<control>();
+        control = FindObjectOfType<control>();
     }
 
     // Update is called once per frame

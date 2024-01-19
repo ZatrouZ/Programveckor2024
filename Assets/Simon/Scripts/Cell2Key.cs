@@ -11,13 +11,16 @@ public class Cell2Key : MonoBehaviour
     GameObject File;
     GameObject CodeLockKey;
 
+    [SerializeField]
+    GameObject KEYWITHSCRIPT;
+
     bool reach;
     public bool hasKey;
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(Starting());
-        LT = FindObjectOfType<Cell2LooseTile>();
+        LT = KEYWITHSCRIPT.GetComponent<Cell2LooseTile>();
         View = GetComponent<PhotonView>();
     }
 

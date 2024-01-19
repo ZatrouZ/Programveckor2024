@@ -29,11 +29,15 @@ public class Cell2Key : MonoBehaviour
     {
         if (LT.hasMovedTile == true)
         {
-            if (Input.GetKey(KeyCode.E))
+            if (View.IsMine)
             {
-                View.RPC("RPC1", RpcTarget.All);
-                hasKey = true;
+                if (Input.GetKey(KeyCode.E))
+                {
+                    View.RPC("RPC1", RpcTarget.All);
+                    hasKey = true;
+                }
             }
+           
         }
 
         if (CodeLockKey == null)

@@ -35,8 +35,8 @@ public class door : MonoBehaviour
             if (Input.GetKey(KeyCode.E))
             {
                 View.RPC("RPC1", RpcTarget.All);
-                //SceneManager.LoadScene("corridor 1(albin)");
-                PhotonNetwork.LoadLevel(5);
+                SceneManager.LoadScene("corridor 1(albin)");
+                //PhotonNetwork.LoadLevel(5);
             }
         }
     }

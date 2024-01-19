@@ -5444,7 +5444,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LockUI: {fileID: 795330918}
   hasCKey: 0
-  rightCode: 110901
+  rightCode: 570509
 --- !u!4 &2099522461
 Transform:
   m_ObjectHideFlags: 0

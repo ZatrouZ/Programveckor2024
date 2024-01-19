@@ -282,6 +282,7 @@ GameObject:
   - component: {fileID: 372278513781925115}
   - component: {fileID: 5631836281238721465}
   - component: {fileID: 132232564615751852}
+  - component: {fileID: 3646938455539380968}
   m_Layer: 0
   m_Name: Player2Singel
   m_TagString: Player
@@ -365,7 +366,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7406500945368600771}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 77b17f02e5f60b4499dcdefed6587fe1, type: 3}
   m_Name: 
@@ -536,3 +537,18 @@ MonoBehaviour:
     InterpolateOption: 0
     InterpolateMoveTowardsSpeed: 1
     InterpolateLerpSpeed: 0
+--- !u!114 &3646938455539380968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7406500945368600771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b564693ab1efb6146b1cb3bc77e1f251, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  animator: {fileID: 0}
+  PauseMenuObject: {fileID: 0}

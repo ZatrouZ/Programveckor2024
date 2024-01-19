@@ -7,11 +7,16 @@ public class vägg : MonoBehaviour
 {
     bomb bomb;
 
+    [SerializeField]
+    GameObject blackscreen;
+
     bool reach = false;
+    float timer = 2;
     // Start is called before the first frame update
     void Start()
     {
         bomb = FindObjectOfType<bomb>();
+        blackscreen.SetActive(false);
     }
 
     // Update is called once per frame
@@ -23,12 +28,17 @@ public class vägg : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    print("wohoo");
-                    SceneManager.LoadScene("slut cutscene");
+                    blackscreen.SetActive(true);
+                    timer -= Time.deltaTime;
                 }
             }  
         }
+        if (timer<0)
+        {
+            SceneManager.LoadScene("slut cutscene");
+        }
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

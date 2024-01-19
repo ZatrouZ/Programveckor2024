@@ -29,9 +29,12 @@ public class door : MonoBehaviour
             Player1 = GameObject.FindWithTag("Player");
         }
 
-        if (open == true)
+        if (KeyInHand == null)
         {
             KeyInHand = GameObject.FindWithTag("KeyInHand");
+        }
+        if (open == true)
+        {
             if (Input.GetKey(KeyCode.E))
             {
                 View.RPC("RPC1", RpcTarget.All);

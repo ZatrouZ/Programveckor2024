@@ -26,6 +26,10 @@ public class Cell2Door : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (File == null)
+        {
+            File = GameObject.FindWithTag("File");
+        }
         if (open == true)
         {
             if (Input.GetKey(KeyCode.E))
@@ -55,7 +59,6 @@ public class Cell2Door : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         Cell2Key = FindObjectOfType<Cell2Key>();
         View.RPC("RPC1", RpcTarget.All);
-        File = GameObject.FindWithTag("File");
     }
 
     [PunRPC]

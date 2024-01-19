@@ -62,7 +62,6 @@ public class key : MonoBehaviour
     {
         yield return new WaitForSeconds(1.5f);
         pipe = FindObjectOfType<pipe>();
-        KeyInHand = GameObject.FindWithTag("KeyInHand");
         View.RPC("RPC2", RpcTarget.All);
         hasKey = false;
     }

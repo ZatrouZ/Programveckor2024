@@ -48,7 +48,11 @@ public class Cell2Key : MonoBehaviour
         {
             CodeLockKey.SetActive(false);
         }
-        
+
+        if (File == null)
+        {
+            File = GameObject.FindWithTag("File");
+        }
     }
    
     IEnumerator Starting() 
@@ -68,10 +72,7 @@ public class Cell2Key : MonoBehaviour
     [PunRPC]
     void RPC2()
     {
-        if (File == null)
-        {
-            File = GameObject.FindWithTag("File");
-        }
+      
         File.SetActive(false);
     }
 }

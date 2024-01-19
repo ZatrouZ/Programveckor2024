@@ -100,7 +100,7 @@ public class CodeLock : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         KeyInHand.SetActive(false);
-        pipe.SetActive(false);
-        otherkey.SetActive(false);
+        //pipe.SetActive(false);
+        //otherkey.SetActive(false);
     }
 }

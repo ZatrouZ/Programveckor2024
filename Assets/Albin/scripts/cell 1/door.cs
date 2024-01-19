@@ -10,7 +10,7 @@ public class door : MonoBehaviour
 
     GameObject KeyInHand;
     PhotonView View;
-    GameObject Player1;
+   
 
     bool open;
     // Start is called before the first frame update
@@ -24,10 +24,7 @@ public class door : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Player1 == null)
-        {
-            Player1 = GameObject.FindWithTag("Player");
-        }
+        
 
         if (KeyInHand == null)
         {

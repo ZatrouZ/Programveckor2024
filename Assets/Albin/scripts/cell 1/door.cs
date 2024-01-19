@@ -60,7 +60,7 @@ public class door : MonoBehaviour
     void RPC1() 
     {
         KeyInHand.SetActive(false);
-        Player1.SetActive(false);
+       
     }
 }
 

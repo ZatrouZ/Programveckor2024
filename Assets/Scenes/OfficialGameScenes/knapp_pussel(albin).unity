@@ -1298,7 +1298,7 @@ MonoBehaviour:
   Yellow: {fileID: 226171362}
   Blue: {fileID: 1124652201}
   Magenta: {fileID: 1504493237}
-  DTLROBJ: {fileID: 0}
+  DTLROBJ: {fileID: 321387683}
   managing: 0
   open: 0
 --- !u!1 &964977996

@@ -123,6 +123,52 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &6613002
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6613004}
+  - component: {fileID: 6613005}
+  m_Layer: 0
+  m_Name: Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6613004
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6613002}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.14746174, y: 0.18186945, z: -9.989333}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6613005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6613002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ee0b3fecfd3baa4d9e550d5f65d8c1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xSpawnCo: 4.818457
+  ySpawnCo: -1.210869
 --- !u!1001 &65102186
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -186,6 +232,10 @@ PrefabInstance:
     - target: {fileID: 7185139411781758864, guid: c6401ea0fdbd4d24fa85b342b2a7965e, type: 3}
       propertyPath: m_Name
       value: Player1Singel
+      objectReference: {fileID: 0}
+    - target: {fileID: 7185139411781758864, guid: c6401ea0fdbd4d24fa85b342b2a7965e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1537,7 +1587,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1687111028
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2139,3 +2189,4 @@ SceneRoots:
   - {fileID: 1507676135}
   - {fileID: 65102186}
   - {fileID: 1035967896}
+  - {fileID: 6613004}

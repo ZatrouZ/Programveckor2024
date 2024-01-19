@@ -24,7 +24,7 @@ public class vägg : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     print("wohoo");
-                    SceneManager.LoadScene("--------");
+                    SceneManager.LoadScene("slut cutscene");
                 }
             }  
         }

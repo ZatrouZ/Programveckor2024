@@ -3,12 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class FootstepsScript : MonoBehaviour
 {
-  /*  public AudioSource audioSource;
-    public AudioClip[] audioClipArray;
-    AudioClip lastClip;
+        public AudioSource audioSource;
+        public AudioClip[] audioClipArray;
+        AudioClip lastClip;
 
     void Start()
     {
@@ -27,5 +28,5 @@ public class FootstepsScript : MonoBehaviour
         }
         lastClip = newClip;
         return newClip;
-    }*/
+    }
 }

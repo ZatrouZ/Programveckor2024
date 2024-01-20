@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bc730b2c90bd9234cae1dc3d150d6806
+guid: 6cb6f69bb0713c140965a2a6fd0c338c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -175,13 +175,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: robohwalkdown-Sheet_0
+      name: minainteractleft-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 64
-        height: 80
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,20 +189,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03f684be1780b0843996d2d1b4b9c68b
-      internalID: 1299736269
+      spriteID: 6bfca0c85d55d65478b27f68f87bd42e
+      internalID: 183348551
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robohwalkdown-Sheet_1
+      name: minainteractleft-Sheet_1
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 64
-        height: 80
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,20 +210,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ae2d16d8ca1d3d42bfbb15f997735d1
-      internalID: 1521530539
+      spriteID: e7993ddce836d72448aa7fcbc53e7491
+      internalID: 201892480
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robohwalkdown-Sheet_2
+      name: minainteractleft-Sheet_2
       rect:
         serializedVersion: 2
         x: 128
         y: 0
         width: 64
-        height: 80
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,20 +231,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e91bc4d24a9f36f4ab981005f27538de
-      internalID: -311084369
+      spriteID: b544e0721b41a57449246fa4948369d6
+      internalID: 1939909139
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robohwalkdown-Sheet_3
+      name: minainteractleft-Sheet_3
       rect:
         serializedVersion: 2
         x: 192
         y: 0
         width: 64
-        height: 80
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,20 +252,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13a65ce0926b0454288254750ea00430
-      internalID: -573790866
+      spriteID: 795310a5b7720df4b9155edc4edd1378
+      internalID: -1184333461
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robohwalkdown-Sheet_4
+      name: minainteractleft-Sheet_4
       rect:
         serializedVersion: 2
         x: 256
         y: 0
         width: 64
-        height: 80
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -273,20 +273,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f9c06fda39f91b42a23767460e03d13
-      internalID: 1687001211
+      spriteID: 9eb61dbef8aef2f4db9c7bf35a16e81b
+      internalID: 745619910
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robohwalkdown-Sheet_5
+      name: minainteractleft-Sheet_5
       rect:
         serializedVersion: 2
         x: 320
         y: 0
         width: 64
-        height: 80
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,20 +294,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e791471d3fa6964186cca6d05c5ffeb
-      internalID: 1046940640
+      spriteID: d96d96b58f691cb448ff2b652b2cf33b
+      internalID: -498629945
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robohwalkdown-Sheet_6
+      name: minainteractleft-Sheet_6
       rect:
         serializedVersion: 2
         x: 384
         y: 0
         width: 64
-        height: 80
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,20 +315,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 318299473299af04089a1f479732615d
-      internalID: 902433165
+      spriteID: 5278e25ce3d80ba45b9bad3d065dda80
+      internalID: -1494514482
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robohwalkdown-Sheet_7
+      name: minainteractleft-Sheet_7
       rect:
         serializedVersion: 2
         x: 448
         y: 0
         width: 64
-        height: 80
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -336,20 +336,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66fe1a209b16e0347986088fee5b531f
-      internalID: -1208866718
+      spriteID: 7d253aa84a1968345a385f0ab3d42efa
+      internalID: 153170005
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robohwalkdown-Sheet_8
+      name: minainteractleft-Sheet_8
       rect:
         serializedVersion: 2
         x: 512
         y: 0
         width: 64
-        height: 80
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -357,20 +357,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa9fdcdbf71f4fa479f89bd097f9f245
-      internalID: 1291081775
+      spriteID: babb6acd5c752104f803a2fb179cb5a0
+      internalID: 769891192
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robohwalkdown-Sheet_9
+      name: minainteractleft-Sheet_9
       rect:
         serializedVersion: 2
         x: 576
         y: 0
         width: 64
-        height: 80
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -378,20 +378,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f2abfbe2ae9eb04bb841f6c41d8c131
-      internalID: -790147134
+      spriteID: a19ec1a1464ab67429da2deffa1f2d17
+      internalID: 1935361171
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robohwalkdown-Sheet_10
+      name: minainteractleft-Sheet_10
       rect:
         serializedVersion: 2
         x: 640
         y: 0
         width: 64
-        height: 80
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -399,20 +399,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3948512f298381744a26c71cc0f73050
-      internalID: -1595670579
+      spriteID: cadd9067c93244c4cb03997219fd0040
+      internalID: -510982147
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robohwalkdown-Sheet_11
+      name: minainteractleft-Sheet_11
       rect:
         serializedVersion: 2
         x: 704
         y: 0
         width: 64
-        height: 80
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -420,8 +420,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83dc25da4017b6d4c8c364bf1d16150c
-      internalID: 975561457
+      spriteID: d4ce19e2041086341b3ea7369c8c6e70
+      internalID: 1860423965
       vertices: []
       indices: 
       edges: []
@@ -437,18 +437,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      robohwalkdown-Sheet_0: 1299736269
-      robohwalkdown-Sheet_1: 1521530539
-      robohwalkdown-Sheet_10: -1595670579
-      robohwalkdown-Sheet_11: 975561457
-      robohwalkdown-Sheet_2: -311084369
-      robohwalkdown-Sheet_3: -573790866
-      robohwalkdown-Sheet_4: 1687001211
-      robohwalkdown-Sheet_5: 1046940640
-      robohwalkdown-Sheet_6: 902433165
-      robohwalkdown-Sheet_7: -1208866718
-      robohwalkdown-Sheet_8: 1291081775
-      robohwalkdown-Sheet_9: -790147134
+      minainteractleft-Sheet_0: 183348551
+      minainteractleft-Sheet_1: 201892480
+      minainteractleft-Sheet_10: -510982147
+      minainteractleft-Sheet_11: 1860423965
+      minainteractleft-Sheet_2: 1939909139
+      minainteractleft-Sheet_3: -1184333461
+      minainteractleft-Sheet_4: 745619910
+      minainteractleft-Sheet_5: -498629945
+      minainteractleft-Sheet_6: -1494514482
+      minainteractleft-Sheet_7: 153170005
+      minainteractleft-Sheet_8: 769891192
+      minainteractleft-Sheet_9: 1935361171
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -31,7 +31,7 @@ public class door : MonoBehaviour
         {
             KeyInHand = GameObject.FindWithTag("KeyInHand");
         }
-        if (reach == true && KeyInHand == true)
+        if (reach == true && KeyInHand == true && Input.GetKey(KeyCode.E))
         {
             open = true;
         }
@@ -44,8 +44,8 @@ public class door : MonoBehaviour
             if (Input.GetKey(KeyCode.E))
             {
                 View.RPC("RPC1", RpcTarget.All);
-                //SceneManager.LoadScene("corridor 1(albin)");
-                PhotonNetwork.LoadLevel(5);
+                SceneManager.LoadScene("corridor 1(albin)");
+                //PhotonNetwork.LoadLevel(5);
             }
         }
     }

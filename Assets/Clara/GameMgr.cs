@@ -10,6 +10,7 @@ public class GameMgr : MonoBehaviour
     public int maxMessage = 25;
 
    public GameObject chatPanel, textObject;
+    public InputField chatBox;
 
     [SerializeField]
     List<Message> messageList = new List<Message>();
@@ -24,8 +25,11 @@ public class GameMgr : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Return))
+        {
             SendMessageToChat("You pressed the return button");
-        Debug.Log("Return");
+            Debug.Log("Return");
+        }
+          
     }
 
     public void SendMessageToChat(string text)

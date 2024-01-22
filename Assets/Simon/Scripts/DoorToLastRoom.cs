@@ -30,6 +30,7 @@ public class DoorToLastRoom : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
+                PhotonNetwork.AutomaticallySyncScene = true;
                 SceneManager.LoadScene("sista rum(albin)");
                 ConnectedOpen = true;
             }

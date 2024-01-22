@@ -18,14 +18,14 @@ public class interract : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")//om dörrens hitbox rör spelarens hitbox
+        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Player2")//om dörrens hitbox rör spelarens hitbox
         {
             reach = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")//om spelaren lämnar dörrens hitbox
+        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Player2")//om spelaren lämnar dörrens hitbox
         {
             reach = false;
         }

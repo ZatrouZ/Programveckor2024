@@ -20,7 +20,6 @@ public class key : MonoBehaviour
 
     GameObject PipeInHand;
 
-    bool exe = true;
     bool reach;
     public bool hasKey;
     // Start is called before the first frame update

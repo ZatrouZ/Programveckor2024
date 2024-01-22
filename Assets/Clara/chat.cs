@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class chat : MonoBehaviour
 {
+
+
     /*[SerializeField] private GameObject chatUI = null;
     [SerializeField] private TMP_Text chatText = null;
     [SerializeField] private TMP_InputField inputField = null;

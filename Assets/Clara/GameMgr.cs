@@ -10,7 +10,7 @@ public class GameMgr : MonoBehaviour
     public int maxMessage = 25;
 
    public GameObject chatPanel, textObject;
-    public InputField chatBox;
+    public TMP_InputField chatBox;
 
     [SerializeField]
     List<Message> messageList = new List<Message>();
@@ -24,10 +24,22 @@ public class GameMgr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
+        if(chatBox.text != "")
         {
-            SendMessageToChat("You pressed the return button");
-            Debug.Log("Return");
+            if(Input.GetKeyDown(KeyCode.Return))
+            {
+                SendMessageToChat(chatBox.text);
+                chatBox.text = "";
+            }
+        }
+
+        if (!chatBox.isFocused)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                SendMessageToChat("You pressed the space bar");
+                Debug.Log("Return");
+            }
         }
           
     }

@@ -23,12 +23,6 @@ public class door : MonoBehaviour
         key = FindObjectOfType<key>();
         View = GetComponent<PhotonView>();
         PhotonNetwork.AutomaticallySyncScene = false;
-        player = GameObject.FindGameObjectWithTag("Player2");
-        PlayerView = player.GetComponent<PhotonView>();
-        if (PlayerView.IsMine == true)
-        {
-            this.enabled = false;
-        }
     }
 
     // Update is called once per frame
@@ -72,6 +66,17 @@ public class door : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             reach = false;
+        }
+    }
+
+    IEnumerator Starting()
+    {
+        yield return new WaitForSeconds(1.5f);
+        player = GameObject.FindGameObjectWithTag("Player2");
+        PlayerView = player.GetComponent<PhotonView>();
+        if (PlayerView.IsMine == true)
+        {
+            this.enabled = false;
         }
     }
 

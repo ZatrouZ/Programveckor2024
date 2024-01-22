@@ -17,12 +17,7 @@ public class Cell2LooseTile : MonoBehaviour
     {
         StartCoroutine(Starting());
         View = GetComponent<PhotonView>();
-        player = GameObject.FindGameObjectWithTag("Player");
-        PlayerView = player.GetComponent<PhotonView>();
-        if (PlayerView.IsMine == true)
-        {
-            this.enabled = false;
-        }
+        
     }
 
     // Update is called once per frame
@@ -62,6 +57,12 @@ public class Cell2LooseTile : MonoBehaviour
         View.RPC("RPC2", RpcTarget.All);
         pickup = false;
         hasMovedTile = false;
+        player = GameObject.FindGameObjectWithTag("Player");
+        PlayerView = player.GetComponent<PhotonView>();
+        if (PlayerView.IsMine == true)
+        {
+            this.enabled = false;
+        }
     }
 
     [PunRPC]

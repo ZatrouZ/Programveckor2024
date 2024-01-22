@@ -23,12 +23,7 @@ public class Cell2Door : MonoBehaviour
     {
         StartCoroutine(Starting());
         View = GetComponent<PhotonView>();
-        player = GameObject.FindGameObjectWithTag("Player");
-        PlayerView = player.GetComponent<PhotonView>();
-        if (PlayerView.IsMine == true)
-        {
-            this.enabled = false;
-        }
+     
     }
 
     // Update is called once per frame
@@ -67,6 +62,12 @@ public class Cell2Door : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         Cell2Key = FindObjectOfType<Cell2Key>();
         View.RPC("RPC1", RpcTarget.All);
+        player = GameObject.FindGameObjectWithTag("Player");
+        PlayerView = player.GetComponent<PhotonView>();
+        if (PlayerView.IsMine == true)
+        {
+            this.enabled = false;
+        }
     }
 
     [PunRPC]

@@ -24,12 +24,7 @@ public class Cell2Key : MonoBehaviour
         StartCoroutine(Starting());
         LT = KEYWITHSCRIPT.GetComponent<Cell2LooseTile>();
         View = GetComponent<PhotonView>();
-        player = GameObject.FindGameObjectWithTag("Player");
-        PlayerView = player.GetComponent<PhotonView>();
-        if (PlayerView.IsMine == true)
-        {
-            this.enabled = false;
-        }
+      
     }
 
     // Update is called once per frame
@@ -68,6 +63,12 @@ public class Cell2Key : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         hasKey = false;
         View.RPC("RPC2", RpcTarget.All);
+        player = GameObject.FindGameObjectWithTag("Player");
+        PlayerView = player.GetComponent<PhotonView>();
+        if (PlayerView.IsMine == true)
+        {
+            this.enabled = false;
+        }
     }
 
     [PunRPC]

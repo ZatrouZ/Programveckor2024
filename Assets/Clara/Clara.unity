@@ -1177,7 +1177,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1148029386}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1913,6 +1913,8 @@ MonoBehaviour:
   chatPanel: {fileID: 1506010417}
   textObject: {fileID: 1972781608315087757, guid: c66de70a42c5e2d46b6d5fb81610acfd, type: 3}
   chatBox: {fileID: 331054392}
+  playerMessage: {r: 1, g: 1, b: 1, a: 0}
+  info: {r: 0.24688497, g: 0.5377358, b: 0.29036236, a: 0}
   messageList: []
 --- !u!4 &959155303
 Transform:

@@ -1173,7 +1173,7 @@ MonoBehaviour:
   Group: 0
   prefixField: -1
   Synchronization: 3
-  OwnershipTransfer: 0
+  OwnershipTransfer: 1
   observableSearch: 2
   ObservedComponents: []
   sceneViewId: 5
@@ -3922,6 +3922,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 005c6b965a8801a4ba30f68c56381ded, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  open: 0
+  reach: 0
+  timer: 0.5
 --- !u!61 &1938409980
 BoxCollider2D:
   m_ObjectHideFlags: 0

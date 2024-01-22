@@ -10,7 +10,9 @@ public class door : MonoBehaviour
 
     GameObject KeyInHand;
     PhotonView View;
-   
+    PhotonView PlayerView;
+    GameObject player;
+
 
     public bool open;
     public bool reach;
@@ -21,6 +23,12 @@ public class door : MonoBehaviour
         key = FindObjectOfType<key>();
         View = GetComponent<PhotonView>();
         PhotonNetwork.AutomaticallySyncScene = false;
+        player = GameObject.FindGameObjectWithTag("Player2");
+        PlayerView = player.GetComponent<PhotonView>();
+        if (PlayerView.IsMine == true)
+        {
+            this.enabled = false;
+        }
     }
 
     // Update is called once per frame

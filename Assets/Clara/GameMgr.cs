@@ -12,6 +12,8 @@ public class GameMgr : MonoBehaviour
    public GameObject chatPanel, textObject;
     public TMP_InputField chatBox;
 
+    public Color playerMessage, info;
+
     [SerializeField]
     List<Message> messageList = new List<Message>();
 
@@ -28,8 +30,15 @@ public class GameMgr : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.Return))
             {
-                SendMessageToChat(chatBox.text);
+                SendMessageToChat(chatBox.text, Message.MessageType.playerMessage);
                 chatBox.text = "";
+            }
+        }
+        else
+        {
+            if(!chatBox.isFocused && Input.GetKeyDown(KeyCode.Return))
+            {
+                chatBox.ActivateInputField();
             }
         }
 
@@ -37,14 +46,14 @@ public class GameMgr : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                SendMessageToChat("You pressed the space bar");
-                Debug.Log("Return");
+                SendMessageToChat("You pressed the space bar", Message.MessageType.info);
+                Debug.Log("Space");
             }
         }
           
     }
 
-    public void SendMessageToChat(string text)
+    public void SendMessageToChat(string text, Message.MessageType messageType)
     {
 
         if (messageList.Count >= maxMessage)
@@ -59,11 +68,26 @@ public class GameMgr : MonoBehaviour
 
         GameObject newText = Instantiate(textObject, chatPanel.transform);
 
-        newMessage.textObject = newText.GetComponent<Text>();
+        newMessage.textObject = newText.GetComponent<TextMeshPro>();
 
         newMessage.textObject.text = newMessage.text;
+        newMessage.textObject.color = MessageTypeColor(messageType);
 
         messageList.Add(newMessage);
+    }
+
+    Color MessageTypeColor(Message.MessageType messageType)
+    {
+        Color color = info;
+
+        switch (messageType)
+        {
+            case Message.MessageType.playerMessage:
+                color = playerMessage;
+                break;
+        }
+
+        return color;
     }
 }
 
@@ -71,5 +95,12 @@ public class GameMgr : MonoBehaviour
 public class Message
 {
     public string text;
-    public Text textObject;
+    public TextMeshPro textObject;
+    public MessageType messageType;
+
+    public enum MessageType
+    {
+        playerMessage,
+        info
+    }
 }

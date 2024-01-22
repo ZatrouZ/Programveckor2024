@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class control : MonoBehaviour
 {
+    AudioSource AudioSource;
+
     red red;
     green green;
     yellow yellow;
@@ -44,11 +46,16 @@ public class control : MonoBehaviour
         open = false;
         panel.SetActive(false);
         DTLR = DTLROBJ.GetComponent<DoorToLastRoom>();
+        AudioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(KeyCode.Alpha1) || Input.GetKey(KeyCode.Alpha2) || Input.GetKey(KeyCode.Alpha3) || Input.GetKey(KeyCode.Alpha4) || Input.GetKey(KeyCode.Alpha5))
+        {
+            AudioSource.Play();
+        }
         if (reach == true)
         {
             if (Input.GetKey(KeyCode.E))

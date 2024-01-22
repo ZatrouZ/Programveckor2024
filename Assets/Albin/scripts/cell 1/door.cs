@@ -13,6 +13,7 @@ public class door : MonoBehaviour
    
 
     bool open;
+    bool reach;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +31,14 @@ public class door : MonoBehaviour
         {
             KeyInHand = GameObject.FindWithTag("KeyInHand");
         }
+        if (reach == true && KeyInHand == true)
+        {
+            open = true;
+        }
+        else
+        {
+            open = false;
+        }
         if (open == true)
         {
             if (Input.GetKey(KeyCode.E))
@@ -42,9 +51,9 @@ public class door : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player" && key.hasKey == true)
+        if (collision.gameObject.tag == "Player")
         {
-            open = true;
+            reach = true;
             print("canOpen");
         }
     }
@@ -52,7 +61,7 @@ public class door : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            open = false;
+            reach = false;
         }
     }
 

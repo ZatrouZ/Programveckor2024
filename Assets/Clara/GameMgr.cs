@@ -71,8 +71,23 @@ public class GameMgr : MonoBehaviour
         newMessage.textObject = newText.GetComponent<TextMeshPro>();
 
         newMessage.textObject.text = newMessage.text;
+        newMessage.textObject.color = MessageTypeColor(messageType);
 
         messageList.Add(newMessage);
+    }
+
+    Color MessageTypeColor(Message.MessageType messageType)
+    {
+        Color color = info;
+
+        switch (messageType)
+        {
+            case Message.MessageType.playerMessage:
+                color = playerMessage;
+                break;
+        }
+
+        return color;
     }
 }
 

@@ -9,11 +9,19 @@ public class pipe : MonoBehaviour
     GameObject PipeInHand;
     bool pickup;
     public bool hasPipe;
+    PhotonView PlayerView;
+    GameObject player;
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(StartIng());
         View = GetComponent<PhotonView>();
+        player = GameObject.FindGameObjectWithTag("Player2");
+        PlayerView = player.GetComponent<PhotonView>();
+        if (PlayerView.IsMine == true)
+        {
+            this.enabled = false;
+        }
     }
 
     // Update is called once per frame

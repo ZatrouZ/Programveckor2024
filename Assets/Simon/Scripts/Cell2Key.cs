@@ -16,13 +16,17 @@ public class Cell2Key : MonoBehaviour
 
     bool reach;
     public bool hasKey;
+    PhotonView PlayerView;
+    GameObject player;
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(Starting());
         LT = KEYWITHSCRIPT.GetComponent<Cell2LooseTile>();
         View = GetComponent<PhotonView>();
-        if (View.IsMine == false)
+        player = GameObject.FindGameObjectWithTag("Player");
+        PlayerView = player.GetComponent<PhotonView>();
+        if (PlayerView.IsMine == true)
         {
             this.enabled = false;
         }

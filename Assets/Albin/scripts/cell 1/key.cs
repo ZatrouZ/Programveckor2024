@@ -7,16 +7,20 @@ public class key : MonoBehaviour
 {
     pipe pipe;
     PhotonView View;
+    PhotonView PlayerView;
 
     [SerializeField]
     GameObject pipeOnGround;
     [SerializeField]
     GameObject EmptyKeyHook;
 
+    GameObject player;
+
     GameObject KeyInHand;
 
     GameObject PipeInHand;
 
+    bool exe = true;
     bool reach;
     public bool hasKey;
     // Start is called before the first frame update
@@ -24,10 +28,13 @@ public class key : MonoBehaviour
     {
         StartCoroutine(Starting());
         View = GetComponent<PhotonView>();
-        if (View.IsMine == false)
+        player = GameObject.FindGameObjectWithTag("Player2");
+        PlayerView = player.GetComponent<PhotonView>();
+        if (PlayerView.IsMine == true)
         {
             this.enabled = false;
         }
+        
     }
 
     // Update is called once per frame

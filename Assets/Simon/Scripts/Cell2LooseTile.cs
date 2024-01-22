@@ -10,11 +10,19 @@ public class Cell2LooseTile : MonoBehaviour
     PhotonView View;
     bool pickup;
     public bool hasMovedTile;
+    PhotonView PlayerView;
+    GameObject player;
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(Starting());
         View = GetComponent<PhotonView>();
+        player = GameObject.FindGameObjectWithTag("Player");
+        PlayerView = player.GetComponent<PhotonView>();
+        if (PlayerView.IsMine == true)
+        {
+            this.enabled = false;
+        }
     }
 
     // Update is called once per frame

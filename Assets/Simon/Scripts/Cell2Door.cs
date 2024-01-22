@@ -16,11 +16,19 @@ public class Cell2Door : MonoBehaviour
     PhotonView View;
 
     GameObject File;
+    PhotonView PlayerView;
+    GameObject player;
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(Starting());
         View = GetComponent<PhotonView>();
+        player = GameObject.FindGameObjectWithTag("Player");
+        PlayerView = player.GetComponent<PhotonView>();
+        if (PlayerView.IsMine == true)
+        {
+            this.enabled = false;
+        }
     }
 
     // Update is called once per frame

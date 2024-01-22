@@ -12,8 +12,9 @@ public class door : MonoBehaviour
     PhotonView View;
    
 
-    bool open;
-    bool reach;
+    public bool open;
+    public bool reach;
+    public float timer = .5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,17 +32,18 @@ public class door : MonoBehaviour
         {
             KeyInHand = GameObject.FindWithTag("KeyInHand");
         }
-        if (reach == true && KeyInHand == true)
+        if (reach == true && key.hasKey == true)
         {
             open = true;
+            timer -= Time.deltaTime;
         }
         else
         {
             open = false;
         }
-        if (open == true)
+        if (open == true && timer < 0)
         {
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 View.RPC("RPC1", RpcTarget.All);
                 SceneManager.LoadScene("corridor 1(albin)");

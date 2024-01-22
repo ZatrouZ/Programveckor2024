@@ -30,7 +30,7 @@ public class DoorToLastRoom : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                PhotonNetwork.AutomaticallySyncScene = true;
+                View.RPC("SyncScene", RpcTarget.All);
                 SceneManager.LoadScene("sista rum(albin)");
                 ConnectedOpen = true;
             }
@@ -56,5 +56,11 @@ public class DoorToLastRoom : MonoBehaviour
     void OpenLastDoor() 
     {
         DoorOpen = true;
+    }
+
+    [PunRPC]
+    void SyncScene() 
+    {
+        PhotonNetwork.AutomaticallySyncScene = true;
     }
 }

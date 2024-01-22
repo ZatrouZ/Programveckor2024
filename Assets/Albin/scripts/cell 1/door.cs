@@ -39,7 +39,7 @@ public class door : MonoBehaviour
         {
             open = false;
         }
-        if (open == true && Input.GetKeyDown(KeyCode.E))
+        if (open == true)
         {
             if (Input.GetKey(KeyCode.E))
             {

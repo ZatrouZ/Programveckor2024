@@ -728,6 +728,7 @@ MonoBehaviour:
   speed: 4
   animator: {fileID: 0}
   PauseMenuObject: {fileID: 0}
+  walking: 0
 --- !u!1 &7488954503642072634
 GameObject:
   m_ObjectHideFlags: 0

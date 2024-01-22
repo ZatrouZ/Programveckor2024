@@ -24,6 +24,10 @@ public class key : MonoBehaviour
     {
         StartCoroutine(Starting());
         View = GetComponent<PhotonView>();
+        if (View.IsMine == false)
+        {
+            this.enabled = false;
+        }
     }
 
     // Update is called once per frame

@@ -22,6 +22,10 @@ public class Cell2Key : MonoBehaviour
         StartCoroutine(Starting());
         LT = KEYWITHSCRIPT.GetComponent<Cell2LooseTile>();
         View = GetComponent<PhotonView>();
+        if (View.IsMine == false)
+        {
+            this.enabled = false;
+        }
     }
 
     // Update is called once per frame

@@ -31,7 +31,7 @@ public class door : MonoBehaviour
         {
             KeyInHand = GameObject.FindWithTag("KeyInHand");
         }
-        if (reach == true && KeyInHand == true && Input.GetKeyDown(KeyCode.E))
+        if (reach == true && KeyInHand == true)
         {
             open = true;
         }
@@ -39,7 +39,7 @@ public class door : MonoBehaviour
         {
             open = false;
         }
-        if (open == true)
+        if (open == true && Input.GetKeyDown(KeyCode.E))
         {
             if (Input.GetKey(KeyCode.E))
             {

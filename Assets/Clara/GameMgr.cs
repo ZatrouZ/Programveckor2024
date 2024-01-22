@@ -38,7 +38,7 @@ public class GameMgr : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 SendMessageToChat("You pressed the space bar");
-                Debug.Log("Return");
+                Debug.Log("Space");
             }
         }
           

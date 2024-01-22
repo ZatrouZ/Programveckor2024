@@ -27,12 +27,7 @@ public class key : MonoBehaviour
     {
         StartCoroutine(Starting());
         View = GetComponent<PhotonView>();
-        player = GameObject.FindGameObjectWithTag("Player2");
-        PlayerView = player.GetComponent<PhotonView>();
-        if (PlayerView.IsMine == true)
-        {
-            this.enabled = false;
-        }
+      
         
     }
 
@@ -74,6 +69,12 @@ public class key : MonoBehaviour
         pipe = FindObjectOfType<pipe>();
         View.RPC("RPC2", RpcTarget.All);
         hasKey = false;
+        player = GameObject.FindGameObjectWithTag("Player2");
+        PlayerView = player.GetComponent<PhotonView>();
+        if (PlayerView.IsMine == true)
+        {
+            this.enabled = false;
+        }
     }
 
     [PunRPC]

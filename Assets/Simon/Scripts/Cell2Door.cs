@@ -23,12 +23,7 @@ public class Cell2Door : MonoBehaviour
     {
         StartCoroutine(Starting());
         View = GetComponent<PhotonView>();
-        player = GameObject.FindGameObjectWithTag("Player");
-        PlayerView = player.GetComponent<PhotonView>();
-        if (PlayerView.IsMine == true)
-        {
-            this.enabled = false;
-        }
+     
     }
 
     // Update is called once per frame
@@ -49,14 +44,14 @@ public class Cell2Door : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player" && Cell2Key.hasKey == true)
+        if (collision.gameObject.tag == "Player2" && Cell2Key.hasKey == true)
         {
             open = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player2")
         {
             open = false;
         }
@@ -67,6 +62,12 @@ public class Cell2Door : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         Cell2Key = FindObjectOfType<Cell2Key>();
         View.RPC("RPC1", RpcTarget.All);
+        player = GameObject.FindGameObjectWithTag("Player");
+        PlayerView = player.GetComponent<PhotonView>();
+        if (PlayerView.IsMine == true)
+        {
+            this.enabled = false;
+        }
     }
 
     [PunRPC]

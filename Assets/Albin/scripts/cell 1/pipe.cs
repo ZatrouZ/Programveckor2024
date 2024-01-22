@@ -16,12 +16,7 @@ public class pipe : MonoBehaviour
     {
         StartCoroutine(StartIng());
         View = GetComponent<PhotonView>();
-        player = GameObject.FindGameObjectWithTag("Player2");
-        PlayerView = player.GetComponent<PhotonView>();
-        if (PlayerView.IsMine == true)
-        {
-            this.enabled = false;
-        }
+       
     }
 
     // Update is called once per frame
@@ -62,6 +57,12 @@ public class pipe : MonoBehaviour
         View.RPC("RPC2", RpcTarget.All);
         pickup = false;
         hasPipe = false;
+        player = GameObject.FindGameObjectWithTag("Player2");
+        PlayerView = player.GetComponent<PhotonView>();
+        if (PlayerView.IsMine == true)
+        {
+            this.enabled = false;
+        }
     }
 
     [PunRPC]

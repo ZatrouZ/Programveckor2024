@@ -6,8 +6,8 @@ public class bomb : MonoBehaviour
 {
     GameObject hasbomb;
     GameObject hasbomb2;
-    bool reach = false;
-    bool reach2 = false;
+    public bool reach = false;
+    public bool reach2 = false;
     public bool hasBomb = false;
     public bool hasBomb2 = false;
     void Start()

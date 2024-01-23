@@ -70,6 +70,7 @@ public class control : MonoBehaviour
             panel.SetActive(false);
             open = true;
             DTLR.DoorOpen = true;
+            SyncScene.instance.SyncNow = true;
             //svar: grön magenta gul grön röd
         }
     }

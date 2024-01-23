@@ -14,6 +14,7 @@ TagManager:
   - LRK
   - Bomb
   - Player2
+  - Bomb2
   layers:
   - Default
   - TransparentFX

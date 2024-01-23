@@ -1645,10 +1645,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df902b06481726f47900b4da49f82d29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bomb: {fileID: 0}
-  Bomb2: {fileID: 0}
   hasBomb: 0
-  boom: 0
+  hasBomb2: 0
 --- !u!61 &1524364813
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2420,7 +2418,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7185139411781758864, guid: f9725c740563e784d83a60c356eb92a2, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2505,7 +2503,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7406500945368600771, guid: 0acb47938fff15344890172e69542331, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

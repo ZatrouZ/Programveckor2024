@@ -26,12 +26,11 @@ public class vägg : MonoBehaviour
     {
         if (reach == true)
         {
-            if (bomb.hasBomb==true)
+            if (bomb.hasBomb == true || bomb.hasBomb2 == true)
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     blackscreen.SetActive(true);
-                    bomb.boom = true;
                     timerstart = true;
                 }
             }  
@@ -49,14 +48,14 @@ public class vägg : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Player2")
         {
             reach = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Player2")
         {
             reach = false;
         }

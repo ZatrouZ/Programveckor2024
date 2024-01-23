@@ -17,13 +17,11 @@ public class GameMgr : MonoBehaviour
     [SerializeField]
     List<Message> messageList = new List<Message>();
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(chatBox.text != "")
@@ -68,7 +66,7 @@ public class GameMgr : MonoBehaviour
 
         GameObject newText = Instantiate(textObject, chatPanel.transform);
 
-        newMessage.textObject = newText.GetComponent<TextMeshPro>();
+        newMessage.textObject = newText.GetComponent<Text>();
 
         newMessage.textObject.text = newMessage.text;
         newMessage.textObject.color = MessageTypeColor(messageType);
@@ -95,7 +93,7 @@ public class GameMgr : MonoBehaviour
 public class Message
 {
     public string text;
-    public TextMeshPro textObject;
+    public Text textObject;
     public MessageType messageType;
 
     public enum MessageType

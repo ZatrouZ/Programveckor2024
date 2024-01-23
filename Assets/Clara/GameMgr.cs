@@ -15,7 +15,7 @@ public class GameMgr : MonoBehaviour
 
     public void SendMessage()
     {
-        GetComponent<PhotonView>().RPC("GetMessage", RpcTarget.All, TMP_InputField.text);
+        GetComponent<PhotonView>().RPC("GetMessage", RpcTarget.All, chatBox.text);
     }
 
     [PunRPC]

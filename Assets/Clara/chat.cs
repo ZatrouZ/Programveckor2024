@@ -3,11 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class chat : MonoBehaviour
 {
 
+    public TMP_Text YourMessage;
 
+
+// fel grej igen 
     /*[SerializeField] private GameObject chatUI = null;
     [SerializeField] private TMP_Text chatText = null;
     [SerializeField] private TMP_InputField inputField = null;

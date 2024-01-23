@@ -4,11 +4,29 @@ using UnityEngine;
 using TMPro;
 using Photon.Pun;
 using UnityEngine.UI;
+using UnityEditor.VersionControl;
 
 public class GameMgr : MonoBehaviour
 {
 
-    public int maxMessage = 25;
+    public TMP_InputField chatBox;
+    public GameObject Message;
+    public GameObject Content;
+
+    public void SendMessage()
+    {
+        GetComponent<PhotonView>().RPC("GetMessage", RpcTarget.All, TMP_InputField.text);
+    }
+
+    [PunRPC]
+    public void GetMessage(string ReceiveMessage)
+    {
+        Instantiate(Message, Vector3.zero, Quaternion.identity, Content.transform);
+        GetComponent<chat>().YourMessage.text = ReceiveMessage;
+    }
+
+
+    /*public int maxMessage = 25;
 
    public GameObject chatPanel, textObject;
     public TMP_InputField chatBox;
@@ -101,5 +119,5 @@ public class Message
     {
         playerMessage,
         info
-    }
+    }*/
 }

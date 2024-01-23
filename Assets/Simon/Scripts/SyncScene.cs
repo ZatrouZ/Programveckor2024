@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using UnityEngine.SceneManagement;
 
 public class SyncScene : MonoBehaviour, IPunObservable
 {
@@ -41,7 +42,7 @@ public class SyncScene : MonoBehaviour, IPunObservable
     {
         if (SyncNow == true)
         {
-            PhotonNetwork.AutomaticallySyncScene = true;
+            SceneManager.LoadScene("sista rum(albin)");
         }
     }
 }

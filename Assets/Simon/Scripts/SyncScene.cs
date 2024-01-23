@@ -39,6 +39,9 @@ public class SyncScene : MonoBehaviour, IPunObservable
     // Update is called once per frame
     void Update()
     {
-        
+        if (SyncNow == true)
+        {
+            PhotonNetwork.AutomaticallySyncScene = true;
+        }
     }
 }

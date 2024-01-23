@@ -31,7 +31,7 @@ public class OverheadItemRemoval : MonoBehaviour
         }
         if (Bomb2 == null)
         {
-            Bomb2 = GameObject.FindWithTag("Bomb");
+            Bomb2 = GameObject.FindWithTag("Bomb2");
         }
         else
         {

@@ -6,6 +6,7 @@ using Photon.Pun;
 using UnityEngine.UI;
 
 
+
 public class GameMgr : MonoBehaviour
 {
 
@@ -16,13 +17,15 @@ public class GameMgr : MonoBehaviour
     public void SendMessage()
     {
         GetComponent<PhotonView>().RPC("GetMessage", RpcTarget.All, chatBox.text);
+
+        chatBox.text = "";
     }
 
     [PunRPC]
     public void GetMessage(string ReceiveMessage)
     {
-        Instantiate(Message, Vector3.zero, Quaternion.identity, Content.transform);
-        GetComponent<chat>().YourMessage.text = ReceiveMessage;
+       GameObject M = Instantiate(Message, Vector3.zero, Quaternion.identity, Content.transform);
+       M.GetComponent<chat>().YourMessage.text = ReceiveMessage;
     }
 
 

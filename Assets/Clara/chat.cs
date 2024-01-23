@@ -10,8 +10,13 @@ public class chat : MonoBehaviour
 
     public TMP_Text YourMessage;
 
+    void Start()
+    {
+        GetComponent<RectTransform>().SetAsFirstSibling();
+    }
 
-// fel grej igen 
+
+    // fel grej igen 
     /*[SerializeField] private GameObject chatUI = null;
     [SerializeField] private TMP_Text chatText = null;
     [SerializeField] private TMP_InputField inputField = null;

@@ -3,7 +3,10 @@ guid: 2aa331f84668cd44ba5ae99a2503ba88
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - chatPanel: {instanceID: 0}
+  - textObject: {fileID: 1972781608315087757, guid: c66de70a42c5e2d46b6d5fb81610acfd, type: 3}
+  - chatBox: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

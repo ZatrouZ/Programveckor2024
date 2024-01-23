@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Photon.Pun;
 using UnityEngine.UI;
 
 public class GameMgr : MonoBehaviour

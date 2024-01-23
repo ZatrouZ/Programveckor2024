@@ -4,29 +4,31 @@ using UnityEngine;
 
 public class bomb : MonoBehaviour
 {
-    [SerializeField]
-    GameObject Bomb;
+    GameObject hasbomb;
+    GameObject hasbomb2;
     bool reach = false;
+    bool reach2 = false;
     public bool hasBomb = false;
-    public bool boom = false;
-
+    public bool hasBomb2 = false;
     void Start()
     {
-        Bomb.SetActive(false);
+
     }
 
     void Update()
     {
-        if (boom == true)
-        {
-            Bomb.SetActive(false);
-        }
         if (reach == true)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
                 hasBomb = true;
-                Bomb.SetActive(true);
+            }
+        }
+        if (reach2 == true)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                hasBomb2 = true;
             }
         }
     }
@@ -37,12 +39,20 @@ public class bomb : MonoBehaviour
         {
             reach = true;
         }
+        if (collision.gameObject.tag == "Player2")
+        {
+            reach2 = true;
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
             reach = false;
+        }
+        if (collision.gameObject.tag == "Player2")
+        {
+            reach2 = false;
         }
     }
 }

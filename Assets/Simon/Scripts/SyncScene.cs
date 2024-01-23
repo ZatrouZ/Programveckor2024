@@ -3,11 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
-public class SyncScene : MonoBehaviour
+public class SyncScene : MonoBehaviour, IPunObservable
 {
     public static SyncScene instance;
 
     public bool SyncNow;
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.IsWriting)
+        {
+            stream.SendNext(SyncNow);
+        }
+        else if (stream.IsReading)
+        {
+            SyncNow = (bool)stream.ReceiveNext();
+        }
+    }
 
     // Start is called before the first frame update
     void Start()

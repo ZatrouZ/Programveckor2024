@@ -38,6 +38,10 @@ public class key : MonoBehaviour
         {
             KeyInHand = GameObject.FindWithTag("KeyInHand");
         }
+        if (PipeInHand == null)
+        {
+            PipeInHand = GameObject.FindWithTag("PipeInHand");
+        }
 
         if (reach==true)
         {
@@ -80,10 +84,7 @@ public class key : MonoBehaviour
     [PunRPC]
     void RPC1() 
     {
-        if (PipeInHand == null)
-        {
-            PipeInHand = GameObject.FindWithTag("PipeInHand");
-        }
+       
         PipeInHand.SetActive(false);
         KeyInHand.SetActive(true);
         pipeOnGround.SetActive(true);

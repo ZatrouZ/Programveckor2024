@@ -42,8 +42,10 @@ public class SyncScene : MonoBehaviour, IPunObservable
     {
         if (SyncNow == true)
         {
-            SceneManager.LoadScene("sista rum(albin)");
-            SyncNow = false;
+            for (int i = 0; i < 1; i++)
+            {
+                SceneManager.LoadScene("sista rum(albin)");
+            }
         }
     }
 }

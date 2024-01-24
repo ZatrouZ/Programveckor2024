@@ -42,7 +42,7 @@ public class SyncScene : MonoBehaviour, IPunObservable
     // Update is called once per frame
     void Update()
     {
-        if (SyncNow == true && Timer > 1)
+        if (SyncNow == true && Timer < 1)
         {
             
                 SceneManager.LoadScene("sista rum(albin)");

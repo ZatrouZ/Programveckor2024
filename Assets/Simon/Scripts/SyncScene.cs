@@ -43,6 +43,7 @@ public class SyncScene : MonoBehaviour, IPunObservable
         if (SyncNow == true)
         {
             SceneManager.LoadScene("sista rum(albin)");
+            SyncNow = false;
         }
     }
 }

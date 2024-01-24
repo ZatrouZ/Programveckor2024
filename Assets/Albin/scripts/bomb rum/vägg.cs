@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Photon.Pun;
 
 public class vägg : MonoBehaviour
 {
 
     bomb bomb;
+
+    PhotonView View;
 
     [SerializeField]
     GameObject blackscreen;
@@ -19,6 +22,7 @@ public class vägg : MonoBehaviour
     {
         bomb = FindObjectOfType<bomb>();
         blackscreen.SetActive(false);
+        View = GetComponent<PhotonView>();
     }
 
     // Update is called once per frame
@@ -30,8 +34,7 @@ public class vägg : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    blackscreen.SetActive(true);
-                    timerstart = true;
+                    View.RPC("RPC1", RpcTarget.All);
                 }
             }  
         }
@@ -60,4 +63,13 @@ public class vägg : MonoBehaviour
             reach = false;
         }
     }
+
+    [PunRPC]
+    void RPC1() 
+    {
+        blackscreen.SetActive(true);
+        timerstart = true;
+    }
+
+    
 }

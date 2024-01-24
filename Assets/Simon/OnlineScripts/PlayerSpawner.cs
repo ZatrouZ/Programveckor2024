@@ -5,10 +5,10 @@ using Photon.Pun;
 
 public class PlayerSpawner : MonoBehaviour
 {
-     public float p1x = -4;
-    public float p1y = -1.15f;
-    public float p2x = 5.5f;
-    public float p2y = -1.15f;
+    
+
+    public Transform p1SpawnLoc;
+    public Transform p2SpawnLoc;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,11 +20,11 @@ public class PlayerSpawner : MonoBehaviour
     {
         if (PhotonNetwork.IsMasterClient)
         {
-            PhotonNetwork.Instantiate("Player1", new Vector3(-4, -1.15f, 0), Quaternion.identity);
+            PhotonNetwork.Instantiate("Player1", p1SpawnLoc.position , Quaternion.identity);
         }
         else
         {
-            PhotonNetwork.Instantiate("Player2", new Vector3(5.5f, -1.15f, 0), Quaternion.identity);
+            PhotonNetwork.Instantiate("Player2", p2SpawnLoc.position , Quaternion.identity);
         }
             
     }

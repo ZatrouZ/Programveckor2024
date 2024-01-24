@@ -38,7 +38,8 @@ public class Cell2Door : MonoBehaviour
             if (Input.GetKey(KeyCode.E))
             {
                 View.RPC("RPC2", RpcTarget.All);
-                SceneManager.LoadScene("Corridor 2(albin)");
+                //SceneManager.LoadScene("Corridor 2(albin)");
+                SceneManager.LoadScene("sista rum(albin)");
             }
         }
     }

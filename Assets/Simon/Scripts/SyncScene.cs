@@ -10,6 +10,8 @@ public class SyncScene : MonoBehaviour, IPunObservable
 
     public bool SyncNow;
 
+    public bool hasLoaded = false;
+
     float Timer = 0;
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
@@ -17,10 +19,12 @@ public class SyncScene : MonoBehaviour, IPunObservable
         if (stream.IsWriting)
         {
             stream.SendNext(SyncNow);
+            stream.SendNext(hasLoaded);
         }
         else if (stream.IsReading)
         {
             SyncNow = (bool)stream.ReceiveNext();
+            hasLoaded = (bool)stream.ReceiveNext();
         }
     }
 
@@ -42,11 +46,11 @@ public class SyncScene : MonoBehaviour, IPunObservable
     // Update is called once per frame
     void Update()
     {
-        if (SyncNow == true && Timer < 1)
+        if (SyncNow == true && hasLoaded == false)
         {
             
                 SceneManager.LoadScene("sista rum(albin)");
-                Timer += Time.deltaTime;
+                hasLoaded = true;
             
         }
     }

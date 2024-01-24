@@ -14,9 +14,6 @@ public class DocumentSyncer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (SyncScene.instance.SyncNow == true)
-        {
-            PhotonNetwork.AutomaticallySyncScene = true;
-        }
+      
     }
 }

@@ -10,7 +10,7 @@ public class SyncScene : MonoBehaviour, IPunObservable
 
     public bool SyncNow;
 
-    float Timer;
+    float Timer = 0;
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {

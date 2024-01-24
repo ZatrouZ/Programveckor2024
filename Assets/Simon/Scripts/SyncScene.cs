@@ -19,12 +19,12 @@ public class SyncScene : MonoBehaviour, IPunObservable
         if (stream.IsWriting)
         {
             stream.SendNext(SyncNow);
-            stream.SendNext(hasLoaded);
+            //stream.SendNext(hasLoaded);
         }
         else if (stream.IsReading)
         {
             SyncNow = (bool)stream.ReceiveNext();
-            hasLoaded = (bool)stream.ReceiveNext();
+            //hasLoaded = (bool)stream.ReceiveNext();
         }
     }
 

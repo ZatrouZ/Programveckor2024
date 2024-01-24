@@ -23,7 +23,7 @@ public class DoorToLastRoom : MonoBehaviour
     {
         if (ConnectedOpen == true)
         {
-            View.RPC("OpenLastDoor", RpcTarget.All);
+            //View.RPC("OpenLastDoor", RpcTarget.All);
         }
 
         if (open == true)

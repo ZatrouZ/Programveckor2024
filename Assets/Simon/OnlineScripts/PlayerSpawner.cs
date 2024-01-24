@@ -5,7 +5,10 @@ using Photon.Pun;
 
 public class PlayerSpawner : MonoBehaviour
 {
-
+     public float p1x = -4;
+    public float p1y = -1.15f;
+    public float p2x = 5.5f;
+    public float p2y = -1.15f;
     // Start is called before the first frame update
     void Start()
     {

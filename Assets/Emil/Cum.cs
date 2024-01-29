@@ -32,7 +32,7 @@ public class Cum : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "player" && active == true)
+        if (collision.GetComponent<>)
         {
             hahaL();
         }

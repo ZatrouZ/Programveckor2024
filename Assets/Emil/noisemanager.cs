@@ -9,5 +9,6 @@ public class noisemanager : MonoBehaviour
     
     private void Update()
     { 
+
     }
 }

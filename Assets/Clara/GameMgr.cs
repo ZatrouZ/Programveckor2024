@@ -6,11 +6,12 @@ using Photon.Pun;
 using UnityEngine.UI;
 using Photon.Chat;
 using ExitGames.Client.Photon;
+using System;
 
 
 public class GameMgr : MonoBehaviour, IChatClientListener
 {
-    ChatClient chatClient;
+   ChatClient chatClient;
     [SerializeField] string UserID;
 
     public TMP_InputField chatBox;
@@ -22,6 +23,8 @@ public class GameMgr : MonoBehaviour, IChatClientListener
         chatClient = new ChatClient(this);
         chatClient.Connect(PhotonNetwork.PhotonServerSettings.AppSettings.AppIdChat, PhotonNetwork.AppVersion, new AuthenticationValues(UserID/*username or whatever we call it*/));
     }
+
+    ChatClient.setRegion(L"EU")
 
     void Update()
     {
@@ -59,7 +62,7 @@ public class GameMgr : MonoBehaviour, IChatClientListener
 
     public void OnChatStateChange(ChatState state)
     {
-        throw new System.NotImplementedException();
+        Console.WriteLine("HIIHI");
     }
 
     public void OnGetMessages(string channelName, string[] senders, object[] messages)

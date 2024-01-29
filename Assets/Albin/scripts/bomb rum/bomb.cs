@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class bomb : MonoBehaviour
 {
-    GameObject hasbomb;
-    GameObject hasbomb2;
+    GameObject bomb1;
+    GameObject bomb2;
     public bool reach = false;
     public bool reach2 = false;
     public bool hasBomb = false;
     public bool hasBomb2 = false;
+    
     void Start()
     {
 
@@ -17,18 +18,30 @@ public class bomb : MonoBehaviour
 
     void Update()
     {
-        if (reach == true)
+        if (bomb1 == null)
+        {
+            bomb1 = GameObject.FindWithTag("Bomb");
+        }
+
+        if (bomb2 == null)
+        {
+            bomb2 = GameObject.FindWithTag("Bomb2");
+        }
+
+        if (reach == true && hasBomb2 == false)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
                 hasBomb = true;
+                bomb1.SetActive(true);
             }
         }
-        if (reach2 == true)
+        if (reach2 == true && hasBomb == false)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
                 hasBomb2 = true;
+                bomb2.SetActive(true);
             }
         }
     }

@@ -5,8 +5,7 @@ using Photon.Pun;
 
 public class OverheadItemRemoval : MonoBehaviour
 {
-    GameObject Bomb;
-    GameObject Bomb2;
+    
     GameObject File;
     GameObject KeyInHand;
     GameObject PipeInHand;
@@ -21,22 +20,7 @@ public class OverheadItemRemoval : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Bomb == null)
-        {
-            Bomb = GameObject.FindWithTag("Bomb");
-        }
-        else
-        {
-            Bomb.SetActive(false);
-        }
-        if (Bomb2 == null)
-        {
-            Bomb2 = GameObject.FindWithTag("Bomb2");
-        }
-        else
-        {
-            Bomb2.SetActive(false);
-        }
+       
         if (File == null)
         {
             File = GameObject.FindWithTag("File");

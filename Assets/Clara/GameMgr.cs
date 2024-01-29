@@ -11,6 +11,7 @@ using System;
 
 public class GameMgr : MonoBehaviour, IChatClientListener
 {
+
    ChatClient chatClient;
     [SerializeField] string UserID;
 
@@ -21,10 +22,10 @@ public class GameMgr : MonoBehaviour, IChatClientListener
     void Start()
     {
         chatClient = new ChatClient(this);
-        chatClient.Connect(PhotonNetwork.PhotonServerSettings.AppSettings.AppIdChat, PhotonNetwork.AppVersion, new AuthenticationValues(UserID/*username or whatever we call it*/));
+        chatClient.Connect(chatAppId, chatAppVersion, new AuthenticationValues(userID));
     }
 
-    ChatClient.setRegion(L"EU")
+    ChatClient.setRegion(L"EU");
 
     void Update()
     {

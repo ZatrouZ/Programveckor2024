@@ -15,21 +15,75 @@ public class GameMgr : MonoBehaviour, IChatClientListener
    ChatClient chatClient;
     [SerializeField] string UserID;
 
-    public TMP_InputField chatBox;
-    public GameObject Message;
-    public GameObject Content;
 
-    void Start()
+    public GameObject Content;
+    GameMgr chatListener;
+    bool isConnected;
+
+    /*static const ExitGames::Common::JString appID = L"<ff2df880-13eb-4b23-aae4-ca13e01cd78a>";
+    static const ExitGames::Common::JString appVersion = L"1.0";
+    ExitGames::Chat::Client chatClient(chatListener, appID, appVersion);
+    chatClient.connect(ExitGames::Chat::AuthenticationValues().setUserID(userID));*/
+
+    public void ChatConnect()
     {
+        isConnected = true;
+        ChatClient.ChatRegion = "EU";
+        chatClient.Service();
         chatClient = new ChatClient(this);
-        chatClient.Connect(chatAppId, chatAppVersion, new AuthenticationValues(userID));
+        chatClient.Connect(PhotonNetwork.PhotonServerSettings.AppSettings.AppIdChat, PhotonNetwork.AppVersion, new AuthenticationValues(username));
+        Debug.Log("plzzzzzzzz connect, just connecting");
     }
 
-    ChatClient.setRegion(L"EU");
+    [SerializeField] GameObject chatPanel;
+    string privateReceiver = "";
+    string currentChat;
+    [SerializeField] TMP_InputField chatBox;
+    [SerializeField] GameObject Message;
+
 
     void Update()
     {
-        chatClient.Service();
+        if (isConnected)
+        {
+            chatClient.Service();
+        }
+
+        if (chatBox.text != "" &amp;&amp; Input.GetKey(KeyCode.Return))
+          {
+            SubmitPublicChatOnClick();
+            SubmitPrivateChatOnClick();
+          }
+    }
+
+    public void SubmitPublicChatOnClick()
+    {
+        if (privateReceiver == "")
+        {
+            chatClient.PublishMessage("RegionChannel", currentChat);
+            chatBox.text = "";
+            currentChat = "";
+        }
+    }
+
+    public void TypeChatOnValueChange(string valueIn)
+    {
+        currentChat = valueIn;
+    }
+
+    public void ReceiverOnValueChange(string valueIn)
+    {
+        privateReceiver = valueIn;
+    }
+
+    public void SubmitPrivateChatOnClick()
+    {
+        if (privateReceiver != "")
+        {
+            chatClient.SendPrivateMessage(privateReceiver, currentChat);
+            chatBox.text = "";
+            currentChat = "";
+        }
     }
 
     /*public void SendMessage()

@@ -11,8 +11,8 @@ using System;
 
 public class GameMgr : MonoBehaviour, IChatClientListener
 {
-
-   ChatClient chatClient;
+    #region connect
+    ChatClient chatClient;
     [SerializeField] string UserID;
 
 
@@ -34,6 +34,8 @@ public class GameMgr : MonoBehaviour, IChatClientListener
         chatClient.Connect(PhotonNetwork.PhotonServerSettings.AppSettings.AppIdChat, PhotonNetwork.AppVersion, new AuthenticationValues(username));
         Debug.Log("plzzzzzzzz connect, just connecting");
     }
+    #endregion connect
+
 
     [SerializeField] GameObject chatPanel;
     string privateReceiver = "";
@@ -86,6 +88,54 @@ public class GameMgr : MonoBehaviour, IChatClientListener
         }
     }
 
+    public void DebugReturn(DebugLevel level, string message)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void OnChatStateChange(ChatState state)
+    {
+        if (state == ChatState.Uninitialized)
+        {
+            isConnected = false;
+            chatPanel.SetActive(false);
+        }
+    }
+
+    public void OnConnected()
+    {
+        Debug.Log("connected");
+        chatClient.Subscribe(new string[] { "RegionChannel" });
+        //throw new System.NotImplementedException();
+    }
+
+    public void OnDisconnected()
+    {
+        isConnected = false;
+        chatPanel.SetActive(false);
+        //throw new System.NotImplementedException();
+    }
+
+    public void OnGetMessages(string channelName, string[] senders, object[] messages)
+    {
+        string msgs = "";
+        for (int i = 0; i & lt; senders.Length; i++)
+        {
+            msgs = string.Format("{0}: {1}", senders[i], messages[i]);
+
+           Message.text+= "\n" + msgs;
+
+            Debug.Log(msgs);
+        }
+        //throw new System.NotImplementedException();
+    }
+
+    public void OnPrivateMessage(string sender, object message, string channelName)
+    {
+        string msgs = ""
+        //throw new System.NotImplementedException();
+    }
+
     /*public void SendMessage()
     {
         GetComponent<PhotonView>().RPC("GetMessage", RpcTarget.All, chatBox.text);
@@ -100,30 +150,11 @@ public class GameMgr : MonoBehaviour, IChatClientListener
        M.GetComponent<chat>().YourMessage.text = ReceiveMessage;
     }*/
 
-    public void DebugReturn(DebugLevel level, string message)
-    {
-        throw new System.NotImplementedException();
-    }
 
-    public void OnDisconnected()
-    {
-        throw new System.NotImplementedException();
-    }
 
-    public void OnConnected()
-    {
-        throw new System.NotImplementedException();
-    }
 
-    public void OnChatStateChange(ChatState state)
-    {
-        Console.WriteLine("HIIHI");
-    }
 
-    public void OnGetMessages(string channelName, string[] senders, object[] messages)
-    {
-        throw new System.NotImplementedException();
-    }
+
 
     public void OnPrivateMessage(string sender, object message, string channelName)
     {

@@ -14,8 +14,6 @@ public class GameMgr : MonoBehaviour, IChatClientListener
     #region connect
     ChatClient chatClient;
     [SerializeField] string UserID;
-
-
     public GameObject Content;
     GameMgr chatListener;
     bool isConnected;
@@ -112,6 +110,7 @@ public class GameMgr : MonoBehaviour, IChatClientListener
     public void OnDisconnected()
     {
         isConnected = false;
+      
         chatPanel.SetActive(false);
         //throw new System.NotImplementedException();
     }
@@ -132,33 +131,13 @@ public class GameMgr : MonoBehaviour, IChatClientListener
 
     public void OnPrivateMessage(string sender, object message, string channelName)
     {
-        string msgs = ""
+        string msgs = "";
+        msgs = string.Format("(Private) {0}: {1}", sender, message);
+
+        Message.text += "\n" + msgs;
+        Debug.Log(msgs);
+
         //throw new System.NotImplementedException();
-    }
-
-    /*public void SendMessage()
-    {
-        GetComponent<PhotonView>().RPC("GetMessage", RpcTarget.All, chatBox.text);
-
-        chatBox.text = "";
-    }
-
-    [PunRPC]
-    public void GetMessage(string ReceiveMessage)
-    {
-       GameObject M = Instantiate(Message, Vector3.zero, Quaternion.identity, Content.transform);
-       M.GetComponent<chat>().YourMessage.text = ReceiveMessage;
-    }*/
-
-
-
-
-
-
-
-    public void OnPrivateMessage(string sender, object message, string channelName)
-    {
-        throw new System.NotImplementedException();
     }
 
     public void OnSubscribed(string[] channels, bool[] results)
@@ -186,6 +165,19 @@ public class GameMgr : MonoBehaviour, IChatClientListener
         throw new System.NotImplementedException();
     }
 
+    /*public void SendMessage()
+    {
+        GetComponent<PhotonView>().RPC("GetMessage", RpcTarget.All, chatBox.text);
+
+        chatBox.text = "";
+    }
+
+    [PunRPC]
+    public void GetMessage(string ReceiveMessage)
+    {
+       GameObject M = Instantiate(Message, Vector3.zero, Quaternion.identity, Content.transform);
+       M.GetComponent<chat>().YourMessage.text = ReceiveMessage;
+    }*/
 
     /*public int maxMessage = 25;
 

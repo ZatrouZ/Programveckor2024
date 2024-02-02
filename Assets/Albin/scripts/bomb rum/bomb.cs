@@ -8,9 +8,10 @@ public class bomb : MonoBehaviour
     GameObject bomb2;
     public bool reach = false;
     public bool reach2 = false;
-    public bool hasBomb = false;
-    public bool hasBomb2 = false;
-    
+    public bool hasBomb;
+    public bool hasBomb2;
+    bool hasFoundBomb2 = false;
+    bool hasFoundBomb = false;
     void Start()
     {
 
@@ -21,12 +22,24 @@ public class bomb : MonoBehaviour
         if (bomb1 == null)
         {
             bomb1 = GameObject.FindWithTag("Bomb");
+            hasFoundBomb = true;
+        }
+        else if (bomb1 != null && hasFoundBomb == false)
+        {
+            bomb1.SetActive(false);
+            hasFoundBomb = true;
         }
 
         if (bomb2 == null)
         {
             bomb2 = GameObject.FindWithTag("Bomb2");
         }
+        else if (bomb2 != null && hasFoundBomb2 == false)
+        {
+            bomb2.SetActive(false);
+            hasFoundBomb2 = true;
+        }
+
 
         if (reach == true && hasBomb2 == false)
         {

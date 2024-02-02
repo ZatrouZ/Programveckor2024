@@ -1104,6 +1104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aa331f84668cd44ba5ae99a2503ba88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UserID: 
   chatBox: {fileID: 331054392}
   Message: {fileID: 4346725778075902186, guid: e765bd9c2e4a5b747a10d501d5b3f743, type: 3}
   Content: {fileID: 1506010417}
@@ -1192,7 +1193,7 @@ GameObject:
   - component: {fileID: 1283929786}
   - component: {fileID: 1283929785}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: ChatPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

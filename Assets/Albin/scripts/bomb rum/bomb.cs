@@ -1,34 +1,60 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class bomb : MonoBehaviour
 {
-    GameObject hasbomb;
-    GameObject hasbomb2;
+    PhotonView View;
+
+    GameObject bomb1;
+    GameObject bomb2;
     public bool reach = false;
     public bool reach2 = false;
-    public bool hasBomb = false;
-    public bool hasBomb2 = false;
+    public bool hasBomb;
+    public bool hasBomb2;
+    bool hasFoundBomb2 = false;
+    bool hasFoundBomb = false;
     void Start()
     {
-
+        View = GetComponent<PhotonView>();
     }
 
     void Update()
     {
-        if (reach == true)
+        if (bomb1 == null)
+        {
+            bomb1 = GameObject.FindWithTag("Bomb");
+        }
+        else if (bomb1 != null && hasFoundBomb == false)
+        {
+            bomb1.SetActive(false);
+            hasFoundBomb = true;
+        }
+
+        if (bomb2 == null)
+        {
+            bomb2 = GameObject.FindWithTag("Bomb2");
+        }
+        else if (bomb2 != null && hasFoundBomb2 == false)
+        {
+            bomb2.SetActive(false);
+            hasFoundBomb2 = true;
+        }
+
+
+        if (reach == true && hasBomb2 == false)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                hasBomb = true;
+                View.RPC("RPC1", RpcTarget.All);
             }
         }
-        if (reach2 == true)
+        if (reach2 == true && hasBomb == false)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                hasBomb2 = true;
+                View.RPC("RPC2", RpcTarget.All);
             }
         }
     }
@@ -54,5 +80,19 @@ public class bomb : MonoBehaviour
         {
             reach2 = false;
         }
+    }
+
+    [PunRPC]
+    void RPC1() 
+    {
+        hasBomb = true;
+        bomb1.SetActive(true);
+    }
+
+    [PunRPC]
+    void RPC2()
+    {
+        hasBomb2 = true;
+        bomb2.SetActive(true);
     }
 }

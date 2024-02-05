@@ -100,7 +100,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2392435866830467396
 Transform:
   m_ObjectHideFlags: 0
@@ -456,9 +456,9 @@ GameObject:
   - component: {fileID: 5782022029766410333}
   - component: {fileID: 3661547449320450729}
   - component: {fileID: -8516674255657378083}
-  - component: {fileID: 5475075775871349121}
+  - component: {fileID: -397075499548735420}
   m_Layer: 0
-  m_Name: Player1Singel2
+  m_Name: BombPlayer1
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -543,7 +543,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7185139411781758864}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 77b17f02e5f60b4499dcdefed6587fe1, type: 3}
   m_Name: 
@@ -571,7 +571,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 5782022029766410333}
-  - {fileID: 5475075775871349121}
+  - {fileID: -397075499548735420}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -722,7 +722,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7185139411781758864}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b564693ab1efb6146b1cb3bc77e1f251, type: 3}
   m_Name: 
@@ -731,7 +731,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   PauseMenuObject: {fileID: 0}
   walking: 0
---- !u!114 &5475075775871349121
+--- !u!114 &-397075499548735420
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -747,22 +747,22 @@ MonoBehaviour:
   ShowParameterInspector: 1
   m_SynchronizeParameters:
   - Type: 4
-    SynchronizeType: 1
+    SynchronizeType: 0
     Name: movingLeft
   - Type: 4
-    SynchronizeType: 1
+    SynchronizeType: 0
     Name: movingRight
   - Type: 4
-    SynchronizeType: 1
+    SynchronizeType: 0
     Name: movingUp
   - Type: 4
-    SynchronizeType: 1
+    SynchronizeType: 0
     Name: movingDown
   - Type: 1
-    SynchronizeType: 1
+    SynchronizeType: 0
     Name: L1R2U3D4
   m_SynchronizeLayers:
-  - SynchronizeType: 1
+  - SynchronizeType: 0
     LayerIndex: 0
 --- !u!1 &7488954503642072634
 GameObject:

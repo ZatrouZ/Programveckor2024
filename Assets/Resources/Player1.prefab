@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6652385612182980943
 RectTransform:
   m_ObjectHideFlags: 0
@@ -450,6 +450,7 @@ GameObject:
   - component: {fileID: 4350021547392110875}
   - component: {fileID: 7874181601148073307}
   - component: {fileID: 7933557935782461483}
+  - component: {fileID: 6838614496381263240}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Player
@@ -563,6 +564,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 7874181601148073307}
+  - {fileID: 6838614496381263240}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -706,3 +708,36 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6838614496381263240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5338883887794953714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters:
+  - Type: 4
+    SynchronizeType: 1
+    Name: movingLeft
+  - Type: 4
+    SynchronizeType: 1
+    Name: movingRight
+  - Type: 4
+    SynchronizeType: 1
+    Name: movingUp
+  - Type: 4
+    SynchronizeType: 1
+    Name: movingDown
+  - Type: 1
+    SynchronizeType: 1
+    Name: L1R2U3D4
+  m_SynchronizeLayers:
+  - SynchronizeType: 1
+    LayerIndex: 0

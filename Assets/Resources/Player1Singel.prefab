@@ -372,6 +372,7 @@ GameObject:
   - component: {fileID: 5782022029766410333}
   - component: {fileID: 3661547449320450729}
   - component: {fileID: -8516674255657378083}
+  - component: {fileID: -5910648528185541217}
   m_Layer: 0
   m_Name: Player1Singel
   m_TagString: Player
@@ -485,6 +486,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 5782022029766410333}
+  - {fileID: -5910648528185541217}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -643,6 +645,40 @@ MonoBehaviour:
   speed: 3
   animator: {fileID: 0}
   PauseMenuObject: {fileID: 0}
+  walking: 0
+--- !u!114 &-5910648528185541217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7185139411781758864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters:
+  - Type: 4
+    SynchronizeType: 1
+    Name: movingLeft
+  - Type: 4
+    SynchronizeType: 1
+    Name: movingRight
+  - Type: 4
+    SynchronizeType: 1
+    Name: movingUp
+  - Type: 4
+    SynchronizeType: 1
+    Name: movingDown
+  - Type: 1
+    SynchronizeType: 1
+    Name: L1R2U3D4
+  m_SynchronizeLayers:
+  - SynchronizeType: 1
+    LayerIndex: 0
 --- !u!1 &7488954503642072634
 GameObject:
   m_ObjectHideFlags: 0

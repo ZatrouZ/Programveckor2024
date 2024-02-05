@@ -456,6 +456,7 @@ GameObject:
   - component: {fileID: 5782022029766410333}
   - component: {fileID: 3661547449320450729}
   - component: {fileID: -8516674255657378083}
+  - component: {fileID: -397075499548735420}
   m_Layer: 0
   m_Name: BombPlayer1
   m_TagString: Player
@@ -729,6 +730,22 @@ MonoBehaviour:
   animator: {fileID: 0}
   PauseMenuObject: {fileID: 0}
   walking: 0
+--- !u!114 &-397075499548735420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7185139411781758864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters: []
+  m_SynchronizeLayers: []
 --- !u!1 &7488954503642072634
 GameObject:
   m_ObjectHideFlags: 0

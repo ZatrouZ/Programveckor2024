@@ -45,7 +45,7 @@ public class ReadySystem : MonoBehaviourPunCallbacks
         timerText.text = timer.ToString("0");
         //playersInLobby.text = PhotonNetwork.PlayerList.Length.ToString();
         playersReady.text = readyPlayers.ToString();
-        if (readyPlayers == PhotonNetwork.PlayerList.Length && stopTimer == false)
+        if (readyPlayers == 2 && stopTimer == false)
         {
             timerObj.SetActive(true);
             timer -= Time.deltaTime;

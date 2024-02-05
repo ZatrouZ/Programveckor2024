@@ -38,10 +38,10 @@ public class EnemyPatrol : MonoBehaviour
             // Update to the next target
             currentPoint = currentPoint + 1;
 
-            // If we've gone past the end of our list...
+            // If we've gone past the end of our list...  
             if (currentPoint >= patrolPoints.Length)
             {
-                //start over from the start again (loop)
+                //...we start over from the start again (loop)
                 currentPoint = 0;
             }
         }

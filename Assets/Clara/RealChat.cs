@@ -33,7 +33,7 @@ public class RealChat : MonoBehaviour
 
     public void InputMessage()
     {
-        view.RPC("AddMessage", RpcTarget.All, PhotonNetwork.LocalPlayer.NickName, chatInput.text);
+        view.RPC("AddMessage", RpcTarget.All, PhotonNetwork.LocalPlayer.ActorNumber, chatInput.text);
         chatInput.text = "";
     }
 

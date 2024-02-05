@@ -270,7 +270,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7605092759855638385
 RectTransform:
   m_ObjectHideFlags: 0
@@ -571,6 +571,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 5782022029766410333}
+  - {fileID: -397075499548735420}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -744,8 +745,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowLayerWeightsInspector: 1
   ShowParameterInspector: 1
-  m_SynchronizeParameters: []
-  m_SynchronizeLayers: []
+  m_SynchronizeParameters:
+  - Type: 4
+    SynchronizeType: 0
+    Name: movingLeft
+  - Type: 4
+    SynchronizeType: 0
+    Name: movingRight
+  - Type: 4
+    SynchronizeType: 0
+    Name: movingUp
+  - Type: 4
+    SynchronizeType: 0
+    Name: movingDown
+  - Type: 1
+    SynchronizeType: 0
+    Name: L1R2U3D4
+  m_SynchronizeLayers:
+  - SynchronizeType: 0
+    LayerIndex: 0
 --- !u!1 &7488954503642072634
 GameObject:
   m_ObjectHideFlags: 0

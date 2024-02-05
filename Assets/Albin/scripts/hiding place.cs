@@ -5,6 +5,7 @@ using UnityEngine;
 public class hidingplace : MonoBehaviour
 {
     GameObject player;
+    GameObject player2;
     bool reach = false;
     public bool hiding = false;
     // Start is called before the first frame update
@@ -20,18 +21,20 @@ public class hidingplace : MonoBehaviour
         {
             player = GameObject.FindWithTag("Player");
         }
+        if (player2 == null)
+        {
+            player2 = GameObject.FindWithTag("Player2");
+        }
         if (hiding == true && Input.GetKeyDown(KeyCode.Q))
         {
-            print("stop hiding");
             hiding = false;
             player.SetActive(true);
+            player2.SetActive(true);
         }
         else if (reach == true)
         {
-            print("reach");
             if (Input.GetKeyDown(KeyCode.Q))
             {
-                print("hinding");
                 hiding = true;
                 player.SetActive(false);
             }
@@ -39,14 +42,14 @@ public class hidingplace : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Player2")
         {
             reach = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Player2")
         {
             reach = false;
         }

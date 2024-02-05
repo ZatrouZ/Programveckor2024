@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 
 
-//Denna kod gör så att spelet kan switcha emellan fullscreen och icke fullscreen.
+//This code helps switching from fullscreen to windowed screen.
 public class FullscreenCode : MonoBehaviour
 {
 

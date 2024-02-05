@@ -23,16 +23,17 @@ public class DoorToLastRoom : MonoBehaviour
     {
         if (ConnectedOpen == true)
         {
-            View.RPC("OpenLastDoor", RpcTarget.All);
+            //View.RPC("OpenLastDoor", RpcTarget.All);
         }
 
         if (open == true)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-               
-                SceneManager.LoadScene("sista rum(albin)");
+                SyncScene.instance.SyncNow = true;
+                //SceneManager.LoadScene("sista rum(albin)");
                 ConnectedOpen = true;
+                
             }
         }
     }

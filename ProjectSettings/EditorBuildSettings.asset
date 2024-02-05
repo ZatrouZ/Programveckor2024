@@ -38,4 +38,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/OfficialGameScenes/slut cutscene.unity
     guid: a96c2fc1c25e6e8458d1eea4a3c20ee0
+  - enabled: 1
+    path: Assets/Clara/Clara.unity
+    guid: fccebc0a7d17e3f418bfd045f1b252e3
   m_configObjects: {}

@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
-public class PlayerSpawner : MonoBehaviour
+public class PSWB : MonoBehaviour
 {
-    
-
     public Transform p1SpawnLoc;
     public Transform p2SpawnLoc;
     // Start is called before the first frame update
@@ -20,12 +18,12 @@ public class PlayerSpawner : MonoBehaviour
     {
         if (PhotonNetwork.IsMasterClient)
         {
-            PhotonNetwork.Instantiate("Player1", p1SpawnLoc.position , Quaternion.identity);
+            PhotonNetwork.Instantiate("BombPlayer1", p1SpawnLoc.position, Quaternion.identity);
         }
         else
         {
-            PhotonNetwork.Instantiate("Player2", p2SpawnLoc.position , Quaternion.identity);
+            PhotonNetwork.Instantiate("BombPlayer2", p2SpawnLoc.position, Quaternion.identity);
         }
-            
+
     }
 }

@@ -9,9 +9,9 @@ using ExitGames.Client.Photon;
 using System;
 
 
-public class GameMgr : MonoBehaviour//, IChatClientListener
+public class GameMgr : MonoBehaviour  // IChatClientListener
 {
-   /* #region connect
+  /* #region connect
     ChatClient chatClient;
     [SerializeField] string UserID;
     public GameObject Content;
@@ -21,15 +21,15 @@ public class GameMgr : MonoBehaviour//, IChatClientListener
     public TMP_InputField chatInputField;
     public TMP_Text chatOutputText;
 
-    /*static const ExitGames::Common::JString appID = L"<ff2df880-13eb-4b23-aae4-ca13e01cd78a>";
+    static const ExitGames::Common::JString appID = L"<ff2df880-13eb-4b23-aae4-ca13e01cd78a>";
     static const ExitGames::Common::JString appVersion = L"1.0";
     ExitGames::Chat::Client chatClient(chatListener, appID, appVersion);
-    chatClient.connect(ExitGames::Chat::AuthenticationValues().setUserID(userID));*/
+    chatClient.connect(ExitGames::Chat::AuthenticationValues().setUserID(userID));
 
-  /*  public void ChatConnect()
+   public void ChatConnect()
     {
         isConnected = true;
-        ChatClient.ChatRegion = "EU";
+        //ChatClient.ChatRegion = "EU";
         chatClient.Service();
         chatClient = new ChatClient(this);
         chatClient.Connect(PhotonNetwork.PhotonServerSettings.AppSettings.AppIdChat, PhotonNetwork.AppVersion, new AuthenticationValues(username));
@@ -166,7 +166,7 @@ public class GameMgr : MonoBehaviour//, IChatClientListener
     public void OnUserUnsubscribed(string channel, string user)
     {
         throw new System.NotImplementedException();
-    }*/
+    }
 
 
 

@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class bomb : MonoBehaviour
 {
+    PhotonView View;
+
     GameObject bomb1;
     GameObject bomb2;
     public bool reach = false;
@@ -14,7 +17,7 @@ public class bomb : MonoBehaviour
     bool hasFoundBomb = false;
     void Start()
     {
-
+        View = GetComponent<PhotonView>();
     }
 
     void Update()
@@ -22,7 +25,6 @@ public class bomb : MonoBehaviour
         if (bomb1 == null)
         {
             bomb1 = GameObject.FindWithTag("Bomb");
-            hasFoundBomb = true;
         }
         else if (bomb1 != null && hasFoundBomb == false)
         {
@@ -45,16 +47,14 @@ public class bomb : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                hasBomb = true;
-                bomb1.SetActive(true);
+                View.RPC("RPC1", RpcTarget.All);
             }
         }
         if (reach2 == true && hasBomb == false)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                hasBomb2 = true;
-                bomb2.SetActive(true);
+                View.RPC("RPC2", RpcTarget.All);
             }
         }
     }
@@ -80,5 +80,19 @@ public class bomb : MonoBehaviour
         {
             reach2 = false;
         }
+    }
+
+    [PunRPC]
+    void RPC1() 
+    {
+        hasBomb = true;
+        bomb1.SetActive(true);
+    }
+
+    [PunRPC]
+    void RPC2()
+    {
+        hasBomb2 = true;
+        bomb2.SetActive(true);
     }
 }

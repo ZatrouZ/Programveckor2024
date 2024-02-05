@@ -33,13 +33,15 @@ public class RealChat : MonoBehaviour
 
     public void InputMessage()
     {
-        view.RPC("AddMessage", RpcTarget.All, PhotonNetwork.LocalPlayer.ActorNumber, chatInput.text);
+        print("Input");
+        view.RPC("AddMessage", RpcTarget.All, PhotonNetwork.LocalPlayer.ActorNumber.ToString(), chatInput.text);
         chatInput.text = "";
     }
 
     [PunRPC]
     void AddMessage(string playerName, string message)
     {
+        print("RPC");
         messages.Add(playerName + ": " + message);
         chatLog.text += messages[messages.Count - 1] + "\n";
     }

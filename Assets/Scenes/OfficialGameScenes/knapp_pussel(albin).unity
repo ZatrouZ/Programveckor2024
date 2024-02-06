@@ -940,7 +940,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de26a9a994a5c7e4f92d1e197f5ea736, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Chat: {fileID: 0}
 --- !u!212 &495600745
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2538,6 +2537,26 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3298861578581413460, guid: f12151ddd92c7be4ba69d8f699670211, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3983959393173390007, guid: f12151ddd92c7be4ba69d8f699670211, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3983959393173390007, guid: f12151ddd92c7be4ba69d8f699670211, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3983959393173390007, guid: f12151ddd92c7be4ba69d8f699670211, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3983959393173390007, guid: f12151ddd92c7be4ba69d8f699670211, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3983959393173390007, guid: f12151ddd92c7be4ba69d8f699670211, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}

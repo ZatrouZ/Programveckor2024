@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class StartCellBlackScreen : MonoBehaviour
 {
-    [SerializeField]
-    GameObject Chat;
+    //[SerializeField]
+    //GameObject Chat;
     // Start is called before the first frame update
     void Start()
     {
         gameObject.SetActive(true);
         StartCoroutine(BlackScreen());
-        Chat.SetActive(false);
+        //Chat.SetActive(false);
     }
 
     // Update is called once per frame
@@ -24,6 +24,6 @@ public class StartCellBlackScreen : MonoBehaviour
     {
         yield return new WaitForSeconds(1.5f);
         gameObject.SetActive(false);
-        Chat.SetActive(true);
+       // Chat.SetActive(true);
     }
 }

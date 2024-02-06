@@ -1321,6 +1321,7 @@ GameObject:
   m_Component:
   - component: {fileID: 612442618}
   - component: {fileID: 612442617}
+  - component: {fileID: 612442619}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -1357,6 +1358,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &612442619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612442616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54a11a935d775ed4db4a0b708e159e70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NumberForChatScene: 12
 --- !u!1 &753167229
 GameObject:
   m_ObjectHideFlags: 0
@@ -1961,7 +1975,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de26a9a994a5c7e4f92d1e197f5ea736, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Chat: {fileID: 1425289670}
 --- !u!1 &966609920
 GameObject:
   m_ObjectHideFlags: 0

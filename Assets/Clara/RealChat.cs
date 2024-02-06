@@ -27,7 +27,8 @@ public class RealChat : MonoBehaviour
     {
         if (messages.Count > 6)
         {
-            messages.RemoveAt(6);
+            print("reset list");
+            messages.RemoveAt(0);
         }
     }
 

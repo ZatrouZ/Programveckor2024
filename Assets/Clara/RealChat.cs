@@ -29,6 +29,13 @@ public class RealChat : MonoBehaviour
         {
             print("reset list");
             messages.RemoveAt(0);
+            chatLog.text = "";
+            for (int x = 0; x < messages.Count; x++)
+            {
+                chatLog.text += messages[x] + "\n";
+
+            }
+
         }
     }
 

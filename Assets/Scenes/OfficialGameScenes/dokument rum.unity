@@ -1677,6 +1677,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: gamemgr
       objectReference: {fileID: 0}
+    - target: {fileID: 4972081537217113128, guid: f12151ddd92c7be4ba69d8f699670211, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151437489771669387, guid: f12151ddd92c7be4ba69d8f699670211, type: 3}
+      propertyPath: sceneViewId
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7804584450867457656, guid: f12151ddd92c7be4ba69d8f699670211, type: 3}
       propertyPath: sceneViewId
       value: 1

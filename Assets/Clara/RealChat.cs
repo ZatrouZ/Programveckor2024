@@ -25,8 +25,9 @@ public class RealChat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (messages.Count > 15)
+        if (messages.Count > 6)
         {
+            print("reset list");
             messages.RemoveAt(0);
         }
     }

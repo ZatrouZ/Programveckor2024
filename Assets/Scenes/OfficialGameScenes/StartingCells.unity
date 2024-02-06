@@ -631,6 +631,60 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3656230675628543351, guid: f12151ddd92c7be4ba69d8f699670211, type: 3}
+      propertyPath: m_text
+      value: '1
+
+        2
+
+        3
+
+        4
+
+        5
+
+        6'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3656230675628543351, guid: f12151ddd92c7be4ba69d8f699670211, type: 3}
+      propertyPath: m_fontSize
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 3656230675628543351, guid: f12151ddd92c7be4ba69d8f699670211, type: 3}
+      propertyPath: m_margin.w
+      value: 1.4921342
+      objectReference: {fileID: 0}
+    - target: {fileID: 3656230675628543351, guid: f12151ddd92c7be4ba69d8f699670211, type: 3}
+      propertyPath: m_margin.y
+      value: 1.4920435
+      objectReference: {fileID: 0}
+    - target: {fileID: 3656230675628543351, guid: f12151ddd92c7be4ba69d8f699670211, type: 3}
+      propertyPath: m_lineSpacing
+      value: -32
+      objectReference: {fileID: 0}
+    - target: {fileID: 3656230675628543351, guid: f12151ddd92c7be4ba69d8f699670211, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 3656230675628543351, guid: f12151ddd92c7be4ba69d8f699670211, type: 3}
+      propertyPath: m_characterSpacing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3656230675628543351, guid: f12151ddd92c7be4ba69d8f699670211, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3983959393173390007, guid: f12151ddd92c7be4ba69d8f699670211, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 105
+      objectReference: {fileID: 0}
+    - target: {fileID: 3983959393173390007, guid: f12151ddd92c7be4ba69d8f699670211, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -294
+      objectReference: {fileID: 0}
+    - target: {fileID: 3983959393173390007, guid: f12151ddd92c7be4ba69d8f699670211, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -125.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4972081537217113128, guid: f12151ddd92c7be4ba69d8f699670211, type: 3}
       propertyPath: m_Name
       value: gamemgr
@@ -638,6 +692,10 @@ PrefabInstance:
     - target: {fileID: 4972081537217113128, guid: f12151ddd92c7be4ba69d8f699670211, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5660968926503425518, guid: f12151ddd92c7be4ba69d8f699670211, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6151437489771669387, guid: f12151ddd92c7be4ba69d8f699670211, type: 3}
       propertyPath: sceneViewId
@@ -1263,6 +1321,7 @@ GameObject:
   m_Component:
   - component: {fileID: 612442618}
   - component: {fileID: 612442617}
+  - component: {fileID: 612442619}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -1299,6 +1358,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &612442619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612442616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54a11a935d775ed4db4a0b708e159e70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NumberForChatScene: 12
 --- !u!1 &753167229
 GameObject:
   m_ObjectHideFlags: 0
@@ -1903,7 +1975,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de26a9a994a5c7e4f92d1e197f5ea736, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Chat: {fileID: 1425289670}
 --- !u!1 &966609920
 GameObject:
   m_ObjectHideFlags: 0
@@ -3061,7 +3132,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1425289671
 SpriteRenderer:
   m_ObjectHideFlags: 0

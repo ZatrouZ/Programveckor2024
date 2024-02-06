@@ -27,7 +27,7 @@ public class RealChat : MonoBehaviour
     {
         if (messages.Count > 6)
         {
-            messages.RemoveAt(0);
+            messages.RemoveAt(6);
         }
     }
 

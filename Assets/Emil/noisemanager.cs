@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class NoiseManager : MonoBehaviour
 {
+    bool spawnable;
+    int randomN;
     public float noise;
     public float totalNoise;
     float timer;
@@ -14,6 +16,13 @@ public class NoiseManager : MonoBehaviour
         timer += Time.deltaTime;
         if (timer >= 5)
         {
+            if (randomN <= totalNoise)
+            {
+                print("spawned");
+                totalNoise = 0;
+            }
+            randomN = Random.Range(1, 500);
+
             print("fem");
             timer = 0;
             spawner();
@@ -21,6 +30,6 @@ public class NoiseManager : MonoBehaviour
     }
     void spawner()
     {
-        print("spawned");
+        
     }
 }

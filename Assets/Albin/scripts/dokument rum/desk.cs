@@ -12,7 +12,7 @@ public class desk : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        nm = GetComponent<NoiseManager>();
+        nm = FindObjectOfType<NoiseManager>();
         dokument.SetActive(false);
         deskSearch = false;
     }
@@ -25,7 +25,7 @@ public class desk : MonoBehaviour
             if (Input.GetKey(KeyCode.E))
             {
                 dokument.SetActive(true);
-                nm.totalNoise += 7.5f;
+                nm.totalNoise += 100;
             }
         }
     }

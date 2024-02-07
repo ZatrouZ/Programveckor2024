@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class control : MonoBehaviour
 {
+    NoiseManager NoiseManager;
     AudioSource AudioSource;
 
     red red;
@@ -30,6 +31,8 @@ public class control : MonoBehaviour
     [SerializeField]
     GameObject DTLROBJ;
 
+    GameObject player;
+
     bool reach;
     public bool managing;
     public bool open;
@@ -52,16 +55,26 @@ public class control : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Alpha1) || Input.GetKey(KeyCode.Alpha2) || Input.GetKey(KeyCode.Alpha3) || Input.GetKey(KeyCode.Alpha4) || Input.GetKey(KeyCode.Alpha5))
+        if (player == null)
+        {
+            player = GameObject.FindWithTag("Player");
+        }
+        else
+        {
+            NoiseManager = FindObjectOfType<NoiseManager>();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Alpha4) || Input.GetKeyDown(KeyCode.Alpha5))
         {
             AudioSource.Play();
+            NoiseManager.totalNoise += 4;
         }
         if (reach == true)
         {
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 panel.SetActive(true);
                 managing = true;
+                NoiseManager.totalNoise += 7;
             }
         }
 

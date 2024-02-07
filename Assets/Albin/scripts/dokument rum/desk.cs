@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class desk : MonoBehaviour
 {
-    NoiseManager nm;
+
+    NoiseManager NoiseManager;
     [SerializeField]
     GameObject dokument;
+    GameObject player;
 
     bool deskSearch;
     // Start is called before the first frame update
     void Start()
     {
-        nm = FindObjectOfType<NoiseManager>();
         dokument.SetActive(false);
         deskSearch = false;
     }
@@ -20,12 +21,20 @@ public class desk : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (player == null)
+        {
+            player = GameObject.FindWithTag("Player2");
+        }
+        else
+        {
+            NoiseManager = FindObjectOfType<NoiseManager>();
+        }
         if (deskSearch==true)
         {
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 dokument.SetActive(true);
-                nm.totalNoise += 100;
+                NoiseManager.totalNoise += 7;
             }
         }
     }

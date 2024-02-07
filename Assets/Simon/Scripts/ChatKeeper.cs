@@ -6,12 +6,11 @@ using Photon.Pun;
 
 public class ChatKeeper : MonoBehaviour
 {
-    [SerializeField]
-    int NumberForChatScene;
+   
     // Start is called before the first frame update
     void Start()
     {
-        SceneManager.LoadScene(NumberForChatScene, LoadSceneMode.Additive);
+        DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame

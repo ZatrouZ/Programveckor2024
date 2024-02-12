@@ -1128,7 +1128,7 @@ GameObject:
   - component: {fileID: 3603584220196738499}
   m_Layer: 0
   m_Name: gamemgr
-  m_TagString: Untagged
+  m_TagString: Chat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

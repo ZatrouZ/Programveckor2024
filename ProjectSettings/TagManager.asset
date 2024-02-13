@@ -16,6 +16,7 @@ TagManager:
   - Player2
   - Bomb2
   - Chat
+  - robot
   layers:
   - Default
   - TransparentFX

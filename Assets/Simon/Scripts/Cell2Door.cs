@@ -18,6 +18,7 @@ public class Cell2Door : MonoBehaviour
     GameObject File;
     PhotonView PlayerView;
     GameObject player;
+    GameObject player2;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +42,8 @@ public class Cell2Door : MonoBehaviour
                 SceneManager.LoadScene("Corridor 2(albin)");
             }
         }
+
+        player2 = GameObject.FindWithTag("Player2");
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -81,5 +84,6 @@ public class Cell2Door : MonoBehaviour
         BackroundWithHole.SetActive(true);
         File.SetActive(false);
         BackroundWithoutHole.SetActive(false);
+        player2.SetActive(false);
     }
 }

@@ -28,7 +28,7 @@ public class door : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        player_ = GameObject.FindGameObjectWithTag("Player2");
+        player_ = GameObject.FindGameObjectWithTag("Player");
 
         if (KeyInHand == null)
         {

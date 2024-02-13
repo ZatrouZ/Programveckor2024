@@ -20,23 +20,28 @@ public class BlackChat : MonoBehaviour
         if (yes == true)
         {
             chat = GameObject.FindWithTag("Chat");
+            print("find");
         }
         else if (no == true)
         {
             StartCoroutine("blackchat");
+            print("start");
             no = false;
         }
 
         if (chat != null)
         {
             yes = false;
+            print("found");
         }
     }
 
     IEnumerator blackchat() 
     {
         chat.SetActive(false);
+        print("false");
         yield return new WaitForSeconds(1.5f);
         chat.SetActive(true);
+        print("true");
     }
 }

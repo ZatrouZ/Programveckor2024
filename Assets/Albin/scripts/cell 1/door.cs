@@ -12,7 +12,7 @@ public class door : MonoBehaviour
     PhotonView View;
     PhotonView PlayerView;
     GameObject player;
-
+    GameObject player_;
 
     public bool open;
     public bool reach;
@@ -28,7 +28,7 @@ public class door : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        player_ = GameObject.FindGameObjectWithTag("Player");
 
         if (KeyInHand == null)
         {
@@ -84,7 +84,7 @@ public class door : MonoBehaviour
     void RPC1() 
     {
         KeyInHand.SetActive(false);
-       
+        player_.SetActive(false);
     }
 }
 

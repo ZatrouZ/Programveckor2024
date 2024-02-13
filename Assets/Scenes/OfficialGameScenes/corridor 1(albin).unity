@@ -1126,6 +1126,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlackChat
       objectReference: {fileID: 0}
+    - target: {fileID: 5094970410406008786, guid: 462a1ed2d513fb34f9e52e5908191ecf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

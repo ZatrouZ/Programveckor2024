@@ -2307,7 +2307,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Boris
+  m_text: Aleksei
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4109d2fcbe8390b419f57b24c293ba14, type: 2}
   m_sharedMaterial: {fileID: 2323420316667586084, guid: 4109d2fcbe8390b419f57b24c293ba14, type: 2}

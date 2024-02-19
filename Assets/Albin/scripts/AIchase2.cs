@@ -1,11 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Photon.Pun;
 
-public class AIChase : MonoBehaviour
+public class AIchase2 : MonoBehaviour
 {
-
     public GameObject player;
 
 
@@ -23,7 +21,7 @@ public class AIChase : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        player = GameObject.FindWithTag("Player");
+        player = GameObject.FindWithTag("Player2");
 
 
 
@@ -42,7 +40,7 @@ public class AIChase : MonoBehaviour
         else if (distance >= 5)
         {
             FindObjectOfType<EnemyPatrol>().enabled = true; //EnemyPatrol Enables again if object is further away than distance 9.
-                                                        
+
 
         }
 

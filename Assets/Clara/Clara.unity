@@ -340,7 +340,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!95 &855573450
 Animator:
@@ -459,19 +459,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 855573455}
   audioClipArray:
-  - {fileID: 8300000, guid: 0a3dfb0c117625a41846c56de5a76978, type: 3}
-  - {fileID: 8300000, guid: 0dc3da7511827a94195c72087348eb09, type: 3}
-  - {fileID: 8300000, guid: b18ff1e150af2694bbe21c10c31812b5, type: 3}
-  - {fileID: 8300000, guid: 98ec340711a19284d9f0ca488b9469b1, type: 3}
-  - {fileID: 8300000, guid: 27cbdc9d254c65a40a5413e6fdf65956, type: 3}
-  - {fileID: 8300000, guid: eb530fbca2270724288028744b7303a7, type: 3}
-  - {fileID: 8300000, guid: 68376823fabcc824cbd5f87f536e01ef, type: 3}
-  - {fileID: 8300000, guid: 222f7537649236c4ca46cf1b2a7cdd52, type: 3}
-  - {fileID: 8300000, guid: d21760194ed4c9143a50677f085fbf63, type: 3}
-  - {fileID: 8300000, guid: 1fd1973339d37394b919e0858f04d85b, type: 3}
-  - {fileID: 8300000, guid: a925ba6fcd39ebe4fb620e6955b8ea06, type: 3}
-  - {fileID: 8300000, guid: a5efd4923c74e70428c801dad651f9ce, type: 3}
-  - {fileID: 8300000, guid: 1f14849b19e6fe042bbbfa40291a8d63, type: 3}
+  - {fileID: 8300000, guid: 1803d9d65f9689940ab7a0601b9dd973, type: 3}
+  - {fileID: 8300000, guid: 92e7dadcf670085428e257b1582c1125, type: 3}
+  - {fileID: 8300000, guid: 3c7752826d933a54da12231027d91110, type: 3}
+  - {fileID: 8300000, guid: fbf709beee9979e4c84a4999fb2d98af, type: 3}
+  - {fileID: 8300000, guid: 345ebfba63632fe488fef181c9026798, type: 3}
+  - {fileID: 8300000, guid: 6f8038e581d2f524d84d2f8ee6a7d45c, type: 3}
+  - {fileID: 8300000, guid: e437f9b0efaf18a42892d24c0920986c, type: 3}
 --- !u!82 &855573455
 AudioSource:
   m_ObjectHideFlags: 0

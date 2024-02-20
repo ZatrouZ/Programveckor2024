@@ -539,8 +539,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.014200032, y: -0.0013500154, z: 0}
-    m_Extent: {x: 1.0508001, y: 0.82745004, z: 0}
+    m_Center: {x: -0.01910001, y: -0.008350015, z: 0}
+    m_Extent: {x: 1.052, y: 0.82325, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -566,7 +566,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1677426973}
   - component: {fileID: 1677426972}
-  - component: {fileID: 1677426971}
   - component: {fileID: 1677426974}
   m_Layer: 0
   m_Name: Main Camera
@@ -575,14 +574,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1677426971
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1677426970}
-  m_Enabled: 1
 --- !u!20 &1677426972
 Camera:
   m_ObjectHideFlags: 0

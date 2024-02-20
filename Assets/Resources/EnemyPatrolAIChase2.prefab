@@ -76,6 +76,7 @@ GameObject:
   - component: {fileID: 4065311399013023562}
   - component: {fileID: 4698880900492968768}
   - component: {fileID: 7844333347679430496}
+  - component: {fileID: 8123084320667726718}
   m_Layer: 0
   m_Name: EnemyAI
   m_TagString: Untagged
@@ -257,4 +258,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  speed: 5
+  speed: 4
+--- !u!114 &8123084320667726718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3741844398715053069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a786557948ea03f4aae26b5b17c491aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

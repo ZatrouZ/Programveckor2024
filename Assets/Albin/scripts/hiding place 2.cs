@@ -27,7 +27,7 @@ public class hidingplace2 : MonoBehaviour
         }
         else if (reach == true)
         {
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (Input.GetKeyDown(KeyCode.Q) && RealChat.isWriting == false)
             {
                 hiding = true;
                 player2.SetActive(false);

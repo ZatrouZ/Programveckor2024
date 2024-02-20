@@ -24,7 +24,7 @@ public class doorForCodeLockRoom : MonoBehaviour
     {
         if (open == true)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) && RealChat.isWriting == false)
             { 
                 gameObject.SetActive(false);
                 if (KeyInHand == null)

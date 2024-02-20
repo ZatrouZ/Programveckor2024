@@ -31,7 +31,7 @@ public class desk : MonoBehaviour
         }
         if (deskSearch==true)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) && RealChat.isWriting == false)
             {
                 dokument.SetActive(true);
                 NoiseManager.totalNoise += 7;

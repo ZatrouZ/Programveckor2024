@@ -45,14 +45,14 @@ public class bomb : MonoBehaviour
 
         if (reach == true && hasBomb2 == false)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) && RealChat.isWriting == false)
             {
                 View.RPC("RPC1", RpcTarget.All);
             }
         }
         if (reach2 == true && hasBomb == false)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) && RealChat.isWriting == false)
             {
                 View.RPC("RPC2", RpcTarget.All);
             }

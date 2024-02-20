@@ -30,7 +30,7 @@ public class CodeLock2 : MonoBehaviour
         }
         if (InReach == true)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) && RealChat.isWriting == false)
             {
                 LockUI.SetActive(true);
                 hasUIUP = true;

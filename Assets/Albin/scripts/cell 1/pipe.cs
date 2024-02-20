@@ -24,7 +24,7 @@ public class pipe : MonoBehaviour
     {
         if (pickup==true)
         {
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKey(KeyCode.E) && RealChat.isWriting == false)
             {
                 if (PipeInHand == null)
                 {

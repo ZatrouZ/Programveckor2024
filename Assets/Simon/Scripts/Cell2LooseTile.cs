@@ -26,7 +26,7 @@ public class Cell2LooseTile : MonoBehaviour
         if (pickup == true)
         {
           
-                if (Input.GetKey(KeyCode.E))
+                if (Input.GetKey(KeyCode.E) && RealChat.isWriting == false)
                 {
                     hasMovedTile = true;
                     View.RPC("RPC1", RpcTarget.All);

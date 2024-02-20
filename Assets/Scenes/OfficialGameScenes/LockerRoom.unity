@@ -2749,7 +2749,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 859631313}
-  - component: {fileID: 859631312}
+  - component: {fileID: 859631314}
   m_Layer: 0
   m_Name: robot spawner
   m_TagString: Untagged
@@ -2757,21 +2757,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &859631312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 859631311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 172534affa901bc46b7c63d17d61662c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  robot: {fileID: 2124901327180181775, guid: 94c1a7f73a036394d82e74d438a8b8ef, type: 3}
-  xSpawnCo: -7.96
-  ySpawnCo: -0.23
 --- !u!4 &859631313
 Transform:
   m_ObjectHideFlags: 0
@@ -2787,6 +2772,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &859631314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859631311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12ed20f0f03e3454589eacb21c22429a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  robot: {fileID: 2124901327180181775, guid: 94c1a7f73a036394d82e74d438a8b8ef, type: 3}
+  xSpawnCo: -7.96
+  ySpawnCo: -0.23
 --- !u!1 &1016011385
 GameObject:
   m_ObjectHideFlags: 0

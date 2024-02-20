@@ -2248,8 +2248,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   robot: {fileID: 2415691490049392730, guid: 63732dc0dd2469046b9bbcaec5b39cb6, type: 3}
-  xSpawnCo: -4.33
-  ySpawnCo: -4.28
+  xSpawnCo: -3.986231
+  ySpawnCo: -2.481733
 --- !u!1001 &1393992902
 PrefabInstance:
   m_ObjectHideFlags: 0

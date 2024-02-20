@@ -13,7 +13,7 @@ public class RealChat : MonoBehaviour
     TMP_InputField chatInput;
     List<string> messages = new List<string>();
     PhotonView view;
-
+    public static bool isWriting;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +25,8 @@ public class RealChat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        isWriting = chatInput.isFocused;
+
         if (messages.Count > 6)
         {
             print("reset list");

@@ -13,6 +13,11 @@ public class NoiseManager : MonoBehaviour
     float timer;
     public bool spawn = false;
 
+    private void Start()
+    {
+        randomN = 100;
+    }
+
     private void Update()
     {
         if (player == null)

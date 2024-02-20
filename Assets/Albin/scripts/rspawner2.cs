@@ -9,6 +9,8 @@ public class rspawner2 : MonoBehaviour
     public float xSpawnCo;
     public float ySpawnCo;
 
+    float timer = 3;
+
     NoiseManager NoiseManager;
     // Start is called before the first frame update
     void Start()
@@ -29,12 +31,13 @@ public class rspawner2 : MonoBehaviour
         }
         if (NoiseManager.spawn == true)
         {
-            spawwn();
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+            {
+                Instantiate(robot, new Vector3(xSpawnCo, ySpawnCo, 0), Quaternion.identity);
+                NoiseManager.spawn = false;
+            }
         }
-    }
-    void spawwn()
-    {
-        Instantiate(robot, new Vector3(xSpawnCo, ySpawnCo, 0), Quaternion.identity);
-        NoiseManager.spawn = false;
+        
     }
 }

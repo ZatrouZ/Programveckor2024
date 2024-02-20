@@ -6,7 +6,6 @@ public class AIchase2 : MonoBehaviour
 {
     public GameObject player;
 
-
     public float speed;
 
     hidingplace hiding;
@@ -37,14 +36,11 @@ public class AIchase2 : MonoBehaviour
 
             //patrol.enabled = false; //EnemyPatrol Disables
             //FindObjectOfType<AIChase>().enabled = true; //Ai chase script enables
-            print("moving");
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
 
         }
-        
-        
         else if (hiding == true)
-         {
+        {
             patrol.enabled = true;
             FindObjectOfType<AIChase2>().enabled = false;
         }

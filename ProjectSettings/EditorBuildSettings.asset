@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Clara/chat.unity
     guid: e3ef139d6e01409469703ffab3c5393b
+  - enabled: 1
+    path: Assets/Clara/cutscene i dont know.unity
+    guid: 9669567680dcc6a4b80cbc53cf6a8797
   m_configObjects: {}

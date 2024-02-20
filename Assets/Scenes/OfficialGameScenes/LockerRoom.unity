@@ -2769,9 +2769,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 172534affa901bc46b7c63d17d61662c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  robot: {fileID: 2124901327180181775, guid: 9c86ea743b3accd418c937f3cfc7615c, type: 3}
-  xSpawnCo: 7
-  ySpawnCo: 0
+  robot: {fileID: 2124901327180181775, guid: 94c1a7f73a036394d82e74d438a8b8ef, type: 3}
+  xSpawnCo: -7.96
+  ySpawnCo: -0.23
 --- !u!4 &859631313
 Transform:
   m_ObjectHideFlags: 0

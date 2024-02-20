@@ -35,7 +35,7 @@ public class AIchase2 : MonoBehaviour
         if (hiding == false) //If distance is 8 or closer. This object where this script is placed will start following the player. However if further away than distance 9 it will stop following you.
         {
 
-            //patrol.enabled = false; //EnemyPatrol Disables
+            patrol.enabled = false; //EnemyPatrol Disables
             //FindObjectOfType<AIChase>().enabled = true; //Ai chase script enables
             print("moving");
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
@@ -46,7 +46,7 @@ public class AIchase2 : MonoBehaviour
         else if (hiding == true)
          {
             patrol.enabled = true;
-            FindObjectOfType<AIChase2>().enabled = false;
+            //FindObjectOfType<AIChase2>().enabled = false;
         }
 
 

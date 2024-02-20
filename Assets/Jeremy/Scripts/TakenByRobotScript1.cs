@@ -29,7 +29,7 @@ public class TakenByRobotScript1 : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player2")
         {
-            SceneManager.LoadSceneAsync(13);
+            SceneManager.LoadScene(13);
 
 
             

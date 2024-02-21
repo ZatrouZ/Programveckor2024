@@ -15,8 +15,7 @@ public class doorForCodeLockRoom : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        KeyInHand = GameObject.FindWithTag("Key");
-        CL = CodeLockX.GetComponent<CodeLock>();
+        CL = CodeLockX.GetComponent<CodeLock>();// kollpar till CodeLock scriptet
     }
 
     // Update is called once per frame
@@ -44,7 +43,7 @@ public class doorForCodeLockRoom : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player" && CL.hasCKey == true)
+        if (collision.gameObject.tag == "Player" && CL.hasCKey == true)//om man har nycklen och en object med tagen player entara triggern
         {
             open = true;
             print("open");
@@ -52,7 +51,7 @@ public class doorForCodeLockRoom : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")//om ett object med tagen player går ut ur triggern
         {
             open = false;
         }

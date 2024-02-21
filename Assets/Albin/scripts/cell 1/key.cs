@@ -45,7 +45,7 @@ public class key : MonoBehaviour
 
         if (reach==true)
         {
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKey(KeyCode.E) && RealChat.isWriting == false)
             {
                 View.RPC("RPC1", RpcTarget.All);
                 hasKey = true;

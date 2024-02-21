@@ -71,7 +71,7 @@ public class control : MonoBehaviour
         }
         if (reach == true)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) && RealChat.isWriting == false)
             {
                 panel.SetActive(true);
                 managing = true;

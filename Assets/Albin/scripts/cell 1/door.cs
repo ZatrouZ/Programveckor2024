@@ -45,7 +45,7 @@ public class door : MonoBehaviour
         }
         if (open == true && timer < 0)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) && RealChat.isWriting == false)
             {
                 View.RPC("RPC1", RpcTarget.All);
                 SceneManager.LoadScene("corridor 1(albin)");

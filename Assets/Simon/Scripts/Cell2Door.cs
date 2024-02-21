@@ -36,7 +36,7 @@ public class Cell2Door : MonoBehaviour
         }
         if (open == true)
         {
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKey(KeyCode.E) && RealChat.isWriting == false)
             {
                 View.RPC("RPC2", RpcTarget.All);
                 SceneManager.LoadScene("Corridor 2(albin)");

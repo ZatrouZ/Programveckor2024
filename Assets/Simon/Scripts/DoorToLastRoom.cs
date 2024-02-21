@@ -28,7 +28,7 @@ public class DoorToLastRoom : MonoBehaviour
 
         if (open == true)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) && RealChat.isWriting == false)
             {
                 SyncScene.instance.SyncNow = true;
                 //SceneManager.LoadScene("sista rum(albin)");

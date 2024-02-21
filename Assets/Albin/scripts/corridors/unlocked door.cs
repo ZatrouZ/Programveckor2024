@@ -9,7 +9,7 @@ public class unlockeddoor : interract
     {
         if (reach == true)
         {
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKey(KeyCode.E) && RealChat.isWriting == false)
             {
                 SceneManager.LoadScene("LockerRoom");
             }

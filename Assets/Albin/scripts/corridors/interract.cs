@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class interract : MonoBehaviour
+    //Albin
 {
     protected bool reach = false;//bool för om du är inom räckholl för att öppna dörren
     void Start()

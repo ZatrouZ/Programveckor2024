@@ -285,7 +285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b564693ab1efb6146b1cb3bc77e1f251, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 5
   animator: {fileID: 0}
   PauseMenuObject: {fileID: 0}
   walking: 0
@@ -337,3 +337,4 @@ MonoBehaviour:
   randomN: 0
   noise: 0
   totalNoise: 0
+  spawn: 0

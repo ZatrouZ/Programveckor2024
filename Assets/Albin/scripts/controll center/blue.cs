@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class blue : MonoBehaviour
 {
+    //Alla färgscripts är gjorda på samma sätt av Albin
     Renderer rend;
 
     control control;

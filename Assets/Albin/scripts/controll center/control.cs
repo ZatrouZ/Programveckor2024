@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class control : MonoBehaviour
+    //Albin
 {
     NoiseManager NoiseManager;
     AudioSource AudioSource;
@@ -55,18 +56,18 @@ public class control : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player == null)
+        if (player == null) //om spelaren inte finns 
         {
-            player = GameObject.FindWithTag("Player");
+            player = GameObject.FindWithTag("Player");//hitta efter spelaren
         }
         else
         {
-            NoiseManager = FindObjectOfType<NoiseManager>();
+            NoiseManager = FindObjectOfType<NoiseManager>();//hitta noisemanager scriptet 
         }
         if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Alpha4) || Input.GetKeyDown(KeyCode.Alpha5))
         {
-            AudioSource.Play();
-            NoiseManager.totalNoise += 4;
+            AudioSource.Play();//spelar ljud av att trycka på knappar
+            NoiseManager.totalNoise += 4;//ökar ljudnivån
         }
         if (reach == true)
         {
@@ -87,20 +88,20 @@ public class control : MonoBehaviour
             //svar: grön magenta gul grön röd
         }
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)//om spelaren är inom räckhåll
     {
         if (collision.gameObject.tag == "Player")
         {
             reach = true;
         }
     }
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision)//om spelaren inte är inom räckhåll
     {
         if (collision.gameObject.tag == "Player")
         {
             reach = false;
             managing = false;
-            panel.SetActive(false);
+            panel.SetActive(false);//ta bort hudden
         }
     }
 }

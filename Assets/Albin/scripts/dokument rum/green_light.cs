@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class green_light : MonoBehaviour
+    //Albin men används inte 
 { 
     [SerializeField]
     GameObject green;

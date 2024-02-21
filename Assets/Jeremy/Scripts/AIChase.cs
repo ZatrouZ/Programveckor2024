@@ -33,14 +33,13 @@ public class AIChase : MonoBehaviour
         direction.Normalize();
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        if (hiding == true) //If distance is 8 or closer. This object where this script is placed will start following the player. However if further away than distance 9 it will stop following you.
+        if (hiding == false) //If distance is 8 or closer. This object where this script is placed will start following the player. However if further away than distance 9 it will stop following you.
         {
             //FindObjectOfType<EnemyPatrol>().enabled = false; //EnemyPatrol Disables
             //FindObjectOfType<AIChase>().enabled = true; //Ai chase script enables
             transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
-
         }
-        else if (hiding == true)
+        else
         {
             patrol.enabled = true;
             FindObjectOfType<AIChase>().enabled = false;

@@ -4,6 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 
 public class bomb : MonoBehaviour
+    //Albin
 {
     PhotonView View;
 
@@ -22,9 +23,9 @@ public class bomb : MonoBehaviour
 
     void Update()
     {
-        if (bomb1 == null)
+        if (bomb1 == null)//om bomb1 inte finns
         {
-            bomb1 = GameObject.FindWithTag("Bomb");
+            bomb1 = GameObject.FindWithTag("Bomb");//hitta bomb1
         }
         else if (bomb1 != null && hasFoundBomb == false)
         {

@@ -20,6 +20,6 @@ public class SceneSwitch : MonoBehaviour
     IEnumerator onStart() 
     {
         yield return new WaitForSeconds(8);
-        SceneManager.LoadScene("SlutSlutScene");
+        SceneManager.LoadScene("SlutSlutScreen");
     }
 }

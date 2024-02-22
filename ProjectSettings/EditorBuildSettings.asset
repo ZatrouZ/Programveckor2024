@@ -47,4 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Clara/cutscene i dont know.unity
     guid: 9669567680dcc6a4b80cbc53cf6a8797
+  - enabled: 1
+    path: Assets/Scenes/OfficialGameScenes/SlutSlutScreen.unity
+    guid: 01364d5fc016c2d46b5258f003823468
   m_configObjects: {}

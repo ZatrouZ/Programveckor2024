@@ -23,7 +23,7 @@ public class doorForCodeLockRoom : MonoBehaviour
     {
         if (open == true)
         {
-            if (Input.GetKeyDown(KeyCode.E) && RealChat.isWriting == false)
+            if (Input.GetKeyDown(KeyCode.E) && RealChat.isWriting == false)//om mna trycker på e och inte skriver i chatten så laddas scenen
             { 
                 gameObject.SetActive(false);
                 if (KeyInHand == null)

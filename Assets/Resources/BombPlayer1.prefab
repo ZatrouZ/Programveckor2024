@@ -389,20 +389,20 @@ MonoBehaviour:
   ShowParameterInspector: 1
   m_SynchronizeParameters:
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: movingLeft
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: movingRight
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: movingUp
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: movingDown
   - Type: 1
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: L1R2U3D4
   m_SynchronizeLayers:
-  - SynchronizeType: 0
+  - SynchronizeType: 1
     LayerIndex: 0

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Photon.Pun;
 
 public class SlutSlutScene : MonoBehaviour
 {
@@ -24,6 +25,6 @@ public class SlutSlutScene : MonoBehaviour
 
     public void Restart() 
     {
-        SceneManager.LoadScene("PreGameLobby");
+        PhotonNetwork.LoadLevel("PreGameLobby");
     }
 }

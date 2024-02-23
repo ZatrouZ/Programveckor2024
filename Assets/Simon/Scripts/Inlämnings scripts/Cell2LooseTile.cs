@@ -16,7 +16,7 @@ public class Cell2LooseTile : MonoBehaviour
     void Start()
     {
         StartCoroutine(Starting());
-        View = GetComponent<PhotonView>();
+        View = GetComponent<PhotonView>();//hämtar Photon viewn på objectet scriptet sitter på
         
     }
 
@@ -26,10 +26,10 @@ public class Cell2LooseTile : MonoBehaviour
         if (pickup == true)
         {
           
-                if (Input.GetKey(KeyCode.E) && RealChat.isWriting == false)
+                if (Input.GetKey(KeyCode.E) && RealChat.isWriting == false)// om clickar e och inte skriver i chatten
                 {
                     hasMovedTile = true;
-                    View.RPC("RPC1", RpcTarget.All);
+                    View.RPC("RPC1", RpcTarget.All);//startara RPC för alla
                 }
             
             
@@ -51,14 +51,14 @@ public class Cell2LooseTile : MonoBehaviour
         }
     }
 
-    IEnumerator Starting() 
+    IEnumerator Starting() //väntar i 1.5 sekunder eftsrom att spelarna spawnas in 
     {
         yield return new WaitForSeconds(1.5f);
         View.RPC("RPC2", RpcTarget.All);
         pickup = false;
         hasMovedTile = false;
         player = GameObject.FindGameObjectWithTag("Player");
-        PlayerView = player.GetComponent<PhotonView>();
+        PlayerView = player.GetComponent<PhotonView>();//
         if (PlayerView.IsMine == true)
         {
             this.enabled = false;

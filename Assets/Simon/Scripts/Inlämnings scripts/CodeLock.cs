@@ -24,14 +24,14 @@ public class CodeLock : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        LockUI.SetActive(false);
-        StartCoroutine(Starting());
+        LockUI.SetActive(false); //stänger av UIn för låset i början
+        StartCoroutine(Starting());//startar starting IEnumeratorn 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (player == null)
+        if (player == null)// om player inte är något hotta object emd tagen player
         {
             player = GameObject.FindWithTag("Player");
         }
@@ -40,37 +40,37 @@ public class CodeLock : MonoBehaviour
             NoiseManager = FindObjectOfType<NoiseManager>();
         }
 
-        if (KeyInHand == null)
+        if (KeyInHand == null)//om nyckel inte hittad hitta object med tag LRk (locker room key)
         {
             KeyInHand = GameObject.FindWithTag("LRK");
         }
         
-        if (pipe == null)
+        if (pipe == null)//samma som inann
         {
             pipe = GameObject.FindWithTag("PipeInHand");
         }
         
-        if (otherkey == null)
+        if (otherkey == null)//samma som innan
         {
             otherkey = GameObject.FindWithTag("KeyInHand");
         }
        
         if (InReach == true)
         {
-            if (Input.GetKeyDown(KeyCode.E) && RealChat.isWriting == false)
+            if (Input.GetKeyDown(KeyCode.E) && RealChat.isWriting == false)//om klikca e coh inte skriver i chatten
             {
-                LockUI.SetActive(true);
+                LockUI.SetActive(true);//sätetr på lock UIn
                 hasUIUP = true;
-                NoiseManager.totalNoise += 7;
+                NoiseManager.totalNoise += 7;//höjer noise managerns noise level (noise manager användes aldríg)
             }
         }
 
-        if (EnterdCode == rightCode)
+        if (EnterdCode == rightCode)//om koden som är skriven är den rätta koden starta funktionen
         {
             EnterdRightCode();
         }
 
-        if (hasUIUP == true)
+        if (hasUIUP == true)//om Uin är uppe och man klickar esc stängs UIn ner
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
@@ -80,7 +80,7 @@ public class CodeLock : MonoBehaviour
         }
     }
 
-    public void OnDigitChnage(string s) 
+    public void OnDigitChnage(string s) //gör så att enterd code är koden som skrivs i spelet
     {
         print("CodeEnterd");
         EnterdCode = s;
@@ -108,7 +108,7 @@ public class CodeLock : MonoBehaviour
         KeyInHand.SetActive(true);
     }
 
-    IEnumerator Starting() 
+    IEnumerator Starting() //väntar i en skeund innan den stänger av eftersom att spelaren inte finns direkt utan spawnas inn
     {
         yield return new WaitForSeconds(1);
         KeyInHand.SetActive(false);

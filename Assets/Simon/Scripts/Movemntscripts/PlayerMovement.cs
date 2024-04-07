@@ -11,8 +11,16 @@ public class PlayerMovement : MonoBehaviour
 
     public Animator animator;
 
+    private FootstepsScript footstepsScript;
+
     [SerializeField]
     GameObject PauseMenuObject;
+    private bool isWalking;
+
+    public void Awake()
+    {
+        footstepsScript = GetComponentInChildren<FootstepsScript>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -73,8 +81,16 @@ public class PlayerMovement : MonoBehaviour
                     animator.SetBool("movingRight", false);
                 }
             }
-        }
-       
 
+            if (isWalking)
+            {
+                footstepsScript.StartWalking();
+            }
+            else
+            {
+                footstepsScript.StopWalking();
+            }
+        }
     }
+
 }

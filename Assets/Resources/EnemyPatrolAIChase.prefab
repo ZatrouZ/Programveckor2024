@@ -9,8 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6657850897764680748}
-  - component: {fileID: 1449425263456777180}
-  - component: {fileID: 516224752209203566}
+  - component: {fileID: -7090960206357759425}
   m_Layer: 0
   m_Name: EnemyPatrolAIChase
   m_TagString: Untagged
@@ -34,7 +33,7 @@ Transform:
   - {fileID: 5818512978416194785}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1449425263456777180
+--- !u!114 &-7090960206357759425
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,25 +42,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2124901327180181775}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7197488872184e249a265805b36a91b6, type: 3}
+  m_Script: {fileID: 11500000, guid: e063a98a03241c742b60c9bd4bc3918e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
-  playerHealth: {fileID: 4350021547392110875, guid: 8e00688f4ccd1ee469fabd5cb73a3888, type: 3}
---- !u!114 &516224752209203566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2124901327180181775}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7197488872184e249a265805b36a91b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 0
-  playerHealth: {fileID: -1232637117620282799, guid: 38ca26e189ed48f45aa63abf8de1990d, type: 3}
 --- !u!1 &8305498371426681443
 GameObject:
   m_ObjectHideFlags: 0

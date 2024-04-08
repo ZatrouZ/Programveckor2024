@@ -7,26 +7,69 @@ using Random = UnityEngine.Random;
 
 public class FootstepsScript : MonoBehaviour
 {
-        public AudioSource audioSource;
-        public AudioClip[] audioClipArray;
-        AudioClip lastClip;
+    public AudioClip[] footstepSounds;
 
-    void Start()
+    public float minTimeBetweenFootsteps = 0.3f;
+
+    public float maxTimeBetweenFootsteps = 0.6f;
+
+    private AudioSource audioSource;
+
+    private bool isWalking = false;
+
+    private float timeSinceLastFootstep;
+
+    private void Awake()
     {
-        audioSource.PlayOneShot(RandomClip());
+        audioSource = GetComponent<AudioSource>();
     }
-    
-    AudioClip RandomClip()
-    {
-        int attempt = 3;
-        AudioClip newClip = audioClipArray[Random.Range(0, audioClipArray.Length)];
 
-        while(newClip == lastClip && attempt > 0)
+    private void Update()
+    {
+        if (isWalking)
         {
-           newClip = audioClipArray[Random.Range(0, audioClipArray.Length)];
-            attempt--;
+            if (Time.time - timeSinceLastFootstep >= Random.Range(minTimeBetweenFootsteps, maxTimeBetweenFootsteps))
+            {
+                AudioClip footstepSound = footstepSounds[Random.Range(0, footstepSounds.Length)];
+
+                audioSource.PlayOneShot(footstepSound);
+
+                timeSinceLastFootstep = Time.time;
+            }
         }
-        lastClip = newClip;
-        return newClip;
     }
+
+    public void StartWalking()
+    {
+        isWalking = true;
+    }
+
+    public void StopWalking()
+    {
+        isWalking = false;
+    }
+
+    /*public AudioSource audioSource;
+    public AudioClip[] audioClipArray;
+    AudioClip lastClip;
+
+void Start()
+{
+    audioSource.PlayOneShot(RandomClip());
+}
+
+//spela random
+AudioClip RandomClip()
+{
+    int attempt = 3;
+    AudioClip newClip = audioClipArray[Random.Range(0, audioClipArray.Length)];
+
+    while(newClip == lastClip && attempt > 0)
+    {
+       newClip = audioClipArray[Random.Range(0, audioClipArray.Length)];
+        attempt--;
+    }
+    lastClip = newClip;
+    return newClip;
+}*/
 }

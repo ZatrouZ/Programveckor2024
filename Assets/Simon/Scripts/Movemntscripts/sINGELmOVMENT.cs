@@ -14,6 +14,15 @@ public class sINGELmOVMENT : MonoBehaviour
 
     public Animator animator;
 
+    private FootstepsScript footstepsScript;
+
+    private bool isWalking;
+
+    public void Awake()
+    {
+        footstepsScript = GetComponentInChildren<FootstepsScript>();
+    }
+
     [SerializeField]
     GameObject PauseMenuObject;
     GameObject player;
@@ -87,6 +96,15 @@ public class sINGELmOVMENT : MonoBehaviour
                 animator.SetBool("movingRight", false);
             }
         }
-       
+
+        if (isWalking)
+        {
+            footstepsScript.StartWalking();
+        }
+        else
+        {
+            footstepsScript.StopWalking();
+        }
+
     }
 }

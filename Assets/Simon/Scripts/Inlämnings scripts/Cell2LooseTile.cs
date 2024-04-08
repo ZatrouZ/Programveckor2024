@@ -58,7 +58,7 @@ public class Cell2LooseTile : MonoBehaviour
         pickup = false;
         hasMovedTile = false;
         player = GameObject.FindGameObjectWithTag("Player");
-        PlayerView = player.GetComponent<PhotonView>();//
+        PlayerView = player.GetComponent<PhotonView>();//hittar spelarens photonview och om det inte är din stäng av scriptet
         if (PlayerView.IsMine == true)
         {
             this.enabled = false;

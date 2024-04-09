@@ -1364,7 +1364,6 @@ GameObject:
   m_Component:
   - component: {fileID: 334888800}
   - component: {fileID: 334888799}
-  - component: {fileID: 334888801}
   m_Layer: 0
   m_Name: Robotmanager
   m_TagString: Untagged
@@ -1388,6 +1387,7 @@ MonoBehaviour:
   EndLocation: {fileID: 887205337}
   Robot: {fileID: 2124901327180181775, guid: 94c1a7f73a036394d82e74d438a8b8ef, type: 3}
   chasePlayer: 0
+  Player: {fileID: 0}
   RobotActive: 0
 --- !u!4 &334888800
 Transform:
@@ -1404,22 +1404,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &334888801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 334888798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceab9d2c99887da449a373da5fe1ae6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  randomN: 0
-  noise: 0
-  totalNoise: 0
-  spawn: 0
 --- !u!1 &430619400
 GameObject:
   m_ObjectHideFlags: 0

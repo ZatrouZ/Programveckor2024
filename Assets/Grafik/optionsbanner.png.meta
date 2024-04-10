@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 15240fe55078fea4f9ac1a73bad0463c
+guid: e8ff8589914df65408e110001d698dd2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: graphicsbutton1_0
+      name: optionsbanner_0
       rect:
         serializedVersion: 2
-        x: 74
-        y: 62.4
-        width: 74
-        height: 30.6
+        x: 0
+        y: 114.75
+        width: 222
+        height: 38.25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,8 +150,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27fac3f57b420544d9f2cc950402c3e3
-      internalID: -1910468556
+      spriteID: 89279f861c8fd8448b47fd48bf4cbe55
+      internalID: -556795902
       vertices: []
       indices: 
       edges: []
@@ -167,7 +167,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      graphicsbutton1_0: -1910468556
+      optionsbanner_0: -556795902
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

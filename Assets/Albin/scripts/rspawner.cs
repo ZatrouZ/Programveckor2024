@@ -27,8 +27,9 @@ public class rspawner : MonoBehaviour
         }
         else
         {
-            NoiseManager = FindObjectOfType<NoiseManager>();
+            NoiseManager = player.GetComponent<NoiseManager>();
         }
+
         if (NoiseManager.spawn == true)
         {
             timer -= Time.deltaTime;

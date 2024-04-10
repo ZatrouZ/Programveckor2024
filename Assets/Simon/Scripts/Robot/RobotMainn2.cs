@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RobotMain : MonoBehaviour
+public class RobotMainn2 : MonoBehaviour
 {
     [SerializeField]
     GameObject SpawnLocation;
@@ -10,46 +10,46 @@ public class RobotMain : MonoBehaviour
     public GameObject EndLocation;
     [SerializeField]
     GameObject Robot;
-    HidingPlace2 HidingPlace2;
-    GameObject HidingObj;
+    hidingplace2 hidingplace2;
     NoiseManager NoiseManager;
-    public bool chasePlayer;
+    public bool chasePlayer = true;
+    GameObject HidingObj2;
 
     float timer;
 
-    public GameObject player;
+    public GameObject Player;
 
     public bool RobotActive;
     // Start is called before the first frame update
     void Start()
     {
-        
+        hidingplace2 = GetComponent<hidingplace2>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (player == null)
+        if (Player == null)
         {
-            player = GameObject.FindWithTag("Player");
+            Player = GameObject.FindWithTag("Player2");
         }
         else
         {
-            NoiseManager = player.GetComponent<NoiseManager>();
+            NoiseManager = Player.GetComponent<NoiseManager>();
         }
 
-        if (HidingObj == null)
+        if (HidingObj2 = null)
         {
-            HidingObj = GameObject.FindWithTag("Hiding1");
+            HidingObj2 = GameObject.FindWithTag("Hiding1");
         }
         else
         {
-            HidingPlace2 = HidingObj.GetComponent<HidingPlace2>();
+            hidingplace2 = HidingObj2.GetComponent<hidingplace2>();
         }
-        
-        if (HidingPlace2 != null)
+
+        if (hidingplace2 != null)
         {
-            if (HidingPlace2.hiding == true)
+            if (hidingplace2.hiding == true)
             {
                 chasePlayer = false;
             }
@@ -74,16 +74,19 @@ public class RobotMain : MonoBehaviour
             }
         }
 
-       
     }
-    
-    void Spawn() 
+
+    void Spawn()
     {
         print("instansiate");
-        Instantiate(Robot,SpawnLocation.transform.position, Quaternion.identity);
+        Instantiate(Robot, SpawnLocation.transform.position, Quaternion.identity);
         RobotActive = true;
         NoiseManager.spawn = false;
     }
 
-  
+    void DeSpawn()
+    {
+        Destroy(Robot);
+        RobotActive = false;
+    }
 }

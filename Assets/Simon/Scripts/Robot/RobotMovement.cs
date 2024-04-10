@@ -5,11 +5,14 @@ using UnityEngine;
 public class RobotMovement : MonoBehaviour
 {
     GameObject Player;
+    GameObject MainObj;
     RobotMain RobotMain;
+    [SerializeField]
+    int speed;
     // Start is called before the first frame update
     void Start()
     {
-        RobotMain = GetComponent<RobotMain>();    
+  
     }
 
     // Update is called once per frame
@@ -18,16 +21,38 @@ public class RobotMovement : MonoBehaviour
         if (Player == null)
         {
             Player = GameObject.FindWithTag("Player");
-            Player = GameObject.FindWithTag("Player2");
         }
 
-        if (RobotMain.chasePlayer == true)
+        if (MainObj == null)
         {
-            transform.position = Vector3.MoveTowards(transform.position, Player.transform.position,0);
+            MainObj = GameObject.FindWithTag("RoboMang");
         }
         else
         {
-            transform.position = Vector3.MoveTowards(transform.position, RobotMain.EndLocation.transform.position, 0);
+            RobotMain = MainObj.GetComponent<RobotMain>();
         }
+
+        if (RobotMain != null)
+        {
+            if (RobotMain.chasePlayer == true)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, Player.transform.position, speed * Time.deltaTime );
+            }
+            else
+            {
+                transform.position = Vector3.MoveTowards(transform.position, RobotMain.EndLocation.transform.position, speed * Time.deltaTime);
+            }
+        }
+
+        if (RobotMain != null)
+        {
+            if (transform.position == RobotMain.EndLocation.transform.position)
+            {
+                RobotMain.RobotActive = false;
+                Destroy(gameObject);
+            }
+        }
+     
+
     }
 }

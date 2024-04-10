@@ -5812,6 +5812,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: RoboMang
       objectReference: {fileID: 0}
+    - target: {fileID: 6423896437257745868, guid: 2d6e5672d1f18bb4482da1b6d115eca0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6992434774428397513, guid: 2d6e5672d1f18bb4482da1b6d115eca0, type: 3}
+      propertyPath: Robot
+      value: 
+      objectReference: {fileID: 2124901327180181775, guid: 9b75c4f29421db345bc6f0a1f0449e3e, type: 3}
     - target: {fileID: 6992434774428397513, guid: 2d6e5672d1f18bb4482da1b6d115eca0, type: 3}
       propertyPath: Player
       value: 

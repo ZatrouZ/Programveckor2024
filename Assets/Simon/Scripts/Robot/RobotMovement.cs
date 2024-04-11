@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class RobotMovement : MonoBehaviour
 {
-    GameObject Player;
-    GameObject MainObj;
-    RobotMain RobotMain;
+    public GameObject player;
+    public GameObject MainObj;
+    public RobotMain RobotMain;
     NoiseManager NoiseManager;
     [SerializeField]
     int speed;
@@ -21,13 +21,13 @@ public class RobotMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Player == null)
+        if (player == null)
         {
-            Player = GameObject.FindWithTag("Player");
+            player = GameObject.FindWithTag("Player");
         }
         else
         {
-            NoiseManager = Player.GetComponent<NoiseManager>();
+            NoiseManager = player.GetComponent<NoiseManager>();
         }
 
         if (MainObj == null)
@@ -41,12 +41,15 @@ public class RobotMovement : MonoBehaviour
 
         if (RobotMain != null)
         {
+            print("-_-");
             if (RobotMain.chasePlayer == true)
             {
-                transform.position = Vector3.MoveTowards(transform.position, Player.transform.position, speed * Time.deltaTime );
+                print("till spelare");
+                transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime );
             }
             else
             {
+                print("till slut");
                 transform.position = Vector3.MoveTowards(transform.position, RobotMain.EndLocation.transform.position, speed * Time.deltaTime);
             }
         }

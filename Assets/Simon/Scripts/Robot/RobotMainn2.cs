@@ -10,7 +10,7 @@ public class RobotMainn2 : MonoBehaviour
     public GameObject EndLocation;
     [SerializeField]
     GameObject Robot;
-    hidingplace2 hidingplace2;
+    HidingPlace2 hidingplace2;
     NoiseManager NoiseManager;
     public bool chasePlayer = true;
     GameObject HidingObj2;
@@ -44,7 +44,7 @@ public class RobotMainn2 : MonoBehaviour
         }
         else
         {
-            hidingplace2 = HidingObj2.GetComponent<hidingplace2>();
+            hidingplace2 = HidingObj2.GetComponent<HidingPlace2>();
         }
 
         if (hidingplace2 != null)

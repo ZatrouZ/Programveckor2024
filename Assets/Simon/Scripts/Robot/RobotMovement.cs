@@ -9,6 +9,8 @@ public class RobotMovement : MonoBehaviour
     RobotMain RobotMain;
     [SerializeField]
     int speed;
+
+    public bool destroy;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,21 +46,11 @@ public class RobotMovement : MonoBehaviour
             }
         }
 
-        if (RobotMain != null)
+        if (destroy == true)
         {
-            if (transform.position == RobotMain.EndLocation.transform.position)
-            {
-                RobotMain.RobotActive = false;
-                Destroy(gameObject);
-            }
+            Destroy(gameObject);
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (CompareTag("End") == true)
-        {
-
-        }
-    }
+   
 }

@@ -38,7 +38,7 @@ public class RobotMainn2 : MonoBehaviour
             NoiseManager = Player.GetComponent<NoiseManager>();
         }
 
-        if (HidingObj2 = null)
+        if (HidingObj2 == null)
         {
             HidingObj2 = GameObject.FindWithTag("Hiding2");
         }

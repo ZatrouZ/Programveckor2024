@@ -40,7 +40,7 @@ public class RobotMainn2 : MonoBehaviour
 
         if (HidingObj2 = null)
         {
-            HidingObj2 = GameObject.FindWithTag("Hiding1");
+            HidingObj2 = GameObject.FindWithTag("Hiding2");
         }
         else
         {

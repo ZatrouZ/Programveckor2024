@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class NoiseManager : MonoBehaviour
 {
-    rspawner rspawner;
-    GameObject player;
-    bool spawnable;
     public float randomN;
     public float noise;
     public float totalNoise;
     float timer;
     public bool spawn = false;
 
+    public bool RobotActive = false;
     private void Start()
     {
         randomN = 100;
@@ -20,26 +18,23 @@ public class NoiseManager : MonoBehaviour
 
     private void Update()
     {
-        if (player == null)
+       
+        if (RobotActive == false)
         {
-            player = GameObject.FindWithTag("Player");
-        }
-        else
-        {
-            rspawner = FindObjectOfType<rspawner>();
-        }
-        timer += Time.deltaTime;
-        if (timer >= 5)
-        {
-            if (randomN < totalNoise)
+            timer += Time.deltaTime;
+            if (timer >= 5)
             {
-                print("spawned");
-                totalNoise = 0;
-                spawn = true;
+                if (randomN < totalNoise)
+                {
+                    print("spawned");
+                    totalNoise = 0;
+                    spawn = true;
+                }
+                randomN = Random.Range(20, 200);
+                print("fem");
+                timer = 0;
             }
-            randomN = Random.Range(20, 200);
-            print("fem");
-            timer = 0;
         }
+       
     }
 }

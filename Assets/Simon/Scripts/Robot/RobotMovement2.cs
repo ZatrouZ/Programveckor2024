@@ -7,6 +7,7 @@ public class RobotMovement2 : MonoBehaviour
     GameObject Player;
     GameObject MainObj;
     RobotMainn2 RobotMainn2;
+    NoiseManager NoiseManager;
     [SerializeField]
     int speed;
     // Start is called before the first frame update
@@ -21,6 +22,10 @@ public class RobotMovement2 : MonoBehaviour
         if (Player == null)
         {
             Player = GameObject.FindWithTag("Player2");
+        }
+        else
+        {
+            NoiseManager = Player.GetComponent<NoiseManager>();
         }
 
         if (MainObj == null)
@@ -44,5 +49,18 @@ public class RobotMovement2 : MonoBehaviour
             }
         }
        
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("End") == true)
+        {
+            Destroy(gameObject);
+            NoiseManager.RobotActive = false;
+        }
+
+        if (collision.CompareTag("Player2") == true)
+        {
+            KillScene.instance.SyncNow = true;
+        }
     }
 }

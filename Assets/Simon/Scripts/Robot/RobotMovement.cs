@@ -7,6 +7,7 @@ public class RobotMovement : MonoBehaviour
     GameObject Player;
     GameObject MainObj;
     RobotMain RobotMain;
+    NoiseManager NoiseManager;
     [SerializeField]
     int speed;
 
@@ -23,6 +24,10 @@ public class RobotMovement : MonoBehaviour
         if (Player == null)
         {
             Player = GameObject.FindWithTag("Player");
+        }
+        else
+        {
+            NoiseManager = Player.GetComponent<NoiseManager>();
         }
 
         if (MainObj == null)
@@ -46,11 +51,21 @@ public class RobotMovement : MonoBehaviour
             }
         }
 
-        if (destroy == true)
+        
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("End") == true)
         {
             Destroy(gameObject);
+            NoiseManager.RobotActive = false;
+        }
+
+        if (collision.CompareTag("Player") == true)
+        {
+            KillScene.instance.SyncNow = true;
         }
     }
 
-   
 }

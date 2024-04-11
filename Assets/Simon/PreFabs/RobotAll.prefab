@@ -112,10 +112,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpawnLocation: {fileID: 401147233592908567}
   EndLocation: {fileID: 3683608001285894588}
-  Robot: {fileID: 2124901327180181775, guid: 94c1a7f73a036394d82e74d438a8b8ef, type: 3}
+  Robot: {fileID: 2124901327180181775, guid: 9b75c4f29421db345bc6f0a1f0449e3e, type: 3}
   chasePlayer: 0
   player: {fileID: 0}
-  RobotActive: 0
 --- !u!114 &3009945591629321120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,12 +127,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c52a24bd8ee7d64b87912d30c9aab73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnLocation: {fileID: 0}
-  EndLocation: {fileID: 0}
-  Robot: {fileID: 0}
+  SpawnLocation: {fileID: 401147233592908567}
+  EndLocation: {fileID: 3683608001285894588}
+  Robot: {fileID: 2124901327180181775, guid: 80fd596c38be45c488ba0969b34291f5, type: 3}
   chasePlayer: 1
   Player: {fileID: 0}
-  RobotActive: 0
 --- !u!1 &3683608001285894588
 GameObject:
   m_ObjectHideFlags: 0

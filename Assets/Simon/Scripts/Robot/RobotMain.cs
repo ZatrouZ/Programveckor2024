@@ -19,7 +19,7 @@ public class RobotMain : MonoBehaviour
 
     public GameObject player;
 
-    public bool RobotActive;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -81,7 +81,7 @@ public class RobotMain : MonoBehaviour
     {
         print("instansiate");
         Instantiate(Robot,SpawnLocation.transform.position, Quaternion.identity);
-        RobotActive = true;
+        NoiseManager.RobotActive = true;
         NoiseManager.spawn = false;
     }
 

@@ -19,11 +19,11 @@ public class RobotMainn2 : MonoBehaviour
 
     public GameObject Player;
 
-    public bool RobotActive;
+    
     // Start is called before the first frame update
     void Start()
     {
-        hidingplace2 = GetComponent<hidingplace2>();
+       
     }
 
     // Update is called once per frame
@@ -80,13 +80,8 @@ public class RobotMainn2 : MonoBehaviour
     {
         print("instansiate");
         Instantiate(Robot, SpawnLocation.transform.position, Quaternion.identity);
-        RobotActive = true;
+        NoiseManager.RobotActive = true;
         NoiseManager.spawn = false;
     }
 
-    void DeSpawn()
-    {
-        Destroy(Robot);
-        RobotActive = false;
-    }
 }

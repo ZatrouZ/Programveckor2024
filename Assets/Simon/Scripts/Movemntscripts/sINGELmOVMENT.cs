@@ -51,11 +51,16 @@ public class sINGELmOVMENT : MonoBehaviour
 
         if (RealChat.isWriting == false)
         {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                animator.SetTrigger("interact");
+            }
             if (Input.GetKey(KeyCode.W))
             {
                 rb.AddForce(new Vector3(0, speed));
                 animator.SetBool("movingUp", true);
                 animator.SetFloat("L1R2U3D4", 1);
+                animator.SetInteger("facing", 0);
                 NoiseManager.totalNoise += Time.deltaTime / 5;
             }
             else
@@ -78,6 +83,7 @@ public class sINGELmOVMENT : MonoBehaviour
                 rb.AddForce(new Vector3(-speed, 0));
                 animator.SetBool("movingLeft", true);
                 animator.SetFloat("L1R2U3D4", 5);
+                animator.SetInteger("facing", 1);
                 NoiseManager.totalNoise += Time.deltaTime / 5;
             }
             else
@@ -89,6 +95,7 @@ public class sINGELmOVMENT : MonoBehaviour
                 rb.AddForce(new Vector3(speed, 0));
                 animator.SetBool("movingRight", true);
                 animator.SetFloat("L1R2U3D4", 7);
+                animator.SetInteger("facing", 2);
                 NoiseManager.totalNoise += Time.deltaTime / 5;
             }
             else

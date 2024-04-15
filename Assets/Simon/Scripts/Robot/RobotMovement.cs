@@ -79,8 +79,8 @@ public class RobotMovement : MonoBehaviour
     {
         if (collision.CompareTag("End") == true)
         {
-            Destroy(gameObject);
             NoiseManager.RobotActive = false;
+            Destroy(gameObject);
         }
 
         if (collision.CompareTag("Player") == true)

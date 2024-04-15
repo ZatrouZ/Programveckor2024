@@ -6,6 +6,8 @@ public class hidingplace : MonoBehaviour
 {
     public AudioSource audioSource;
     GameObject player;
+    sINGELmOVMENT movement;
+    SpriteRenderer Image;
     bool reach = false;
     public bool hiding = false;
     // Start is called before the first frame update
@@ -20,11 +22,14 @@ public class hidingplace : MonoBehaviour
         if (player==null)
         {
             player = GameObject.FindWithTag("Player");
+            movement = player.GetComponent<sINGELmOVMENT>();
+            Image = player.GetComponent<SpriteRenderer>();
         }
         if (hiding == true && Input.GetKeyDown(KeyCode.Q))
         {
             hiding = false;
-            player.SetActive(true);
+            movement.enabled = true;
+            Image.color = new Color(1, 1, 1, 1);
             audioSource.Play();
         }
         else if (reach == true)
@@ -32,7 +37,8 @@ public class hidingplace : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Q) && RealChat.isWriting == false)
             {
                 hiding = true;
-                player.SetActive(false);
+                movement.enabled = false;
+                Image.color = new Color(1,1,1,0);
                 audioSource.Play();
             }
         }

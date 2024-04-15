@@ -33,16 +33,20 @@ public class EyeContoller : MonoBehaviour
             NoiseManager = player.GetComponent<NoiseManager>();
         }
 
+        print(NoiseManager);
+
         if (NoiseManager != null)
         {
-            if (NoiseManager.RobotActive == false)
+            if (NoiseManager.RobotActive == false && NoiseManager.totalNoise <= 19)
             {
+                print("Green");
                 Green.SetActive(true);
                 Red.SetActive(false);
             }
            
             if (NoiseManager.spawn == true)
             {
+                print("Red");
                 Red.SetActive(true);
                 Orange.SetActive(false);
                 Green.SetActive(false);
@@ -51,18 +55,20 @@ public class EyeContoller : MonoBehaviour
 
             if (NoiseManager.totalNoise >= 20 && NoiseManager.totalNoise <= 39)
             {
+                print("Yellow");
                 Yellow.SetActive(true);
                 Green.SetActive(false);
             }
 
             if (NoiseManager.totalNoise >= 40 && NoiseManager.spawn != true)
             {
+                print("Orange");
                 Orange.SetActive(true);
                 Yellow.SetActive(false);
             }
         }
        
-
+        
        
     }
 }

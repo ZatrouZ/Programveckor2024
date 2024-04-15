@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NoiseManager : MonoBehaviour
 {
-    public float randomN;
+    public float randomN = 200;
     public float noise;
     public float totalNoise;
     float timer;
@@ -13,7 +13,7 @@ public class NoiseManager : MonoBehaviour
     public bool RobotActive = false;
     private void Start()
     {
-        randomN = 100;
+        
     }
 
     private void Update()
@@ -30,7 +30,7 @@ public class NoiseManager : MonoBehaviour
                     totalNoise = 0;
                     spawn = true;
                 }
-                randomN = Random.Range(20, 200);
+                randomN = Random.Range(20, 150);
                 print("fem");
                 timer = 0;
             }

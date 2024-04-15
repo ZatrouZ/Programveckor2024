@@ -56,7 +56,7 @@ public class RobotMovement2 : MonoBehaviour
                 audioSource.Play();
             }
         }
-        if (Player.transform.position.x < transform.position.x)
+        if (Player.transform.position.x < transform.position.x || RobotMainn2.chasePlayer == false)
         {
             animator.SetInteger("facing", 1);
         }

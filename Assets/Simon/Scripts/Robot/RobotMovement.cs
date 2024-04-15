@@ -62,7 +62,7 @@ public class RobotMovement : MonoBehaviour
             animator.SetInteger("facing", 1);
             print("vänster");
         }
-        if (player.transform.position.x > transform.position.x)
+        if (player.transform.position.x > transform.position.x && RobotMain.chasePlayer == true)
         {
             animator.SetInteger("facing", 2);
             print("höger");
@@ -73,12 +73,14 @@ public class RobotMovement : MonoBehaviour
             print("up");
         }
 
+        print(NoiseManager);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("End") == true)
         {
+            print(NoiseManager);
             NoiseManager.RobotActive = false;
             Destroy(gameObject);
         }

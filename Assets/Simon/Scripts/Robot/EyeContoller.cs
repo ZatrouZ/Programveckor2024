@@ -33,7 +33,7 @@ public class EyeContoller : MonoBehaviour
             NoiseManager = player.GetComponent<NoiseManager>();
         }
 
-        print(NoiseManager);
+       
 
         if (NoiseManager != null)
         {

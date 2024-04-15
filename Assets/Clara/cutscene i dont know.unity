@@ -317,6 +317,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1022446435
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1297542029442852246, guid: 4bfd7ec866d5651498b7ca4c3ce08115, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.471434
+      objectReference: {fileID: 0}
+    - target: {fileID: 1297542029442852246, guid: 4bfd7ec866d5651498b7ca4c3ce08115, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.8033512
+      objectReference: {fileID: 0}
+    - target: {fileID: 1297542029442852246, guid: 4bfd7ec866d5651498b7ca4c3ce08115, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.050451368
+      objectReference: {fileID: 0}
+    - target: {fileID: 1297542029442852246, guid: 4bfd7ec866d5651498b7ca4c3ce08115, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1297542029442852246, guid: 4bfd7ec866d5651498b7ca4c3ce08115, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1297542029442852246, guid: 4bfd7ec866d5651498b7ca4c3ce08115, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1297542029442852246, guid: 4bfd7ec866d5651498b7ca4c3ce08115, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1297542029442852246, guid: 4bfd7ec866d5651498b7ca4c3ce08115, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1297542029442852246, guid: 4bfd7ec866d5651498b7ca4c3ce08115, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1297542029442852246, guid: 4bfd7ec866d5651498b7ca4c3ce08115, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2579771457080316101, guid: 4bfd7ec866d5651498b7ca4c3ce08115, type: 3}
+      propertyPath: m_Name
+      value: eye of the tiger
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4bfd7ec866d5651498b7ca4c3ce08115, type: 3}
 --- !u!1 &1043845171
 GameObject:
   m_ObjectHideFlags: 0
@@ -733,8 +790,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.012199998, y: -0.0055000186, z: 0}
-    m_Extent: {x: 1.0614, y: 0.8219, z: 0}
+    m_Center: {x: -0.018249989, y: -0.013500005, z: 0}
+    m_Extent: {x: 1.05835, y: 0.827, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -970,3 +1027,4 @@ SceneRoots:
   - {fileID: 1497302887}
   - {fileID: 1043845173}
   - {fileID: 748659642}
+  - {fileID: 1022446435}

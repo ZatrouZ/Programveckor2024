@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RobotMovement : MonoBehaviour
 {
+    public AudioSource audioSource;
     public GameObject player;
     public GameObject MainObj;
     public RobotMain RobotMain;
@@ -46,11 +47,13 @@ public class RobotMovement : MonoBehaviour
             {
                 print("till spelare");
                 transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime );
+                audioSource.Play();
             }
             else
             {
                 print("till slut");
                 transform.position = Vector3.MoveTowards(transform.position, RobotMain.EndLocation.transform.position, speed * Time.deltaTime);
+                audioSource.Play();
             }
         }
 

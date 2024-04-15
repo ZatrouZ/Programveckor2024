@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RobotMovement2 : MonoBehaviour
 {
+
+    public AudioSource audioSource;
     GameObject Player;
     GameObject MainObj;
     RobotMainn2 RobotMainn2;
@@ -42,10 +44,12 @@ public class RobotMovement2 : MonoBehaviour
             if (RobotMainn2.chasePlayer == true)
             {
                 transform.position = Vector3.MoveTowards(transform.position, Player.transform.position, speed * Time.deltaTime);
+                audioSource.Play();
             }
             else
             {
                 transform.position = Vector3.MoveTowards(transform.position, RobotMainn2.EndLocation.transform.position, speed * Time.deltaTime);
+                audioSource.Play();
             }
         }
        

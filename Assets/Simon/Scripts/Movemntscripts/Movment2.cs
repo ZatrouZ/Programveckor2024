@@ -65,6 +65,7 @@ public class Movment2 : MonoBehaviour
                 rb.AddForce(new Vector3(0, -speed));
                 animator.SetBool("movingDown", true);
                 animator.SetFloat("L1R2U3D4", 3);
+                animator.SetInteger("facing", 3);
                 NoiseManager.totalNoise += Time.deltaTime / 5;
             }
             else

@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &6791304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1628,6 +1628,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2418166395415773517, guid: 2d6e5672d1f18bb4482da1b6d115eca0, type: 3}
+      propertyPath: m_Color.a
+      value: 0.27058825
+      objectReference: {fileID: 0}
+    - target: {fileID: 2418166395415773517, guid: 2d6e5672d1f18bb4482da1b6d115eca0, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2418166395415773517, guid: 2d6e5672d1f18bb4482da1b6d115eca0, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2418166395415773517, guid: 2d6e5672d1f18bb4482da1b6d115eca0, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5471698
+      objectReference: {fileID: 0}
+    - target: {fileID: 2418166395415773517, guid: 2d6e5672d1f18bb4482da1b6d115eca0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 513
+      objectReference: {fileID: 0}
     - target: {fileID: 3009945591629321120, guid: 2d6e5672d1f18bb4482da1b6d115eca0, type: 3}
       propertyPath: Robot
       value: 
@@ -1640,6 +1660,14 @@ PrefabInstance:
       propertyPath: SpawnLocation
       value: 
       objectReference: {fileID: 906340741}
+    - target: {fileID: 3294782676958051145, guid: 2d6e5672d1f18bb4482da1b6d115eca0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053331612493648999, guid: 2d6e5672d1f18bb4482da1b6d115eca0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6423896437257745868, guid: 2d6e5672d1f18bb4482da1b6d115eca0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.2
@@ -1661,7 +1689,8 @@ PrefabInstance:
       value: -2.88
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3294782676958051145, guid: 2d6e5672d1f18bb4482da1b6d115eca0, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3683608001285894588, guid: 2d6e5672d1f18bb4482da1b6d115eca0, type: 3}

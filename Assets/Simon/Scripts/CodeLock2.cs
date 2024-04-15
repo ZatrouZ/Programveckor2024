@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CodeLock2 : MonoBehaviour
 {
+    public AudioSource audioSource;
     NoiseManager NoiseManager;
     bool InReach;
     [SerializeField]
@@ -35,6 +36,7 @@ public class CodeLock2 : MonoBehaviour
                 LockUI.SetActive(true);
                 hasUIUP = true;
                 NoiseManager.totalNoise += 7;
+                audioSource.Play();
             }
         }
 

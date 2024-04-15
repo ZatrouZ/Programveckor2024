@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class hidingplace : MonoBehaviour
 {
+    public AudioSource audioSource;
     GameObject player;
     bool reach = false;
     public bool hiding = false;
@@ -24,6 +25,7 @@ public class hidingplace : MonoBehaviour
         {
             hiding = false;
             player.SetActive(true);
+            audioSource.Play();
         }
         else if (reach == true)
         {
@@ -31,6 +33,7 @@ public class hidingplace : MonoBehaviour
             {
                 hiding = true;
                 player.SetActive(false);
+                audioSource.Play();
             }
         }
     }

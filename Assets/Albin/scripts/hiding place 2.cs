@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class hidingplace2 : MonoBehaviour
 {
+    Movment2 movment2;
+    SpriteRenderer Image;
     GameObject player2;
     bool reach = false;
     public bool hiding = false;
@@ -19,18 +21,22 @@ public class hidingplace2 : MonoBehaviour
         if (player2 == null)
         {
             player2 = GameObject.FindWithTag("Player2");
+            movment2 = player2.GetComponent<Movment2>();
+            Image = player2.GetComponent<SpriteRenderer>();
         }
         if (hiding == true && Input.GetKeyDown(KeyCode.Q))
         {
             hiding = false;
-            player2.SetActive(true);
+            movment2.enabled = true;
+            Image.color = new Color(1, 1, 1, 1);
         }
         else if (reach == true)
         {
             if (Input.GetKeyDown(KeyCode.Q) && RealChat.isWriting == false)
             {
                 hiding = true;
-                player2.SetActive(false);
+                movment2.enabled = false;
+                Image.color = new Color(1, 1, 1, 0);
             }
         }
     }

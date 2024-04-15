@@ -9,7 +9,7 @@ public class RobotMovement : MonoBehaviour
     public GameObject MainObj;
     public RobotMain RobotMain;
     NoiseManager NoiseManager;
-    Animator animator;
+    public Animator animator;
     [SerializeField]
     int speed;
 
@@ -17,7 +17,7 @@ public class RobotMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-  
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -60,14 +60,17 @@ public class RobotMovement : MonoBehaviour
         if (player.transform.position.x < transform.position.x)
         {
             animator.SetInteger("facing", 1);
+            print("vänster");
         }
         if (player.transform.position.x > transform.position.x)
         {
             animator.SetInteger("facing", 2);
+            print("höger");
         }
         if (player.transform.position.y < transform.position.y && player.transform.position.x == transform.position.x)
         {
             animator.SetInteger("facing", 0);
+            print("up");
         }
 
     }

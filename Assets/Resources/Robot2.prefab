@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 8967079410850163793}
   - component: {fileID: 6647965837751507783}
   - component: {fileID: 678151622807826859}
+  - component: {fileID: 6899724806583657123}
   m_Layer: 0
   m_Name: EnemyAI
   m_TagString: Untagged
@@ -153,7 +154,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.009810343, y: -0.04159823}
+  m_Offset: {x: 0.0098103285, y: -0.038825676}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -164,7 +165,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5636996, y: 0.7189756}
+  m_Size: {x: 0.5636996, y: 0.7134305}
   m_EdgeRadius: 0
 --- !u!50 &9107982108127605095
 Rigidbody2D:
@@ -209,6 +210,7 @@ MonoBehaviour:
   player: {fileID: 0}
   MainObj: {fileID: 0}
   RobotMain: {fileID: 0}
+  animator: {fileID: 6899724806583657123}
   speed: 5
   destroy: 0
 --- !u!61 &6647965837751507783
@@ -243,7 +245,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0023493469, y: -0.36897177}
+  m_Offset: {x: 0.006046027, y: -0.3735926}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -254,7 +256,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.28760237, y: 0.062056452}
+  m_Size: {x: 0.32456923, y: 0.09347814}
   m_EdgeRadius: 0
 --- !u!114 &678151622807826859
 MonoBehaviour:
@@ -269,4 +271,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
-  speed: 4
+  animator: {fileID: 0}
+--- !u!95 &6899724806583657123
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8305498371426681443}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9a65edb5520def84891a152edc279e09, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

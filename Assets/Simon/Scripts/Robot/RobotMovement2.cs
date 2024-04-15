@@ -19,6 +19,7 @@ public class RobotMovement2 : MonoBehaviour
     void Start()
     {
         RobotMainn2 = GetComponent<RobotMainn2>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame

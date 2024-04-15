@@ -164,6 +164,7 @@ MonoBehaviour:
   player: {fileID: 0}
   MainObj: {fileID: 0}
   RobotMain: {fileID: 0}
+  animator: {fileID: 1366456125471653672}
   speed: 5
   destroy: 0
 --- !u!61 &6647965837751507783
@@ -198,7 +199,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.009397302, y: -0.37132108}
+  m_Offset: {x: 0.007083699, y: -0.37132108}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -209,7 +210,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.25471193, y: 0.066755176}
+  m_Size: {x: 0.31023833, y: 0.09914556}
   m_EdgeRadius: 0
 --- !u!61 &4152803233315421994
 BoxCollider2D:

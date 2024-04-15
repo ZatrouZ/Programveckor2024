@@ -54,6 +54,7 @@ public class PlayerMovement : MonoBehaviour
                     //animator.Play("RosaWalkDown");
                     animator.SetBool("movingDown", true);
                     animator.SetFloat("L1R2U3D4", 3);
+                    animator.SetInteger("facing", 3);
                 }
                 else
                 {

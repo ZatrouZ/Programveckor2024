@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NoiseManager : MonoBehaviour
 {
-    public float randomN = 200;
+    public float randomN;
     public float noise;
     public float totalNoise;
     float timer;
@@ -13,7 +13,7 @@ public class NoiseManager : MonoBehaviour
     public bool RobotActive = false;
     private void Start()
     {
-        
+        randomN = 200;
     }
 
     private void Update()

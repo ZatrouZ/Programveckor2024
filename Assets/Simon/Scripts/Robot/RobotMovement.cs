@@ -9,6 +9,7 @@ public class RobotMovement : MonoBehaviour
     public GameObject MainObj;
     public RobotMain RobotMain;
     NoiseManager NoiseManager;
+    Animator animator;
     [SerializeField]
     int speed;
 
@@ -56,8 +57,19 @@ public class RobotMovement : MonoBehaviour
                 audioSource.Play();
             }
         }
+        if (player.transform.position.x < transform.position.x)
+        {
+            animator.SetInteger("facing", 1);
+        }
+        if (player.transform.position.x > transform.position.x)
+        {
+            animator.SetInteger("facing", 2);
+        }
+        if (player.transform.position.y < transform.position.y && player.transform.position.x == transform.position.x)
+        {
+            animator.SetInteger("facing", 0);
+        }
 
-        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

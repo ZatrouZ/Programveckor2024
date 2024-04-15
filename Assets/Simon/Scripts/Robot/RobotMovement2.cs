@@ -11,6 +11,9 @@ public class RobotMovement2 : MonoBehaviour
     RobotMainn2 RobotMainn2;
     NoiseManager NoiseManager;
     [SerializeField]
+
+    public Animator animator;
+
     int speed;
     // Start is called before the first frame update
     void Start()
@@ -52,7 +55,18 @@ public class RobotMovement2 : MonoBehaviour
                 audioSource.Play();
             }
         }
-       
+        if (Player.transform.position.x < transform.position.x)
+        {
+            animator.SetInteger("facing", 1);
+        }
+        if (Player.transform.position.x > transform.position.x)
+        {
+            animator.SetInteger("facing", 2);
+        }
+        if (Player.transform.position.y < transform.position.y && Player.transform.position.x == transform.position.x)
+        {
+            animator.SetInteger("facing", 0);
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

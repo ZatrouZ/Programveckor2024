@@ -5,6 +5,7 @@ using TMPro;
 
 public class CodeLock : MonoBehaviour
 {
+    public AudioSource audioSource;
     NoiseManager NoiseManager;
     [SerializeField]
     GameObject LockUI;
@@ -62,6 +63,7 @@ public class CodeLock : MonoBehaviour
                 LockUI.SetActive(true);//sätetr på lock UIn
                 hasUIUP = true;
                 NoiseManager.totalNoise += 7;//höjer noise managerns noise level (noise manager användes aldríg)
+                audioSource.Play();
             }
         }
 

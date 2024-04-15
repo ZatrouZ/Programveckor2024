@@ -13,7 +13,7 @@ public class EyeContoller : MonoBehaviour
     [SerializeField]
     GameObject Red;
 
-    public GameObject player;
+    GameObject player;
     NoiseManager NoiseManager;
     // Start is called before the first frame update
     void Start()
@@ -32,6 +32,7 @@ public class EyeContoller : MonoBehaviour
         {
             NoiseManager = player.GetComponent<NoiseManager>();
         }
+
         if (NoiseManager != null)
         {
             if (NoiseManager.RobotActive == false)
@@ -44,15 +45,17 @@ public class EyeContoller : MonoBehaviour
             {
                 Red.SetActive(true);
                 Orange.SetActive(false);
+                Green.SetActive(false);
+                Yellow.SetActive(false);
             }
 
-            if (NoiseManager.totalNoise == 20)
+            if (NoiseManager.totalNoise >= 20 && NoiseManager.totalNoise <= 39)
             {
                 Yellow.SetActive(true);
                 Green.SetActive(false);
             }
 
-            if (NoiseManager.totalNoise == 40)
+            if (NoiseManager.totalNoise >= 40 && NoiseManager.spawn != true)
             {
                 Orange.SetActive(true);
                 Yellow.SetActive(false);

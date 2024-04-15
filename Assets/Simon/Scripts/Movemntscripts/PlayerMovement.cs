@@ -42,6 +42,7 @@ public class PlayerMovement : MonoBehaviour
                     //  animator.Play("RosaWalkUp");
                     animator.SetBool("movingUp", true);
                     animator.SetFloat("L1R2U3D4", 1);
+                    animator.SetInteger("facing", 0);
                 }
                 else
                 {
@@ -64,6 +65,7 @@ public class PlayerMovement : MonoBehaviour
                     // animator.Play("RosaWalkLeft");
                     animator.SetBool("movingLeft", true);
                     animator.SetFloat("L1R2U3D4", 5);
+                    animator.SetInteger("facing", 1);
                 }
                 else
                 {
@@ -75,6 +77,7 @@ public class PlayerMovement : MonoBehaviour
                     // animator.Play("RosaWalkRight");
                     animator.SetBool("movingRight", true);
                     animator.SetFloat("L1R2U3D4", 7);
+                    animator.SetInteger("facing", 2);
                 }
                 else
                 {

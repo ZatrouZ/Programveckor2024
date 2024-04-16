@@ -20,7 +20,7 @@ public class DeathReset : MonoBehaviour
         if (timer >= 4)
         {
             //PhotonNetwork.LoadLevel("StartingCells");
-            SceneManager.LoadScene("StartingCells1");
+            SceneManager.LoadScene("StartingCells");
             
         }
     }

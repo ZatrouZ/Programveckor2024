@@ -12,7 +12,7 @@ public class KillScene : MonoBehaviour, IPunObservable
 
     public bool hasLoaded = false;
 
-
+    float timer;
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
@@ -46,12 +46,22 @@ public class KillScene : MonoBehaviour, IPunObservable
     // Update is called once per frame
     void Update()
     {
-        if (SyncNow == true)
+        if (SyncNow == true && hasLoaded == false)
         {
 
             SceneManager.LoadScene("cutscene i dont know");
-            SyncNow = false;
+            hasLoaded = true;
 
+        }
+
+        if (SyncNow == true&& hasLoaded == true)
+        {
+            timer += Time.deltaTime;
+            if (timer >= 10)
+            {
+                SyncNow = false;
+                hasLoaded = false;
+            }
         }
     }
 

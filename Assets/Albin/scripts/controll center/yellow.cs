@@ -15,7 +15,7 @@ public class yellow : MonoBehaviour
         control = FindObjectOfType<control>();
         rend = GetComponent<Renderer>();
         rend.material.color = Color.yellow;
-        right = true;
+        right = false;
     }
 
     // Update is called once per frame
@@ -32,20 +32,20 @@ public class yellow : MonoBehaviour
                 else if (rend.material.color == Color.green)
                 {
                     rend.material.color = Color.yellow;
-                    right = true;
                 }
                 else if (rend.material.color == Color.yellow)
                 {
                     rend.material.color = Color.blue;
-                    right = false;
                 }
                 else if (rend.material.color == Color.blue)
                 {
                     rend.material.color = Color.magenta;
+                    right = true;
                 }
                 else if (rend.material.color == Color.magenta)
                 {
                     rend.material.color = Color.red;
+                    right = false;
                 }
             }
         }

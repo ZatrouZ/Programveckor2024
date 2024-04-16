@@ -85,7 +85,7 @@ public class control : MonoBehaviour
             open = true;
             DTLR.DoorOpen = true;
           
-            //svar: grön magenta gul grön röd
+            //svar: röd magenta blå blå magenta
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)//om spelaren är inom räckhåll

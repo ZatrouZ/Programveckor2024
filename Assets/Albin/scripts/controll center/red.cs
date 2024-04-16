@@ -25,20 +25,20 @@ public class red : MonoBehaviour
                 if (rend.material.color == Color.red)
                 {
                     rend.material.color = Color.green;
-                    right = true;
                 }
                 else if (rend.material.color == Color.green)
                 {
                     rend.material.color = Color.yellow;
-                    right = false;
                 }
                 else if (rend.material.color == Color.yellow)
                 {
                     rend.material.color = Color.blue;
+                    right = true;
                 }
                 else if (rend.material.color == Color.blue)
                 {
                     rend.material.color = Color.magenta;
+                    right = false;
                 }
                 else if (rend.material.color == Color.magenta)
                 {

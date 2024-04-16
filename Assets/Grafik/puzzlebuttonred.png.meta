@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 112b9cac71b57ec4299aeed3f44e1ac4
+guid: bb9748f8cb1769841b6d374b129e23eb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -49,7 +49,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 63, z: 0, w: 23}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: puzzlesolution_0
+      name: puzzlebuttonred_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 78
-        width: 307
-        height: 134
+        x: 253
+        y: 79
+        width: 46
+        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97d20ccc56c5d8140b3c3585861d078d
-      internalID: 1359738584
+      spriteID: 11c66aeb2b0bea447a6feb2bab4ff3e5
+      internalID: -719957874
       vertices: []
       indices: 
       edges: []
@@ -134,14 +134,14 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      puzzlesolution_0: 1359738584
+      puzzlebuttonred_0: -719957874
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

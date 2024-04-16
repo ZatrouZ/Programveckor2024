@@ -32,20 +32,20 @@ public class green : MonoBehaviour
                 else if (rend.material.color == Color.green)
                 {
                     rend.material.color = Color.yellow;
+                    right = true;
                 }
                 else if (rend.material.color == Color.yellow)
                 {
                     rend.material.color = Color.blue;
+                    right = false;
                 }
                 else if (rend.material.color == Color.blue)
                 {
                     rend.material.color = Color.magenta;
-                    right = true;
                 }
                 else if (rend.material.color == Color.magenta)
                 {
                     rend.material.color = Color.red;
-                    right = false;
                 }
             }
         }

@@ -36,6 +36,10 @@ public class PlayerMovement : MonoBehaviour
         {
             if (view.IsMine)
             {
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    animator.SetTrigger("interact");
+                }
                 if (Input.GetKey(KeyCode.W))
                 {
                     rb.AddForce(new Vector3(0, speed));

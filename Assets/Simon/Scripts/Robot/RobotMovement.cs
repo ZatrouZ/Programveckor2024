@@ -87,6 +87,7 @@ public class RobotMovement : MonoBehaviour
 
         if (collision.CompareTag("Player") == true)
         {
+            print("You died");
             KillScene.instance.SyncNow = true;
         }
     }

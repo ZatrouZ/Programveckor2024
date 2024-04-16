@@ -34,6 +34,15 @@ public class pipe : MonoBehaviour
                 View.RPC("RPC1", RpcTarget.All);
             }
         }
+
+        if (player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player2");  
+        }
+        else
+        {
+            PlayerView = player.GetComponent<PhotonView>();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -57,8 +66,6 @@ public class pipe : MonoBehaviour
         View.RPC("RPC2", RpcTarget.All);
         pickup = false;
         hasPipe = false;
-        player = GameObject.FindGameObjectWithTag("Player2");
-        PlayerView = player.GetComponent<PhotonView>();
         if (PlayerView.IsMine == true)
         {
             this.enabled = false;

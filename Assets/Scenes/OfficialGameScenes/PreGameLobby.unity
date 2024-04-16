@@ -714,7 +714,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8257505439611509841, guid: 0cc84d5ce6ef5b045aadd82296e7197a, type: 3}
       propertyPath: sceneViewId
-      value: 4
+      value: 999
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4263,7 +4263,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 50285890654378454, guid: 1712f6585c23a5a468bf9754efd582bb, type: 3}
       propertyPath: sceneViewId
-      value: 2
+      value: 998
       objectReference: {fileID: 0}
     - target: {fileID: 6644383054279186415, guid: 1712f6585c23a5a468bf9754efd582bb, type: 3}
       propertyPath: m_LocalPosition.x

@@ -46,11 +46,11 @@ public class KillScene : MonoBehaviour, IPunObservable
     // Update is called once per frame
     void Update()
     {
-        if (SyncNow == true && hasLoaded == false)
+        if (SyncNow == true)
         {
 
             SceneManager.LoadScene("cutscene i dont know");
-            hasLoaded = true;
+            SyncNow = false;
 
         }
     }

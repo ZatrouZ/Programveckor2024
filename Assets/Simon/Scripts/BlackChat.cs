@@ -32,7 +32,7 @@ public class BlackChat : MonoBehaviour
         if (chat != null)
         {
             yes = false;
-            print("found");
+           
         }
     }
 

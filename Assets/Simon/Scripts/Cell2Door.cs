@@ -44,6 +44,24 @@ public class Cell2Door : MonoBehaviour
         }
 
         player2 = GameObject.FindWithTag("Player2");
+       
+        if (player == null)
+        {
+            player = GameObject.FindWithTag("Player");
+        }
+        else
+        {
+            PlayerView = player.GetComponent<PhotonView>();
+        }
+
+        if (PlayerView != null)
+        {
+            if (PlayerView.IsMine == true)
+            {
+                this.enabled = false;
+            }
+        }
+       
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -65,12 +83,8 @@ public class Cell2Door : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         Cell2Key = FindObjectOfType<Cell2Key>();
         View.RPC("RPC1", RpcTarget.All);
-        player = GameObject.FindGameObjectWithTag("Player");
-        PlayerView = player.GetComponent<PhotonView>();
-        if (PlayerView.IsMine == true)
-        {
-            this.enabled = false;
-        }
+      
+       
     }
 
     [PunRPC]

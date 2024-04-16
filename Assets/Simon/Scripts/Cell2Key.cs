@@ -52,6 +52,23 @@ public class Cell2Key : MonoBehaviour
         {
             File = GameObject.FindWithTag("File");
         }
+
+        if (player == null)
+        {
+            player = GameObject.FindWithTag("Player");
+        }
+        else
+        {
+            PlayerView = player.GetComponent<PhotonView>();
+        }
+
+        if (PlayerView != null)
+        {
+            if (PlayerView.IsMine == true)
+            {
+                this.enabled = false;
+            }
+        }
     }
    
     IEnumerator Starting() 
@@ -59,12 +76,8 @@ public class Cell2Key : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         hasKey = false;
         View.RPC("RPC2", RpcTarget.All);
-        player = GameObject.FindGameObjectWithTag("Player");
-        PlayerView = player.GetComponent<PhotonView>();
-        if (PlayerView.IsMine == true)
-        {
-            this.enabled = false;
-        }
+       
+       
     }
 
     [PunRPC]

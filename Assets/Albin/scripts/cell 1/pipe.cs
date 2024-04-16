@@ -43,6 +43,11 @@ public class pipe : MonoBehaviour
         {
             PlayerView = player.GetComponent<PhotonView>();
         }
+
+        if (PipeInHand == null)
+        {
+            PipeInHand = GameObject.FindWithTag("PipeInHand");
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -83,8 +88,12 @@ public class pipe : MonoBehaviour
     {
         if (PipeInHand == null)
         {
-            PipeInHand = GameObject.FindWithTag("PipeInHand");
+            View.RPC("RPC2", RpcTarget.All);
         }
-        PipeInHand.SetActive(false);
+        else
+        {
+            PipeInHand.SetActive(false);
+        }
+       
     }
 }

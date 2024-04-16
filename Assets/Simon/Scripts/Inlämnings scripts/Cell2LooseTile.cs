@@ -34,6 +34,24 @@ public class Cell2LooseTile : MonoBehaviour
             
             
         }
+
+        if (player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+            
+        }
+        else
+        {
+            PlayerView = player.GetComponent<PhotonView>();//hittar spelarens photonview och om det inte är din stäng av scriptet
+        }
+
+        if (PlayerView != null)
+        {
+            if (PlayerView.IsMine == true)
+            {
+                this.enabled = false;
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -57,12 +75,8 @@ public class Cell2LooseTile : MonoBehaviour
         View.RPC("RPC2", RpcTarget.All);
         pickup = false;
         hasMovedTile = false;
-        player = GameObject.FindGameObjectWithTag("Player");
-        PlayerView = player.GetComponent<PhotonView>();//hittar spelarens photonview och om det inte är din stäng av scriptet
-        if (PlayerView.IsMine == true)
-        {
-            this.enabled = false;
-        }
+       
+       
     }
 
     [PunRPC]

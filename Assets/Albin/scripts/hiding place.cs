@@ -10,6 +10,7 @@ public class hidingplace : MonoBehaviour
     SpriteRenderer Image;
     bool reach = false;
     public bool hiding = false;
+    BoxCollider2D PColider;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,14 +23,19 @@ public class hidingplace : MonoBehaviour
         if (player==null)
         {
             player = GameObject.FindWithTag("Player");
+        }
+        else
+        {
             movement = player.GetComponent<sINGELmOVMENT>();
             Image = player.GetComponent<SpriteRenderer>();
+            PColider = player.GetComponent<BoxCollider2D>();
         }
         if (hiding == true && Input.GetKeyDown(KeyCode.Q))
         {
             hiding = false;
             movement.enabled = true;
             Image.color = new Color(1, 1, 1, 1);
+            PColider.enabled = true;
             audioSource.Play();
         }
         else if (reach == true)
@@ -39,6 +45,7 @@ public class hidingplace : MonoBehaviour
                 hiding = true;
                 movement.enabled = false;
                 Image.color = new Color(1,1,1,0);
+                PColider.enabled = false;
                 audioSource.Play();
             }
         }

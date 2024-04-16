@@ -51,6 +51,7 @@ public class key : MonoBehaviour
                 hasKey = true;
             }
         }
+        
         if (player == null)
         {
             player = GameObject.FindWithTag("Player2");
@@ -60,7 +61,15 @@ public class key : MonoBehaviour
             PlayerView = player.GetComponent<PhotonView>();
         }
 
-        if (KeyInHand != null)
+        if (PlayerView != null)
+        {
+            if (PlayerView.IsMine == true)
+            {
+                this.enabled = false;
+            }
+        }
+
+        if (KeyInHand != null && pipeOnGround != null)
         {
             View.RPC("RPC2", RpcTarget.All);
         }
@@ -84,13 +93,7 @@ public class key : MonoBehaviour
     {
         yield return new WaitForSeconds(1.5f);
         pipe = FindObjectOfType<pipe>();
-        
         hasKey = false;
-       
-        if (PlayerView.IsMine == true)
-        {
-            this.enabled = false;
-        }
     }
 
     [PunRPC]
@@ -106,11 +109,7 @@ public class key : MonoBehaviour
     [PunRPC]
     void RPC2()
     {
-      
-        
         KeyInHand.SetActive(false);
-        
-        
         pipeOnGround.SetActive(false);
     }
 }

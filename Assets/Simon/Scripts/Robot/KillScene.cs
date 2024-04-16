@@ -7,9 +7,9 @@ using UnityEngine.SceneManagement;
 public class KillScene : MonoBehaviour, IPunObservable
 {
     public static KillScene instance;
-
+    [SerializeField]
     public bool SyncNow;
-
+    [SerializeField]
     public bool hasLoaded = false;
 
     float timer;
@@ -63,6 +63,8 @@ public class KillScene : MonoBehaviour, IPunObservable
                 hasLoaded = false;
             }
         }
+
+      
     }
 
 

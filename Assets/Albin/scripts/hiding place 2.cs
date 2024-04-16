@@ -21,8 +21,12 @@ public class hidingplace2 : MonoBehaviour
         if (player2 == null)
         {
             player2 = GameObject.FindWithTag("Player2");
+           
+        }
+        else
+        {
             movment2 = player2.GetComponent<Movment2>();
-            Image = player2.GetComponent<SpriteRenderer>();
+            Image = player2.GetComponent<SpriteRenderer>(); 
         }
         if (hiding == true && Input.GetKeyDown(KeyCode.Q))
         {

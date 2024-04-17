@@ -63,6 +63,11 @@ public class KillScene : MonoBehaviour, IPunObservable
                 hasLoaded = false;
             }
         }
+
+        if (PhotonNetwork.CurrentRoom.PlayerCount <= 1)
+        {
+            Application.Quit();
+        }
     }
 
 

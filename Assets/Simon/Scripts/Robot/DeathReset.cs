@@ -22,8 +22,8 @@ public class DeathReset : MonoBehaviour
             if (PhotonNetwork.IsMasterClient == true)
             {
                 PhotonNetwork.Disconnect();
-                //PhotonNetwork.LoadLevel("Main Menu(Simon)");
-                PhotonNetwork.LoadLevel("StartingCells");
+                PhotonNetwork.LoadLevel("Main Menu(Simon)");
+                //PhotonNetwork.LoadLevel("StartingCells");
             }
             
             //SceneManager.LoadScene("StartingCells");

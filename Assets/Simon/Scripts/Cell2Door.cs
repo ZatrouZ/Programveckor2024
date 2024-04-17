@@ -58,10 +58,10 @@ public class Cell2Door : MonoBehaviour
         {
             if (PlayerView.IsMine == true)
             {
-                Destroy(gameObject);
+                this.enabled = false;
             }
         }
-
+       
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -83,6 +83,8 @@ public class Cell2Door : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         Cell2Key = FindObjectOfType<Cell2Key>();
         View.RPC("RPC1", RpcTarget.All);
+      
+       
     }
 
     [PunRPC]

@@ -28,28 +28,7 @@ public class door : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player_ == null)
-        {
-            player_ = GameObject.FindGameObjectWithTag("Player");
-        }
-       
-        if (player == null)
-        {
-            player = GameObject.FindGameObjectWithTag("Player2");
-        }
-        else
-        {
-            PlayerView = player.GetComponent<PhotonView>();
-        }
-       
-
-        if (PlayerView != null)
-        {
-            if (PlayerView.IsMine == true)
-            {
-                Destroy(gameObject);
-            }
-        }
+        player_ = GameObject.FindGameObjectWithTag("Player");
 
         if (KeyInHand == null)
         {
@@ -93,6 +72,12 @@ public class door : MonoBehaviour
     IEnumerator Starting()
     {
         yield return new WaitForSeconds(1.5f);
+        player = GameObject.FindGameObjectWithTag("Player2");
+        PlayerView = player.GetComponent<PhotonView>();
+        if (PlayerView.IsMine == true)
+        {
+            this.enabled = false;
+        }
     }
 
     [PunRPC]

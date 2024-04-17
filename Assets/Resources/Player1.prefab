@@ -558,12 +558,6 @@ MonoBehaviour:
   - Type: 1
     SynchronizeType: 1
     Name: L1R2U3D4
-  - Type: 9
-    SynchronizeType: 0
-    Name: interact
-  - Type: 3
-    SynchronizeType: 0
-    Name: facing
   m_SynchronizeLayers:
   - SynchronizeType: 1
     LayerIndex: 0

@@ -10,7 +10,7 @@ public class DeathReset : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PhotonNetwork.AutomaticallySyncScene = true;
+        
     }
 
     // Update is called once per frame
@@ -23,6 +23,7 @@ public class DeathReset : MonoBehaviour
             {
                 PhotonNetwork.Disconnect();
                 PhotonNetwork.LoadLevel("Main Menu(Simon)");
+                PhotonNetwork.AutomaticallySyncScene = true;
                 //PhotonNetwork.LoadLevel("StartingCells");
             }
             

@@ -70,10 +70,10 @@ public class Cell2Key : MonoBehaviour
         {
             file = GameObject.FindWithTag("File");
         }
-        else
+       /* else
         {
             FileSprite = file.GetComponent<SpriteRenderer>();
-        }
+        }*/
 
         if (player == null)
         {
@@ -92,33 +92,34 @@ public class Cell2Key : MonoBehaviour
             }
         }
 
-        if (FileSprite != null && hasActive == false)
-        {
-            //FileSprite.color = new Color(1, 1, 1, 0);
-            View.RPC("RPC2", RpcTarget.All);
-            hasActive = true;
-        }
+       
+          
+            
 
-        print(file);
+            
+       
+
+      
     }
    
     IEnumerator Starting() 
     {
         yield return new WaitForSeconds(1.5f);
         hasKey = false;
+        View.RPC("RPC2", RpcTarget.All);
     }
 
    [PunRPC]
     void RPC1() 
     {
-        FileSprite.color = new Color(1, 1, 1, 1);
-        //File.SetActive(true);
+        //FileSprite.color = new Color(1, 1, 1, 1);
+        file.SetActive(true);
         groundFile.SetActive(false);
     }
     [PunRPC]
     void RPC2()
     {
-        FileSprite.color = new Color(1, 1, 1, 0);
-        //file.SetActive(false);
+        //FileSprite.color = new Color(1, 1, 1, 0);
+        file.SetActive(false);
     }
 }

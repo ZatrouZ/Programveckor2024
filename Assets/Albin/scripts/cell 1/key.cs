@@ -30,8 +30,8 @@ public class key : MonoBehaviour
     {
         StartCoroutine(Starting());
         View = GetComponent<PhotonView>();
-      
-        
+        hasActive = false;
+
     }
 
     // Update is called once per frame

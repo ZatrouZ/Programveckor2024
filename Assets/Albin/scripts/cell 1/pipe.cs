@@ -19,7 +19,7 @@ public class pipe : MonoBehaviour
     {
         StartCoroutine(StartIng());
         View = GetComponent<PhotonView>();
-       
+        hasActive = false;
     }
 
     // Update is called once per frame

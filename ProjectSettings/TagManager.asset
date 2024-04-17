@@ -21,6 +21,9 @@ TagManager:
   - Hiding2
   - RoboMang
   - End
+  - GroundFile
+  - RealPipe
+  - RealKey
   layers:
   - Default
   - TransparentFX

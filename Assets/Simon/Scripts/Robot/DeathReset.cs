@@ -19,13 +19,19 @@ public class DeathReset : MonoBehaviour
         timer += Time.deltaTime;
         if (timer >= 4)
         {
+            Application.Quit();
+           /* if (PhotonNetwork.CurrentRoom.PlayerCount <= 1)
+            {
+                Application.Quit();
+            }
             if (PhotonNetwork.IsMasterClient == true)
             {
-                PhotonNetwork.Disconnect();
+               PhotonNetwork.Disconnect();
                 PhotonNetwork.LoadLevel("Main Menu(Simon)");
                 PhotonNetwork.AutomaticallySyncScene = true;
+
                 //PhotonNetwork.LoadLevel("StartingCells");
-            }
+            }*/
             
             //SceneManager.LoadScene("StartingCells");
             

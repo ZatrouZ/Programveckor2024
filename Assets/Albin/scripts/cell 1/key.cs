@@ -22,6 +22,9 @@ public class key : MonoBehaviour
 
     bool reach;
     public bool hasKey;
+    bool hasActive;
+
+    GameObject RKey;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +37,10 @@ public class key : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (View == null)
+        {
+            View = GetComponent<PhotonView>();
+        }
         if (KeyInHand == null)
         {
             KeyInHand = GameObject.FindWithTag("KeyInHand");
@@ -48,6 +55,11 @@ public class key : MonoBehaviour
             if (Input.GetKey(KeyCode.E) && RealChat.isWriting == false)
             {
                 View.RPC("RPC1", RpcTarget.All);
+                /*PipeInHand.SetActive(false);
+                KeyInHand.SetActive(true);
+                pipeOnGround.SetActive(true);
+                gameObject.SetActive(false);
+                EmptyKeyHook.SetActive(true);*/
                 hasKey = true;
             }
         }
@@ -61,17 +73,26 @@ public class key : MonoBehaviour
             PlayerView = player.GetComponent<PhotonView>();
         }
 
+        if (RKey == null)
+        {
+            RKey = GameObject.FindWithTag("RealKey");
+        }
+
         if (PlayerView != null)
         {
             if (PlayerView.IsMine == true)
             {
-                this.enabled = false;
+                Destroy(gameObject);
             }
         }
 
-        if (KeyInHand != null && pipeOnGround != null)
+
+        if (KeyInHand != null && pipeOnGround != null && hasActive == false)
         {
+           // KeyInHand.SetActive(false);
+           // pipeOnGround.SetActive(false);
             View.RPC("RPC2", RpcTarget.All);
+            hasActive = true;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -96,14 +117,13 @@ public class key : MonoBehaviour
         hasKey = false;
     }
 
-    [PunRPC]
+   [PunRPC]
     void RPC1() 
     {
-       
         PipeInHand.SetActive(false);
         KeyInHand.SetActive(true);
         pipeOnGround.SetActive(true);
-        gameObject.SetActive(false);
+        RKey.SetActive(false);
         EmptyKeyHook.SetActive(true);
     }
     [PunRPC]

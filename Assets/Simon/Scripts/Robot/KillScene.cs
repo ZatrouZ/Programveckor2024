@@ -48,8 +48,8 @@ public class KillScene : MonoBehaviour, IPunObservable
     {
         if (SyncNow == true && hasLoaded == false)
         {
-
-            PhotonNetwork.LoadLevel("cutscene i dont know");
+            Application.Quit();
+           // PhotonNetwork.LoadLevel("cutscene i dont know");
             hasLoaded = true;
 
         }

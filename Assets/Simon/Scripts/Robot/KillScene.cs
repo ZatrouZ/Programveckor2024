@@ -14,6 +14,8 @@ public class KillScene : MonoBehaviour, IPunObservable
 
     float timer;
 
+    PhotonView view; 
+
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
         if (stream.IsWriting)
@@ -31,6 +33,7 @@ public class KillScene : MonoBehaviour, IPunObservable
     // Start is called before the first frame update
     void Start()
     {
+        view = GetComponent<PhotonView>();
         if (instance == null)
         {
             instance = this;
@@ -41,14 +44,19 @@ public class KillScene : MonoBehaviour, IPunObservable
         }
         DontDestroyOnLoad(gameObject);
     }
-
+    [PunRPC]
+    public void ChangeKillScene()
+    {
+        PhotonNetwork.LoadLevel("cutscene i dont know");
+    }
 
     // Update is called once per frame
     void Update()
     {
         if (SyncNow == true && hasLoaded == false)
         {
-            Application.Quit();
+            view.RPC("ChangeKillScene", RpcTarget.All);
+            //Application.Quit();
            // PhotonNetwork.LoadLevel("cutscene i dont know");
             hasLoaded = true;
 
@@ -64,10 +72,7 @@ public class KillScene : MonoBehaviour, IPunObservable
             }
         }
 
-        if (PhotonNetwork.CurrentRoom.PlayerCount <= 1)
-        {
-            Application.Quit();
-        }
+       
     }
 
 

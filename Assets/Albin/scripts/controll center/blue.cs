@@ -29,10 +29,12 @@ public class blue : MonoBehaviour
                 if (rend.material.color == Color.red)
                 {
                     rend.material.color = Color.green;
+                    right = true;
                 }
                 else if (rend.material.color == Color.green)
                 {
                     rend.material.color = Color.yellow;
+                    right = false;
                 }
                 else if (rend.material.color == Color.yellow)
                 {
@@ -41,12 +43,12 @@ public class blue : MonoBehaviour
                 else if (rend.material.color == Color.blue)
                 {
                     rend.material.color = Color.magenta;
-                    right = true;
+                    
                 }
                 else if (rend.material.color == Color.magenta)
                 {
                     rend.material.color = Color.red;
-                    right = false;
+                    
                 }
             }
         }

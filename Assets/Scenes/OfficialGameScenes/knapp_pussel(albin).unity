@@ -2354,7 +2354,6 @@ GameObject:
   - component: {fileID: 2024976334}
   - component: {fileID: 2024976337}
   - component: {fileID: 2024976336}
-  - component: {fileID: 2024976335}
   m_Layer: 0
   m_Name: hiding place
   m_TagString: Hiding1
@@ -2377,18 +2376,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 206484850}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2024976335
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2024976333}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47079471fbec67e4c927376e88a22e64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2024976336
 MonoBehaviour:
   m_ObjectHideFlags: 0

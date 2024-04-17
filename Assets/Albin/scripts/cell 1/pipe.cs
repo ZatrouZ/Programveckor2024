@@ -11,6 +11,9 @@ public class pipe : MonoBehaviour
     public bool hasPipe;
     PhotonView PlayerView;
     GameObject player;
+    bool hasActive;
+
+    GameObject RPipe;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +25,11 @@ public class pipe : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (View == null)
+        {
+            View = GetComponent<PhotonView>();
+        }
+
         if (pickup==true)
         {
             if (Input.GetKey(KeyCode.E) && RealChat.isWriting == false)
@@ -32,22 +40,46 @@ public class pipe : MonoBehaviour
                 }
                 hasPipe = true;
                 View.RPC("RPC1", RpcTarget.All);
+                //PipeInHand.SetActive(true);
+                //gameObject.SetActive(false);
             }
         }
 
         if (player == null)
         {
-            player = GameObject.FindGameObjectWithTag("Player2");  
+            player = GameObject.FindWithTag("Player2");  
         }
         else
         {
             PlayerView = player.GetComponent<PhotonView>();
         }
 
+        if (PlayerView != null)
+        {
+            if (PlayerView.IsMine == true)
+            {
+                Destroy(gameObject);
+            }
+        }
+
+        if (RPipe == null)
+        {
+            RPipe = GameObject.FindWithTag("RealPipe");
+        }
+
         if (PipeInHand == null)
         {
             PipeInHand = GameObject.FindWithTag("PipeInHand");
         }
+
+        if (PipeInHand != null && hasActive == false)
+        {
+            //PipeInHand.SetActive(false);
+            View.RPC("RPC2", RpcTarget.All);
+            hasActive = true;
+        }
+
+        print(PipeInHand);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -68,13 +100,8 @@ public class pipe : MonoBehaviour
     IEnumerator StartIng()
     {
         yield return new WaitForSeconds(1.5f);
-        View.RPC("RPC2", RpcTarget.All);
         pickup = false;
         hasPipe = false;
-        if (PlayerView.IsMine == true)
-        {
-            this.enabled = false;
-        }
     }
 
     [PunRPC]
@@ -86,14 +113,6 @@ public class pipe : MonoBehaviour
     [PunRPC]
     void RPC2()
     {
-        if (PipeInHand == null)
-        {
-            View.RPC("RPC2", RpcTarget.All);
-        }
-        else
-        {
-            PipeInHand.SetActive(false);
-        }
-       
+      PipeInHand.SetActive(false);
     }
 }

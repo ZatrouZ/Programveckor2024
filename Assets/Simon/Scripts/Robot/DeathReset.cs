@@ -19,8 +19,8 @@ public class DeathReset : MonoBehaviour
         timer += Time.deltaTime;
         if (timer >= 4)
         {
-            PhotonNetwork.LoadLevel("StartingCells");
-            //SceneManager.LoadScene("StartingCells");
+            //PhotonNetwork.LoadLevel("StartingCells");
+            SceneManager.LoadScene("StartingCells");
             
         }
     }

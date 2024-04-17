@@ -8,7 +8,7 @@ public class Cell2Key : MonoBehaviour
     //detta script är en kopia av albins key scripts med några endringar
     Cell2LooseTile LT;
     PhotonView View;
-    GameObject File;
+    GameObject file;
     GameObject CodeLockKey;
 
     [SerializeField]
@@ -18,24 +18,36 @@ public class Cell2Key : MonoBehaviour
     public bool hasKey;
     PhotonView PlayerView;
     GameObject player;
+    bool hasActive;
+
+    GameObject groundFile;
+
+    SpriteRenderer FileSprite;
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(Starting());
         LT = KEYWITHSCRIPT.GetComponent<Cell2LooseTile>();
         View = GetComponent<PhotonView>();
-      
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (View == null)
+        {
+            View = GetComponent<PhotonView>();
+        }
+
         if (LT.hasMovedTile == true)
         {
                 if (Input.GetKey(KeyCode.E))
                 {
-                    View.RPC("RPC1", RpcTarget.All);
-                    hasKey = true;
+               // FileSprite.color = new Color(1, 1, 1, 1);
+                hasKey = true;
+               // gameObject.SetActive(false);
+                View.RPC("RPC1", RpcTarget.All);
                 }
         }
 
@@ -48,9 +60,19 @@ public class Cell2Key : MonoBehaviour
             CodeLockKey.SetActive(false);
         }
 
-        if (File == null)
+        if (groundFile == null)
         {
-            File = GameObject.FindWithTag("File");
+            groundFile = GameObject.FindWithTag("GroundFile");
+        }
+       
+
+        if (file == null)
+        {
+            file = GameObject.FindWithTag("File");
+        }
+        else
+        {
+            FileSprite = file.GetComponent<SpriteRenderer>();
         }
 
         if (player == null)
@@ -66,29 +88,37 @@ public class Cell2Key : MonoBehaviour
         {
             if (PlayerView.IsMine == true)
             {
-                this.enabled = false;
+                Destroy(gameObject);
             }
         }
+
+        if (FileSprite != null && hasActive == false)
+        {
+            //FileSprite.color = new Color(1, 1, 1, 0);
+            View.RPC("RPC2", RpcTarget.All);
+            hasActive = true;
+        }
+
+        print(file);
     }
    
     IEnumerator Starting() 
     {
         yield return new WaitForSeconds(1.5f);
         hasKey = false;
-        View.RPC("RPC2", RpcTarget.All);
-       
-       
     }
 
-    [PunRPC]
+   [PunRPC]
     void RPC1() 
     {
-        File.SetActive(true);
-        gameObject.SetActive(false);
+        FileSprite.color = new Color(1, 1, 1, 1);
+        //File.SetActive(true);
+        groundFile.SetActive(false);
     }
     [PunRPC]
     void RPC2()
     {
-        File.SetActive(false);
+        FileSprite.color = new Color(1, 1, 1, 0);
+        //file.SetActive(false);
     }
 }

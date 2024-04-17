@@ -66,7 +66,7 @@ public class RobotMainn2 : MonoBehaviour
             {
                 print("SpawnaMain");
                 timer += Time.deltaTime;
-                if (timer <= 5)
+                if (timer <= 4)
                 {
                     Spawn();
                     timer = 0;

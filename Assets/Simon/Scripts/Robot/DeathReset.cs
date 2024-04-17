@@ -19,8 +19,12 @@ public class DeathReset : MonoBehaviour
         timer += Time.deltaTime;
         if (timer >= 4)
         {
-            //PhotonNetwork.LoadLevel("StartingCells");
-            SceneManager.LoadScene("StartingCells");
+            if (PhotonNetwork.IsMasterClient == true)
+            {
+                PhotonNetwork.LoadLevel("Main Menu(Simon)");
+            }
+            
+            //SceneManager.LoadScene("StartingCells");
             
         }
     }

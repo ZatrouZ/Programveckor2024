@@ -712,6 +712,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: gamemgr Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 6617925955031735809, guid: 0cc84d5ce6ef5b045aadd82296e7197a, type: 3}
+      propertyPath: m_TagString
+      value: Destroy1
+      objectReference: {fileID: 0}
     - target: {fileID: 8257505439611509841, guid: 0cc84d5ce6ef5b045aadd82296e7197a, type: 3}
       propertyPath: sceneViewId
       value: 999
@@ -4308,6 +4312,10 @@ PrefabInstance:
     - target: {fileID: 7694555022020862092, guid: 1712f6585c23a5a468bf9754efd582bb, type: 3}
       propertyPath: m_Name
       value: Syncer
+      objectReference: {fileID: 0}
+    - target: {fileID: 7694555022020862092, guid: 1712f6585c23a5a468bf9754efd582bb, type: 3}
+      propertyPath: m_TagString
+      value: Destroy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

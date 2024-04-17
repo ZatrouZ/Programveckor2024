@@ -13,9 +13,14 @@ public class NetworkController : MonoBehaviourPunCallbacks
     InputField nameField;
 
 
+    GameObject Syncer;
+    GameObject GameMMR;
+    
+
     // Start is called before the first frame update
     void Start()
     {
+        PhotonNetwork.Disconnect();
         startButton.interactable = false;
         PhotonNetwork.ConnectUsingSettings();
         print("Connecting...");
@@ -38,6 +43,22 @@ public class NetworkController : MonoBehaviourPunCallbacks
     // Update is called once per frame
     void Update()
     {
+        if (Syncer == null)
+        {
+            Syncer = GameObject.FindWithTag("Destroy");
+        }
+        else
+        {
+            DestroyImmediate(Syncer);
+        }
 
+        if (GameMMR == null)
+        {
+            GameMMR = GameObject.FindWithTag("Destroy1");
+        }
+        else
+        {
+            DestroyImmediate(GameMMR);
+        }
     }
 }

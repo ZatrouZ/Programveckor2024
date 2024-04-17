@@ -21,6 +21,8 @@ TagManager:
   - Hiding2
   - RoboMang
   - End
+  - Destroy
+  - Destroy1
   layers:
   - Default
   - TransparentFX

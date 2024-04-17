@@ -15,10 +15,11 @@ public class EyeContoller : MonoBehaviour
 
     GameObject player;
     NoiseManager NoiseManager;
+    bool isRed;
     // Start is called before the first frame update
     void Start()
     {
-        
+        isRed = false;
     }
 
     // Update is called once per frame
@@ -42,6 +43,7 @@ public class EyeContoller : MonoBehaviour
                 print("Green");
                 Green.SetActive(true);
                 Red.SetActive(false);
+                isRed = false;
             }
            
             if (NoiseManager.spawn == true)
@@ -51,9 +53,10 @@ public class EyeContoller : MonoBehaviour
                 Orange.SetActive(false);
                 Green.SetActive(false);
                 Yellow.SetActive(false);
+                isRed = true;
             }
 
-            if (NoiseManager.totalNoise >= 20 && NoiseManager.totalNoise <= 39)
+            if (NoiseManager.totalNoise >= 20 && NoiseManager.totalNoise <= 39 && isRed == false)
             {
                 print("Yellow");
                 Yellow.SetActive(true);

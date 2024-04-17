@@ -8,18 +8,19 @@ public class RobotMovement2 : MonoBehaviour
     public AudioSource audioSource;
     GameObject Player;
     GameObject MainObj;
-    RobotMainn2 RobotMainn2;
+    RobotMainn2 robotMainn2;
     NoiseManager NoiseManager;
     [SerializeField]
 
     public Animator animator;
-
-    int speed;
+    [SerializeField]
+    int speed = 4;
     // Start is called before the first frame update
     void Start()
     {
-        RobotMainn2 = GetComponent<RobotMainn2>();
+       
         animator = GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame
@@ -40,34 +41,41 @@ public class RobotMovement2 : MonoBehaviour
         }
         else
         {
-            RobotMainn2 = MainObj.GetComponent<RobotMainn2>();
+            robotMainn2 = MainObj.GetComponent<RobotMainn2>();
         }
 
-        if (RobotMainn2 != null)
+      
+        if (robotMainn2 != null)
         {
-            if (RobotMainn2.chasePlayer == true)
+            if (robotMainn2.chasePlayer == true)
             {
                 transform.position = Vector3.MoveTowards(transform.position, Player.transform.position, speed * Time.deltaTime);
                 audioSource.Play();
             }
             else
             {
-                transform.position = Vector3.MoveTowards(transform.position, RobotMainn2.EndLocation.transform.position, speed * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(transform.position, robotMainn2.EndLocation.transform.position, speed * Time.deltaTime);
                 audioSource.Play();
             }
         }
-        if (Player.transform.position.x < transform.position.x || RobotMainn2.chasePlayer == false)
+
+       
+        if (robotMainn2 != null)
         {
-            animator.SetInteger("facing", 1);
+            if (Player.transform.position.x < transform.position.x && robotMainn2.chasePlayer == true)
+            {
+                animator.SetInteger("facing", 1);
+            }
+            if (Player.transform.position.x > transform.position.x && robotMainn2.chasePlayer == true)
+            {
+                animator.SetInteger("facing", 2);
+            }
+            if (Player.transform.position.y < transform.position.y && Player.transform.position.x == transform.position.x || robotMainn2.chasePlayer == false)
+            {
+                animator.SetInteger("facing", 0);
+            }
         }
-        if (Player.transform.position.x > transform.position.x)
-        {
-            animator.SetInteger("facing", 2);
-        }
-        if (Player.transform.position.y < transform.position.y && Player.transform.position.x == transform.position.x)
-        {
-            animator.SetInteger("facing", 0);
-        }
+       
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

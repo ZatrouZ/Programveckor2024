@@ -21,9 +21,14 @@ public class hidingplace2 : MonoBehaviour
         if (player2 == null)
         {
             player2 = GameObject.FindWithTag("Player2");
+           
+        }
+        else
+        {
             movment2 = player2.GetComponent<Movment2>();
             Image = player2.GetComponent<SpriteRenderer>();
         }
+        
         if (hiding == true && Input.GetKeyDown(KeyCode.Q))
         {
             hiding = false;
@@ -35,6 +40,7 @@ public class hidingplace2 : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Q) && RealChat.isWriting == false)
             {
                 hiding = true;
+                print("Hiding");
                 movment2.enabled = false;
                 Image.color = new Color(1, 1, 1, 0);
             }

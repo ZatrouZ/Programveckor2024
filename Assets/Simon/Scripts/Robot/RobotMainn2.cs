@@ -47,6 +47,8 @@ public class RobotMainn2 : MonoBehaviour
             hidingplace2 = HidingObj2.GetComponent<hidingplace2>();
         }
 
+        print(hidingplace2);
+        print(HidingObj2);
         if (hidingplace2 != null)
         {
             if (hidingplace2.hiding == true)
@@ -56,6 +58,7 @@ public class RobotMainn2 : MonoBehaviour
             else
             {
                 chasePlayer = true;
+                print("Chase");
             }
         }
        
@@ -66,7 +69,7 @@ public class RobotMainn2 : MonoBehaviour
             {
                 print("SpawnaMain");
                 timer += Time.deltaTime;
-                if (timer <= 4)
+                if (timer >= 4)
                 {
                     Spawn();
                     timer = 0;
